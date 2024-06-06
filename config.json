@@ -1,0 +1,28 @@
+{
+    "name": "Starfall Ex API",
+    "settings": {
+        "Lua.runtime.version": "LuaJIT",
+        "Lua.runtime.builtin": {
+            "basic": "disable",
+            "coroutine": "disable",
+            "string": "disable",
+            "table": "disable",
+            "math": "disable",
+            "io": "disable",
+            "os": "disable",
+            "debug": "disable",
+            "bit": "disable",
+            "jit": "disable",
+            "utf8": "disable",
+            "package": "disable",
+            "bit32": "disable",
+            "ffi": "disable",
+            "builtin": "enable",
+            "jit.profile": "disable",
+            "jit.util": "disable",
+            "string.buffer": "disable",
+            "table.clear": "disable",
+            "table.new": "disable"
+        }
+    }
+}
