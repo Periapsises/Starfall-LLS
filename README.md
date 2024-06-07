@@ -5,7 +5,7 @@ An addon for [Lua Language Server](https://luals.github.io) that provides [Starf
 ## Usage
 
 1. Install the LuaLS extension for your editor of choice.
-    - [VSCode](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
+    - VSCode: [Lua Language Server](https://marketplace.visualstudio.com/items?itemName=sumneko.lua)
 2. Open the Addon Manager.
     - VSCode: `Ctrl`+`Shift`+`P` -> Search for "Lua: Open Addon Manager"
 3. Look for the Starfall Ex addon and enable.
