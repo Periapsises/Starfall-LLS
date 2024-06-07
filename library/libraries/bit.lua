@@ -114,4 +114,3 @@ function bit.rshift(value, shiftCount) end
 ---@param shiftCount number # Amount of bits to shift
 ---@return number # shiftedValue
 function bit.arshift(value, shiftCount) end
-

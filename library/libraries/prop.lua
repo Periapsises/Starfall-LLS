@@ -79,4 +79,3 @@ function prop.createComponent(pos, ang, class, model, frozen) end
 function prop.createCustom(pos, ang, vertices, frozen) end
 
 prop.SENT_Data_Structures = {}
-

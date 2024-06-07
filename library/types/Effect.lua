@@ -137,4 +137,3 @@ function Effect:getDamageType() end
 --- Returns the effect's entindex
 ---@return number # The effect's entindex
 function Effect:getEntIndex() end
-

@@ -169,9 +169,9 @@ function Vector:cross(v) end
 function Vector:__index(Key) end
 
 --- Sets a value at a key in the vector
----@param Vec Vector 
----@param Key number|string 
----@param Value number 
+---@param Vec Vector
+---@param Key number|string
+---@param Value number
 function Vector:__newindex(Vec, Key, Value) end
 
 --- Get the vector's Length.
@@ -235,4 +235,3 @@ function Vector:__mul(a, b) end
 ---@param v Vector Second Vector
 ---@return number # Dot product result between the two vectors
 function Vector:dot(v) end
-

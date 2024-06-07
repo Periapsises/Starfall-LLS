@@ -87,4 +87,3 @@ function timer.exists(name) end
 --- Stops and removes the timer.
 ---@param name string # The timer name
 function timer.remove(name) end
-

@@ -247,4 +247,3 @@ function NextBot:removeInjuredCallback(callbackid) end
 ---@param callbackid string The unique ID this callback will use.
 ---@param callback function The function to run when the NB leaves the ground. The arguments are: (The entity the NB "jumped" from.)
 function NextBot:addLeaveGroundCallback(callbackid, callback) end
-

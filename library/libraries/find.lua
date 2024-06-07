@@ -102,4 +102,3 @@ function find.inPVS(pos, filter) end
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
 function find.all(filter) end
-

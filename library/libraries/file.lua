@@ -87,4 +87,3 @@ function file.write(path, data) end
 ---@param data string # The data to write
 ---@return string # The generated path for your temp file
 function file.writeTemp(filename, data) end
-

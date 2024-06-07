@@ -19,4 +19,3 @@ function bass.loadURL(path, flags, callback) end
 ---@param flags string # Flags for the sound (`3d`, `mono`, `noplay`, `noblock`).
 ---@param callback function # Function which is called when the sound is loaded. It'll get 3 arguments: `Bass` object, error number and name.
 function bass.loadFile(path, flags, callback) end
-

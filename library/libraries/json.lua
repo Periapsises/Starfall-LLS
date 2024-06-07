@@ -12,4 +12,3 @@ function json.decode(s) end
 ---@param prettyPrint boolean? # Optional. If true, formats and indents the resulting JSON
 ---@return string # JSON encoded string representation of the table
 function json.encode(tbl, prettyPrint) end
-

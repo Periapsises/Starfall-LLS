@@ -177,4 +177,3 @@ function net.writeAngle(t) end
 --- Writes a float to the net message
 ---@param t number # The float to be written
 function net.writeFloat(t) end
-

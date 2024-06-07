@@ -25,4 +25,3 @@ function SurfaceInfo:isNoDraw() end
 --- This internally checks the SURFDRAW_WATER flag.
 ---@return boolean # If the surface is water.
 function SurfaceInfo:isWater() end
-

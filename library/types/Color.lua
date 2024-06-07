@@ -101,4 +101,3 @@ function Color:__mul(a, b) end
 ---@param b number|Color Number or Color divisor
 ---@return Color # Scaled color.
 function Color:__div(b, b) end
-

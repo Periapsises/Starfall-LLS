@@ -181,7 +181,7 @@ function printMessage(mtype, text) end
 function unpack(tbl, startIndex, endIndex) end
 
 --- Used to select single values from a vararg or get the count of values in it.
----@param parameter any # 
+---@param parameter any #
 ---@param ... any # Args to select from
 ---@return any # Returns a number or vararg, depending on the select method.
 function select(parameter, ...) end
@@ -1551,4 +1551,3 @@ RENDERMODE["TRANSALPHADD"] = nil
 RENDERMODE["WORLDGLOW"] = nil
 ---@type number
 RENDERMODE["NONE"] = nil
-

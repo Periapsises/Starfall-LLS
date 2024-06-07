@@ -61,4 +61,3 @@ function wire.create(entI, entO, inputname, outputname, width, color, materialNa
 function wire.delete(entI, inputname) end
 
 wire.ports = {}
-

@@ -22,4 +22,3 @@ function sql.query(query) end
 ---@param tabname string # The table to check for.
 ---@return boolean # False if the table does not exist, true if it does.
 function sql.tableExists(tabname) end
-

@@ -182,4 +182,3 @@ vr.VR["BOOLEAN_HANDBRAKE"] = nil
 vr.VR["BOOLEAN_EXIT"] = nil
 ---@type number
 vr.VR["BOOLEAN_TURRET"] = nil
-

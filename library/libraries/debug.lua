@@ -23,4 +23,3 @@ function debug.getinfo(funcOrStackLevel, fields) end
 ---@param index number # The index of the local to get
 ---@return string # The name of the local
 function debug.getlocal(funcOrStackLevel, index) end
-

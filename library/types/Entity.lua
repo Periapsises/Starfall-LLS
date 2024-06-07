@@ -670,7 +670,7 @@ function Entity:enableSphere(enabled, radius) end
 function Entity:isConstraint() end
 
 --- Sets the elasticity of the entity
----@param elasticity number 
+---@param elasticity number
 function Entity:setElasticity(elasticity) end
 
 --- Returns the ragdoll bone index given a bone name
@@ -755,7 +755,7 @@ function Entity:getModelScale() end
 function Entity:getBodygroupName(id) end
 
 --- Sets the entity's friction multiplier
----@param friction number 
+---@param friction number
 function Entity:setFriction(friction) end
 
 --- Draws the entity, requires 3D rendering context
@@ -1085,4 +1085,3 @@ function Entity:setPose(pose, value) end
 --- Converts entity angles to a quaternion
 ---@return Quaternion # Constructed quaternion
 function Entity:getQuaternion() end
-

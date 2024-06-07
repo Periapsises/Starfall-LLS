@@ -62,4 +62,3 @@ function Weapon:getActivity() end
 --- Returns Ammo in primary clip
 ---@return number # Amount of ammo
 function Weapon:clip1() end
-

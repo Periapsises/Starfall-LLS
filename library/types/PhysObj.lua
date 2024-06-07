@@ -263,4 +263,3 @@ function PhysObj:isDragEnabled() end
 --- Returns the volume in source units cubed. Or nil if the PhysObj is a generated sphere or box.
 ---@return number? # The volume or nil if the PhysObj is a generated sphere or box.
 function PhysObj:getVolume() end
-

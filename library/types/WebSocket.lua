@@ -33,4 +33,3 @@ function WebSocket:__tostring() end
 --- * 3 - CLOSED
 ---@return number # The current state of the websocket.
 function WebSocket:getState() end
-

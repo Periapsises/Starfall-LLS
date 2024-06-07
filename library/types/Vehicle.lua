@@ -27,4 +27,3 @@ function Vehicle:killDriver() end
 
 --- Will unlock the vehicle.
 function Vehicle:unlock() end
-

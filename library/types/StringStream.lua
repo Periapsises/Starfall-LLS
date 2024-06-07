@@ -121,4 +121,3 @@ function StringStream:readUntil(byte) end
 --- Writes a 4 byte IEEE754 float to the byte stream and advances the buffer pointer.
 ---@param x number The float to write
 function StringStream:writeFloat(x) end
-

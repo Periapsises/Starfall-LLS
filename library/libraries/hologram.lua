@@ -20,4 +20,3 @@ function hologram.canSpawn() end
 ---@param scale Vector? # (Optional) The scale to give the hologram
 ---@return Hologram # The hologram object
 function hologram.create(pos, ang, model, scale) end
-

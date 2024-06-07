@@ -14,4 +14,3 @@ function physenv.getAirDensity() end
 --- See http://wiki.facepunch.com/gmod/Structures/PhysEnvPerformanceSettings for table structure.
 ---@return table # Performance Settings Table.
 function physenv.getPerformanceSettings() end
-

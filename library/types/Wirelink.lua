@@ -58,4 +58,3 @@ function Wirelink:getWiredTo(name) end
 ---@param name string Name of the input to check
 ---@return boolean # Whether it is wired
 function Wirelink:isWired(name) end
-

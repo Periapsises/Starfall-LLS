@@ -12,4 +12,3 @@ function von.serialize(tbl, checkRecursive) end
 ---@param str string # String to deserialize
 ---@return table # Table
 function von.deserialize(str) end
-

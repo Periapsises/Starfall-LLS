@@ -99,4 +99,3 @@ function Hologram:setRenderMatrix(mat) end
 --- Sets the hologram's position.
 ---@param vec Vector New position
 function Hologram:setPos(vec) end
-

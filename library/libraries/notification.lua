@@ -21,4 +21,3 @@ function notification.addProgress(id, text) end
 ---@param type number # Determines the notification method.
 ---@param length number # Time in seconds to display the notification (Max length of 30)
 function notification.addLegacy(text, type, length) end
-

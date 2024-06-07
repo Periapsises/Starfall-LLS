@@ -11,4 +11,3 @@ function particle.create(position, use3D) end
 --- Returns number of particle emitters left able to be created
 ---@return number # Number of particle emitters left
 function particle.particleEmittersLeft() end
-

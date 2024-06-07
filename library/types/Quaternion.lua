@@ -137,12 +137,12 @@ function Quaternion:exp() end
 
 --- Index metamethod
 --- Can be indexed with: 1, 2, 3, 4, r, i, j, k, rr, ri, rj, rk, rrr, rijk, kjir, etc. Numerical lookup is the most efficient
----@param Key number|string 
+---@param Key number|string
 ---@return number # Found value
 function Quaternion:__index(Key) end
 
 --- Newindex metamethod
----@param Key number|string 
+---@param Key number|string
 ---@param Value number to set
 function Quaternion:__newindex(Key, Value) end
 
@@ -204,4 +204,3 @@ function Quaternion:log() end
 ---@param quat Quaternion Second quaternion
 ---@return number # The dot product
 function Quaternion:dot(quat) end
-

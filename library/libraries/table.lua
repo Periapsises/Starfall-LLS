@@ -177,4 +177,3 @@ function table.isSequential(tbl) end
 ---@param tbl table # The table to search in
 ---@return any # Winning key
 function table.getWinningKey(tbl) end
-

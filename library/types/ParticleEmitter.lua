@@ -25,8 +25,8 @@ function ParticleEmitter:setBBox(mins, maxs) end
 function ParticleEmitter:setPos(position) end
 
 --- This function sets the the distance between the render camera and the emitter at which the particles should start fading and at which distance fade ends ( alpha becomes 0 ).
----@param distanceMin number 
----@param distanceMax number 
+---@param distanceMin number
+---@param distanceMax number
 function ParticleEmitter:setNearClip(distanceMin, distanceMax) end
 
 --- Manually renders all particles the emitter has created.
@@ -55,7 +55,18 @@ function ParticleEmitter:is3D() end
 ---@param endAlpha number Sets the alpha value of the particle that it will reach when it dies.
 ---@param dieTime number Sets the time where the particle will be removed. (0-60)
 ---@return Particle # A Particle object
-function ParticleEmitter:add(material, position, startSize, endSize, startLength, endLength, startAlpha, endAlpha, dieTime) end
+function ParticleEmitter:add(
+	material,
+	position,
+	startSize,
+	endSize,
+	startLength,
+	endLength,
+	startAlpha,
+	endAlpha,
+	dieTime
+)
+end
 
 --- The function name has not much in common with its actual function.
 --- It applies a radius to every particles that affects the building of the bounding box, as it usually is constructed by the particle that has the lowest x, y and z and the highest x, y and z.
@@ -65,4 +76,3 @@ function ParticleEmitter:setParticleCullRadius(radius) end
 
 --- Removes the emitter, making it no longer usable from Lua. If particles remain, the emitter will be removed when all particles die.
 function ParticleEmitter:destroy() end
-

@@ -13,4 +13,3 @@ function Constraint:remove() end
 --- Returns whether the constraint is valid or not
 ---@return boolean # True if valid, false if not
 function Constraint:isValid() end
-

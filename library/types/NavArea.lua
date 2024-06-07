@@ -165,7 +165,7 @@ function NavArea:isBlocked(teamID, ignoreNavBlockers) end
 
 --- Returns the height difference on the Z axis of the two CNavAreas. This is calculated from the center most point on both CNavAreas.
 ---@param other NavArea The nav area to test against.
----@return number # 
+---@return number #
 function NavArea:computeGroundHeightChange(other) end
 
 --- Returns the parent NavArea
@@ -265,7 +265,7 @@ function NavArea:remove() end
 function NavArea:addToClosedList() end
 
 --- Returns how this CNavArea is connected to its parent.
----@return number # 
+---@return number #
 function NavArea:getParentHow() end
 
 --- Adds this CNavArea to the Open List.
@@ -284,7 +284,7 @@ function NavArea:computeDirection(pos) end
 --- Returns whether this NavArea has an outgoing ( one or two way ) connection to given NavArea in given direction.
 ---@param other NavArea The other NavArea to check for connection to.
 ---@param navDirType number The direction, in which to look for the connection. See NAV_DIR enums
----@return boolean # 
+---@return boolean #
 function NavArea:isConnectedAtSide(other, navDirType) end
 
 --- Returns whether this CNavArea can see given position.
@@ -306,4 +306,3 @@ function NavArea:setPlace(place) end
 
 --- Clears the open and closed lists for a new search.
 function NavArea:clearSearchLists() end
-

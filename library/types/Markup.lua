@@ -24,4 +24,3 @@ function Markup:getWidth() end
 ---@param alpha number? The alpha to draw it with. Default 255
 ---@param contentAlign number? The content alignment TEXT_ALIGN. Default TEXT_ALIGN.LEFT
 function Markup:draw(x, y, xAlign, yAlign, alpha, contentAlign) end
-

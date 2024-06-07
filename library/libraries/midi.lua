@@ -53,4 +53,3 @@ midi.MIDI["PATCH_CHANGE"] = nil
 midi.MIDI["CHANNEL_PRESSURE"] = nil
 ---@type number
 midi.MIDI["PITCH_BEND"] = nil
-

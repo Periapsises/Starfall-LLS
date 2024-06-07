@@ -55,4 +55,3 @@ function convar.getFlags(name) end
 ---@param name string # Name of the ConVar
 ---@return number # The minimum value or nil if not specified
 function convar.getMin(name) end
-

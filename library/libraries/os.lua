@@ -25,4 +25,3 @@ function os.time(dateData) end
 ---@param timeB number # The value to subtract
 ---@return number # Time difference
 function os.difftime(timeA, timeB) end
-

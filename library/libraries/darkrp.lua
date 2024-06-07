@@ -108,4 +108,3 @@ function darkrp.openF1Menu() end
 --- Get all food items.
 ---@return table? # Table with food items, or nil if there are none.
 function darkrp.getFoodItems() end
-

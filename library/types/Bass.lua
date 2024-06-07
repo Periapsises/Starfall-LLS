@@ -34,7 +34,7 @@ function Bass:is2D() end
 ---@param pos Vector Where to position the sound.
 function Bass:setPos(pos) end
 
---- Gets the fade distance of the sound in 3D space. 
+--- Gets the fade distance of the sound in 3D space.
 ---@return number # The distance before the sound starts to fade.
 ---@return number # The distance before the sound stops fading.
 ---@return boolean # Whether or not this sound uses simple fading.
@@ -144,4 +144,3 @@ function Bass:setPitch(pitch) end
 --- Gets whether the sound is streamed online.
 ---@return boolean # Boolean of whether the sound is streamed online.
 function Bass:isOnline() end
-

@@ -22,7 +22,7 @@ function http.base64Encode(data) end
 function http.canRequest() end
 
 --- Gets how many get/post operations can be in progress at the same time
----@return number # Maximum amount of concurrent active HTTP get/post requests 
+---@return number # Maximum amount of concurrent active HTTP get/post requests
 function http.getMaximumRequests() end
 
 --- Runs a new http GET request
@@ -58,4 +58,3 @@ function http.post(url, payload, callbackSuccess, callbackFail, headers) end
 ---@param url string # The url to convert
 ---@return string # The converted url
 function http.urlDropboxToRaw(url) end
-

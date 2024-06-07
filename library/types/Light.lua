@@ -57,4 +57,3 @@ function Light:setOuterAngle(ang) end
 --- Sets whether the light should cast onto models or not
 ---@param on boolean Whether the light shouldn't cast onto the models
 function Light:setNoModel(on) end
-

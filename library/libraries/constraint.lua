@@ -121,7 +121,22 @@ function constraint.getTable(ent) end
 ---@param rotateonly boolean? # If True, ballsocket will only affect the rotation allowing for free movement, otherwise it will limit both - rotation and movement. Default false
 ---@param nocollide boolean? # Bool whether or not to nocollide the two entities. Default false
 ---@return Constraint # The constraint entity
-function constraint.ballsocketadv(e1, e2, bone1, bone2, v1, v2, force_lim, torque_lim, minv, maxv, frictionv, rotateonly, nocollide) end
+function constraint.ballsocketadv(
+	e1,
+	e2,
+	bone1,
+	bone2,
+	v1,
+	v2,
+	force_lim,
+	torque_lim,
+	minv,
+	maxv,
+	frictionv,
+	rotateonly,
+	nocollide
+)
+end
 
 --- Sets the damping of an elastic attached to the entity
 ---@param index number # Index of the elastic constraint
@@ -146,7 +161,23 @@ function constraint.setElasticDamping(index, e, damping) end
 ---@param rigid boolean? # Whether the rope is rigid. Default false
 ---@param color Color? # The color of the rope. Default white
 ---@return Constraint # The constraint entity
-function constraint.rope(index, e1, e2, bone1, bone2, v1, v2, length, addlength, force_lim, width, materialName, rigid, color) end
+function constraint.rope(
+	index,
+	e1,
+	e2,
+	bone1,
+	bone2,
+	v1,
+	v2,
+	length,
+	addlength,
+	force_lim,
+	width,
+	materialName,
+	rigid,
+	color
+)
+end
 
 --- Axis two entities. v1 in e1's coordinates and v2 in e2's coordinates (or laxis in e1's coordinates again) define the axis
 ---@param e1 Entity # The first entity
@@ -162,4 +193,3 @@ function constraint.rope(index, e1, e2, bone1, bone2, v1, v2, length, addlength,
 ---@param laxis Vector? # Optional second position of the constraint, same as v2 but local to e1
 ---@return Constraint # The constraint entity
 function constraint.axis(e1, e2, bone1, bone2, v1, v2, force_lim, torque_lim, friction, nocollide, laxis) end
-

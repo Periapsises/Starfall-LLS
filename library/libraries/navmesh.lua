@@ -185,4 +185,3 @@ navmesh.NAV_DIR["SOUTH"] = nil
 navmesh.NAV_DIR["EAST"] = nil
 ---@type number
 navmesh.NAV_DIR["WEST"] = nil
-

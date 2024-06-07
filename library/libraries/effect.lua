@@ -13,4 +13,3 @@ function effect.create() end
 --- Returns number of effects able to be created
 ---@return number # Number of effects able to be created
 function effect.effectsLeft() end
-

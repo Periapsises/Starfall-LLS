@@ -5,7 +5,7 @@ xinput = {}
 --- Gets whether the button on the controller is currently pushed down.
 ---@param id number # Controller number. Starts at 0
 ---@param button number # The button to check for. See https://github.com/mitterdoo/garrysmod-xinput#xinput_gamepad_
----@return boolean # 
+---@return boolean #
 function xinput.getButton(id, button) end
 
 --- Gets the current coordinates of the stick on the controller.
@@ -41,4 +41,3 @@ function xinput.getTrigger(id, trigger) end
 ---@param softPercent number # A number between 0.0-1.0 for how much the soft rumble motor should vibrate.
 ---@param hardPercent number # A number between 0.0-1.0 for how much the hard rumble motor should vibrate.
 function xinput.setRumble(id, softPercent, hardPercent) end
-

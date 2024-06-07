@@ -73,4 +73,3 @@ function trace.line(start, endpos, filter, mask, colgroup, ignworld) end
 ---@return Vector? # Hit normal or nil if not hit
 ---@return number? # Hit fraction or nil if not hit
 function trace.intersectRayWithOBB(rayStart, rayDelta, boxOrigin, boxAngles, boxMins, boxMaxs) end
-

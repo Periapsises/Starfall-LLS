@@ -29,4 +29,3 @@ function sound.create(ent, path, nofilter) end
 --- Returns the number of sounds left that can be created
 ---@return number # The number of sounds left
 function sound.soundsLeft() end
-

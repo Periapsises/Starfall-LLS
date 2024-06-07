@@ -178,4 +178,3 @@ function VMatrix:getTranslation() end
 --- Self-Modifies. Does not return anything
 ---@param ang Angle Angle to rotate by
 function VMatrix:rotate(ang) end
-

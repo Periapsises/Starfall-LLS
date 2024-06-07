@@ -100,4 +100,3 @@ function game.steamIDTo64(id) end
 --- Returns true if the server is on a LAN
 ---@return boolean # True if the game is a lan game
 function game.isLan() end
-

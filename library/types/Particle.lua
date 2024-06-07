@@ -82,4 +82,3 @@ function Particle:setCollide(shouldCollide) end
 --- Sets the color of the particle.
 ---@param col Color Color to set to
 function Particle:setColor(col) end
-

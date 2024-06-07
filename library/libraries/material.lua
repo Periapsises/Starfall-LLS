@@ -101,4 +101,3 @@ function material.create(shader) end
 ---@param path string # The path of the material (don't include .vmt in the path)
 ---@return number # The basetexture's width
 function material.getWidth(path) end
-

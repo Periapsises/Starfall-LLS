@@ -54,4 +54,3 @@ function team.exists(ind) end
 ---@param ind number # Index of the team
 ---@return Color # Color of the team
 function team.getColor(ind) end
-

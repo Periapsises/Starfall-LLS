@@ -465,10 +465,9 @@ function math.slerpQuaternion(quat1, quat2, t) end
 function math.binToInt(str) end
 
 --- Basic code for Bezier-Spline algorithm.
----@param i number # 
----@param k number # 
----@param t number # 
----@param tinc number # 
+---@param i number #
+---@param k number #
+---@param t number #
+---@param tinc number #
 ---@return number # Number value
 function math.calcBSplineN(i, k, t, tinc) end
-

@@ -14,4 +14,3 @@ function nextbot.canSpawn() end
 ---@param model string # The model the nextbot will use.
 ---@return NextBot # The nextbot.
 function nextbot.create(spawnpos, model) end
-

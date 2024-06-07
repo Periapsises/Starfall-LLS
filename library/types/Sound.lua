@@ -42,4 +42,3 @@ function Sound:stop(fade) end
 ---@param vol number Volume to set to, between 0 and 1.
 ---@param fade number? Time in seconds to transition to this new volume. Default 0
 function Sound:setVolume(vol, fade) end
-

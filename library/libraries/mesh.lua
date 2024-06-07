@@ -56,7 +56,7 @@ function mesh.generateTangents(vertices) end
 ---@param x number # x
 ---@param y number # y
 ---@param z number # z
----@param handedness number # 
+---@param handedness number #
 function mesh.writeUserData(x, y, z, handedness) end
 
 --- Generates the uv for the provided vertices table
@@ -111,9 +111,8 @@ function mesh.createFromObj(obj, threaded, triangulate) end
 function mesh.writeColor(r, g, b, a) end
 
 --- Draws a quad using a position, normal and size
----@param position Vector # 
----@param normal Vector # 
----@param w number # 
----@param h number # 
+---@param position Vector #
+---@param normal Vector #
+---@param w number #
+---@param h number #
 function mesh.writeQuadEasy(position, normal, w, h) end
-

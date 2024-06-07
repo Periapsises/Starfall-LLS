@@ -56,4 +56,3 @@ function ParticleEffect:setUpVector(id, up) end
 ---@param id number Child Control Point ID (0-63)
 ---@param parentid number Parent control point ID (0-63)
 function ParticleEffect:setControlPointParent(id, parentid) end
-

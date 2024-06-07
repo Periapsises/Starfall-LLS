@@ -77,4 +77,3 @@ function socket.udp4() end
 ---@return table # New IPv4 TCP master object, or nil in case of error.
 ---@return string? # The error string if errored, else nil
 function socket.udp() end
-

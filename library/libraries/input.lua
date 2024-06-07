@@ -70,4 +70,3 @@ function input.screenToVector(x, y) end
 --- Sets the state of the mouse cursor
 ---@param enabled boolean # Whether or not the cursor should be enabled
 function input.enableCursor(enabled) end
-

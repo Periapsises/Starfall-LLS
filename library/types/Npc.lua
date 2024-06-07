@@ -46,4 +46,3 @@ function Npc:stop() end
 --- Makes the npc run to a destination
 ---@param vec Vector The position of the destination
 function Npc:goRun(vec) end
-

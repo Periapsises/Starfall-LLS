@@ -8,4 +8,3 @@ function Mesh:destroy() end
 
 --- Draws the mesh. Must be in a 3D rendering context.
 function Mesh:draw() end
-

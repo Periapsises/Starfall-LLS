@@ -543,4 +543,3 @@ function Player:setCrouchedWalkSpeed(newcwalkspeed) end
 --- Returns whether the player is in a vehicle
 ---@return boolean # True if player in vehicle
 function Player:inVehicle() end
-

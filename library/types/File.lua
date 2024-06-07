@@ -86,4 +86,3 @@ function File:readBool() end
 --- Writes a float and advances the file position
 ---@param x number The float to write
 function File:writeFloat(x) end
-

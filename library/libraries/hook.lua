@@ -25,4 +25,3 @@ function hook.runRemote(recipient, ...) end
 ---@param name string # Unique identifier
 ---@param func function # Function to run
 function hook.add(hookname, name, func) end
-

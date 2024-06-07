@@ -116,4 +116,3 @@ function Material:setFloat(key, v) end
 ---@param key string The key name to set
 ---@param v string The value to set it to
 function Material:setString(key, v) end
-
