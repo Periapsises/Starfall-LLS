@@ -23,7 +23,9 @@ jobs:
 
       - name: Run Lua script to generate documentation
         run: |
-          luajit generator/generator.lua docs/
+          cd generator
+          luajit generator.lua docs/
+          cd ..
 
       - name: Check out the addon branch
         uses: actions/checkout@v2
