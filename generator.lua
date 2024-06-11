@@ -4,9 +4,11 @@ local compileTypes = require("compile/types")
 local compileHooks = require("compile/hooks")
 
 local exportPath = arg[1] or "export/"
-os.execute("mkdir -p " .. exportPath .. "libraries")
-os.execute("mkdir -p " .. exportPath .. "types")
-os.execute("mkdir -p " .. exportPath .. "hooks")
+print("Exporting to: " .. exportPath)
+
+os.execute("mkdir -p " .. exportPath .. "libraries/")
+os.execute("mkdir -p " .. exportPath .. "types/")
+os.execute("mkdir -p " .. exportPath .. "hooks/")
 
 local url = "https://raw.githubusercontent.com/thegrb93/StarfallEx/gh-pages/sf_doc.json"
 print("Fetching documentation from: " .. url)
