@@ -5,6 +5,9 @@ on:
     - cron: '45 4 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
@@ -39,10 +42,11 @@ jobs:
           cp -r generator/docs/* addon/library/
           cd addon
           if ! git diff --quiet; then
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "Periapsises"
+            git config --global user.email "94928308+Periapsises@users.noreply.github.com"
+            git 
             git add .
-            git commit -m "Update documentation"
+            git commit -m "[Automatic] Update documentation"
             git push origin addon
           else
             echo "No changes detected"
