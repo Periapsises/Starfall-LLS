@@ -1,239 +1,245 @@
+---@meta
+
 ---@alias HookName
----| '"addLaw"' #  Called when a law is added. DarkRP only.
----| '"PlayerChangedTeam"' #  Called when a player has changed team using Player:SetTeam
----| '"OnNPCKilled"' #  Called whenever an NPC is killed.
----| '"predrawhud"' #  Called before drawing HUD (2D Context)
----| '"Removed"' #  Called when the starfall chip is removed
----| '"predrawopaquerenderables"' #  Called before opaque entities are drawn. (Only works with HUD) (3D context)
----| '"hudshoulddraw"' #  Called when a hud element is attempting to be drawn
----| '"predrawviewmodels"' #  Called before drawing the viewmodel rendergroup (3D Context)
----| '"input"' #  Called when an input on a wired SF chip is written to
----| '"PostEntityFireBullets"' #  Called after a bullet is fired and it's trace has been calculated
----| '"moneyPrinterPrinted"' #  Called after a money printer is has printed money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
----| '"onLockpickCompleted"' #  Called when a player has finished picking a lock, successfully or otherwise. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
----| '"DupeFinished"' #  Called after the starfall chip is duplicated and the duplication is finished.
----| '"net"' #  Called when a net message arrives
----| '"PlayerEndVoice"' #  Called when a player stops using voice chat.
----| '"PlayerHurt"' #  Called when a player gets hurt, uses the player_hurt game event clientside.
----| '"OnEntityWaterLevelChanged"' #  Called when the Entity:getWaterLevel of an entity is changed.
----| '"PlayerCanPickupWeapon"' #  Called when a wants to pick up a weapon
----| '"KeyPress"' #  Called when a player presses a key
----| '"renderoffscreen"' #  Called when a frame is requested to be drawn. Doesn't require a screen or HUD but only works on rendertargets. (2D Context)
----| '"EntityFireBullets"' #  Called every time a bullet is fired from an entity
----| '"OnEntityCreated"' #  Called when an entity gets created
----| '"render"' #  Called when a frame is requested to be drawn on screen. (2D/3D Context)
----| '"huddisconnected"' #  Called when the player disconnects from a HUD component linked to the Starfall Chip
----| '"PlayerNoClip"' #  Called when a player toggles noclip
----| '"permissionrequest"' #  Called when local client changed instance permissions
----| '"EntityTakeDamage"' #  Called when an entity is damaged
----| '"PlayerSay"' #  Called when a player sends a chat message
----| '"VRStart"' #  Called when a player enters VR
----| '"inputPressed"' #  Called when a button is pressed
----| '"PlayerSwitchFlashlight"' #  Called when a players turns their flashlight on or off
----| '"calcview"' #  Called when the engine wants to calculate the player's view. Only works if connected to Starfall HUD
----| '"xinputDisconnected"' #  Called when a controller has been disconnected. Client must have XInput Lua binary installed.
----| '"mouseWheeled"' #  Called when the mouse wheel is rotated
----| '"OnContextMenuOpen"' #  Called when the player opens the context menu
----| '"StartEntityDriving"' #  Called when a player starts driving an entity
----| '"ClientInitialized"' #  Called after a client's starfall has initialized. Use this to know when it's safe to send net messages to the client.
----| '"PlayerChat"' #  Called when a chat message is printed your chat window (chip owner only)
----| '"xinputPressed"' #  Called when a controller button has been pressed. Client must have XInput Lua binary installed.
----| '"mousemoved"' #  Called when the mouse is moved
----| '"PlayerAmmoChanged"' #  Called when a player's reserve ammo count changes.
----| '"OnContextMenuClose"' #  Called when the player closes the context menu
----| '"xinputConnected"' #  Called when a controller has been connected. Client must have XInput Lua binary installed.
----| '"predrawtranslucentrenderables"' #  Called before translucent entities are drawn. (Only works with HUD) (3D context)
----| '"resetLaws"' #  Called when laws are reset. DarkRP only. Usually the only hook called when /resetlaws is used.
----| '"NetworkEntityCreated"' #  Called when a clientside entity gets created or re-created via lag/PVS
----| '"PlayerSwitchWeapon"' #  Called when a player switches their weapon
----| '"PropBreak"' #  Called when an entity is broken
----| '"PlayerUnfrozeObject"' #  Called when a player unfreezes an object
----| '"PlayerDeath"' #  Called when a player dies
----| '"StarfallError"' #  Called when starfall chip errors
----| '"PlayerSpray"' #  Called when a players sprays their logo
----| '"hologrammatrix"' #  Called before entities are drawn. You can't render anything, but you can edit hologram matrices before they are drawn.
----| '"EndEntityDriving"' #  Called when a player stops driving an entity
----| '"lockdownStarted"' #  Called when a lockdown has started. DarkRP only.
----| '"xinputReleased"' #  Called when a controller button has been released. Client must have XInput Lua binary installed.
----| '"moneyPrinterCatchFire"' #  Called when a money printer is about to catch fire. DarkRP only. Called between moneyPrinterPrintMoney and moneyPrinterPrinted.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
----| '"think"' #  Think hook. Called each frame on the client and each game tick on the server.
----| '"FinishChat"' #  Called when the local player closes their chat window.
 ---| '"ChatTextChanged"' #  Called when the player's chat box text changes.  Requires the 'input' permission.
----| '"OnPhysgunFreeze"' #  Called when an entity is being frozen  Note this is not called for players or NPCs held with the physgun (bug)
----| '"postdrawtranslucentrenderables"' #  Called after translucent entities are drawn. (Only works with HUD) (3D context)
----| '"setupworldfog"' #  Called when world fog is drawn.
----| '"KeyRelease"' #  Called when a player releases a key
----| '"PlayerInitialSpawn"' #  Called when a player spawns for the first time
----| '"VRInput"' #  This gets called every time a boolean controller input action changes state
----| '"setupskyboxfog"' #  Called when skybox fog is drawn.
----| '"VRPreRender"' #  Called before rendering the game. Any code that you want to run once per frame should be put here. HUD is required.
----| '"readcell"' #  Called when a high speed device reads from a wired SF chip
+---| '"ClientInitialized"' #  Called after a client's starfall has initialized. Use this to know when it's safe to send net messages to the client.
 ---| '"ComponentLinked"' #  Called when a component is linked to the starfall
----| '"PhysgunPickup"' #  Called when an entity gets picked up by a physgun  This hook is predicted.
----| '"PlayerEnteredVehicle"' #  Called when a players enters a vehicle
----| '"VRExit"' #  Called when a player exits VR
----| '"PlayerUse"' #  Called when a player holds their use key and looks at an entity.  Will continuously run.
----| '"PlayerDisconnect"' #  Called when a player disconnects from the server. (Game Event)
----| '"PlayerLeaveVehicle"' #  Called when a players leaves a vehicle
----| '"lockdownEnded"' #  Called when a lockdown has ended. DarkRP only.
----| '"OnPhysgunReload"' #  Called when a player reloads their physgun
----| '"hudconnected"' #  Called when the player connects to a HUD component linked to the Starfall Chip
----| '"inputReleased"' #  Called when a button is released
----| '"GravGunPunt"' #  Called when a player punts with the gravity gun
----| '"EntityEmitSound"' #  Called whenever a sound has been played. This will not be called clientside if the server played the sound without the client also calling Entity:EmitSound.
----| '"OnPlayerPhysicsPickup"' #  Called when an entity is being picked up by +use
----| '"postdrawopaquerenderables"' #  Called after opaque entities are drawn. (Only works with HUD) (3D context)
----| '"starfallUsed"' #  Called when a player uses the screen
----| '"GravGunOnDropped"' #  Called when an entity is being dropped by a gravity gun
----| '"tick"' #  Tick hook. Called each game tick on both the server and client.
----| '"PlayerConnect"' #  Called when a player connects to the server. (Game Event)
----| '"DoAnimationEvent"' #  Called when a player animation event occurs
----| '"postdrawhud"' #  Called after drawing HUD (2D Context)
----| '"PhysgunDrop"' #  Called when an entity being held by a physgun gets dropped
----| '"StartChat"' #  Called when the local player opens their chat window.
----| '"writecell"' #  Called when a high speed device writes to a wired SF chip
----| '"PlayerSpawn"' #  Called when a player spawns
----| '"midi"' #  Event hook for midi devices.    Everytime a midi device outputs a signal, the callback function on the hook is called.  Read up on the MIDI protocol to make better sense of everything -> https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html  Commands and their parameters:  0x80 NOTE_OFF              : param1 = key;                         param2 = velocity  0x90 NOTE_ON               : param1 = key;                         param2 = velocity  0xA0 AFTERTOUCH            : param1 = key;                         param2 = touch  0xB0 CONTINUOUS_CONTROLLER : param1 = button_number;               param2 = button_value  0xC0 PATCH_CHANGE          : param1 = patch number;  0xD0 CHANNEL_PRESSURE      : param1 = pressure;  0xE0 PITCH_BEND            : param1 = lsb(least signifigant bit);  param2 = msb(most signifigant bit)
----| '"postdrawskybox"' #  Called after the 3D skybox is drawn. This will not be called if PreDrawSkyBox has prevented rendering of the skybox
----| '"removeLaw"' #  Called when a law is removed. DarkRP only. Not usually called when /resetlaws is used.
----| '"lockpickStarted"' #  Called when a player is about to pick a lock. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
----| '"NotifyShouldTransmit"' #  Called when a clientside entity transmit state is changed. Usually when changing PVS  If you want clientside render changes to persist on an entity you have to re-apply them  each time it begins transmitting again
----| '"remote"' #  Remote hook.  This hook can be called from other instances
----| '"VRPreRenderRight"' #  Called before rendering the right eye. This along with the previous hook can be used to render different things in different eyes. HUD is required.
----| '"PlayerDisconnected"' #  Called when a player disconnects
----| '"xinputStick"' #  Called when a stick on the controller has moved. Client must have XInput Lua binary installed.
----| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun.  Not to be confused with PhysgunPickup which is a predicted hook
----| '"moneyPrinterPrintMoney"' #  Called when a money printer is about to print money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  You should use moneyPrinterPrinted instead, as the printer is not guaranteed to print money even if this hook is called.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
----| '"PlayerChangename"' #  Called when a player changes their Steam name. (Game Event)
----| '"playerWalletChanged"' #  Called when a player receives money. DarkRP only.  Will only be called if the recipient is the owner of the chip, or if the chip is running in superuser mode.
----| '"PlayerFootstep"' #  Called whenever a player steps
----| '"postdraw2dskybox"' #  Called right after the 2D skybox has been drawn - allowing you to draw over it.
----| '"xinputTrigger"' #  Called when a trigger on the controller has moved. Client must have XInput Lua binary installed.
----| '"EntityRemoved"' #  Called when an entity is removed
----| '"predrawskybox"' #  Called before the 3D skybox is drawn. This will not be called for maps with no 3D skybox, or when the 3d skybox is disabled
----| '"GravGunOnPickedUp"' #  Called when an entity is being picked up by a gravity gun
----| '"OnPlayerPhysicsDrop"' #  Called when an entity is being dropped or thrown by +use
----| '"PlayerStartVoice"' #  Called when a player starts using voice chat.
 ---| '"ComponentUnlinked"' #  Called when a component is unlinked to the starfall
+---| '"DoAnimationEvent"' #  Called when a player animation event occurs
+---| '"DupeFinished"' #  Called after the starfall chip is duplicated and the duplication is finished.
+---| '"EndEntityDriving"' #  Called when a player stops driving an entity
+---| '"EntityEmitSound"' #  Called whenever a sound has been played. This will not be called clientside if the server played the sound without the client also calling Entity:EmitSound.
+---| '"EntityFireBullets"' #  Called every time a bullet is fired from an entity
+---| '"EntityRemoved"' #  Called when an entity is removed
+---| '"EntityTakeDamage"' #  Called when an entity is damaged
+---| '"FinishChat"' #  Called when the local player closes their chat window.
+---| '"GravGunOnDropped"' #  Called when an entity is being dropped by a gravity gun
+---| '"GravGunOnPickedUp"' #  Called when an entity is being picked up by a gravity gun
+---| '"GravGunPunt"' #  Called when a player punts with the gravity gun
+---| '"KeyPress"' #  Called when a player presses a key
+---| '"KeyRelease"' #  Called when a player releases a key
+---| '"NetworkEntityCreated"' #  Called when a clientside entity gets created or re-created via lag/PVS
+---| '"NotifyShouldTransmit"' #  Called when a clientside entity transmit state is changed. Usually when changing PVS  If you want clientside render changes to persist on an entity you have to re-apply them  each time it begins transmitting again
+---| '"OnContextMenuClose"' #  Called when the player closes the context menu
+---| '"OnContextMenuOpen"' #  Called when the player opens the context menu
+---| '"OnEntityCreated"' #  Called when an entity gets created
+---| '"OnEntityWaterLevelChanged"' #  Called when the Entity:getWaterLevel of an entity is changed.
+---| '"OnNPCKilled"' #  Called whenever an NPC is killed.
+---| '"OnPhysgunFreeze"' #  Called when an entity is being frozen  Note this is not called for players or NPCs held with the physgun (bug)
+---| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun.  Not to be confused with PhysgunPickup which is a predicted hook
+---| '"OnPhysgunReload"' #  Called when a player reloads their physgun
+---| '"OnPlayerHitGround"' #  Called when a player makes contact with the ground after a jump or a fall.
+---| '"OnPlayerJump"' #  Called when a player jumps.
+---| '"OnPlayerPhysicsDrop"' #  Called when an entity is being dropped or thrown by +use
+---| '"OnPlayerPhysicsPickup"' #  Called when an entity is being picked up by +use
+---| '"PhysgunDrop"' #  Called when an entity being held by a physgun gets dropped
+---| '"PhysgunPickup"' #  Called when an entity gets picked up by a physgun  This hook is predicted.
+---| '"PlayerAmmoChanged"' #  Called when a player's reserve ammo count changes.
+---| '"PlayerCanPickupWeapon"' #  Called when a wants to pick up a weapon
+---| '"PlayerChangedTeam"' #  Called when a player has changed team using Player:SetTeam
+---| '"PlayerChangename"' #  Called when a player changes their Steam name. (Game Event)
+---| '"PlayerChat"' #  Called when a chat message is printed your chat window (chip owner only)
+---| '"PlayerConnect"' #  Called when a player connects to the server. (Game Event)
+---| '"PlayerDeath"' #  Called when a player dies
+---| '"PlayerDisconnect"' #  Called when a player disconnects from the server. (Game Event)
+---| '"PlayerDisconnected"' #  Called when a player disconnects
+---| '"PlayerEndVoice"' #  Called when a player stops using voice chat.
+---| '"PlayerEnteredVehicle"' #  Called when a players enters a vehicle
+---| '"PlayerFootstep"' #  Called whenever a player steps
+---| '"PlayerHurt"' #  Called when a player gets hurt, uses the player_hurt game event clientside.
+---| '"PlayerInitialSpawn"' #  Called when a player spawns for the first time
+---| '"PlayerLeaveVehicle"' #  Called when a players leaves a vehicle
+---| '"PlayerNoClip"' #  Called when a player toggles noclip
+---| '"PlayerSay"' #  Called when a player sends a chat message
+---| '"PlayerSpawn"' #  Called when a player spawns
+---| '"PlayerSpray"' #  Called when a players sprays their logo
+---| '"PlayerStartVoice"' #  Called when a player starts using voice chat.
+---| '"PlayerSwitchFlashlight"' #  Called when a players turns their flashlight on or off
+---| '"PlayerSwitchWeapon"' #  Called when a player switches their weapon
+---| '"PlayerUnfrozeObject"' #  Called when a player unfreezes an object
+---| '"PlayerUse"' #  Called when a player holds their use key and looks at an entity.  Will continuously run.
+---| '"PostEntityFireBullets"' #  Called after a bullet is fired and it's trace has been calculated
+---| '"PropBreak"' #  Called when an entity is broken
+---| '"Removed"' #  Called when the starfall chip is removed
+---| '"StarfallError"' #  Called when starfall chip errors
+---| '"StartChat"' #  Called when the local player opens their chat window.
+---| '"StartEntityDriving"' #  Called when a player starts driving an entity
+---| '"VRExit"' #  Called when a player exits VR
+---| '"VRInput"' #  This gets called every time a boolean controller input action changes state
+---| '"VRPreRender"' #  Called before rendering the game. Any code that you want to run once per frame should be put here. HUD is required.
+---| '"VRPreRenderRight"' #  Called before rendering the right eye. This along with the previous hook can be used to render different things in different eyes. HUD is required.
+---| '"VRStart"' #  Called when a player enters VR
+---| '"addLaw"' #  Called when a law is added. DarkRP only.
+---| '"calcview"' #  Called when the engine wants to calculate the player's view. Only works if connected to Starfall HUD
 ---| '"drawhud"' #  Called when a frame is requested to be drawn on hud. (2D Context)
+---| '"hologrammatrix"' #  Called before entities are drawn. You can't render anything, but you can edit hologram matrices before they are drawn.
+---| '"hudconnected"' #  Called when the player connects to a HUD component linked to the Starfall Chip
+---| '"huddisconnected"' #  Called when the player disconnects from a HUD component linked to the Starfall Chip
+---| '"hudshoulddraw"' #  Called when a hud element is attempting to be drawn
+---| '"input"' #  Called when an input on a wired SF chip is written to
+---| '"inputPressed"' #  Called when a button is pressed
+---| '"inputReleased"' #  Called when a button is released
+---| '"lockdownEnded"' #  Called when a lockdown has ended. DarkRP only.
+---| '"lockdownStarted"' #  Called when a lockdown has started. DarkRP only.
+---| '"lockpickStarted"' #  Called when a player is about to pick a lock. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
+---| '"midi"' #  Event hook for midi devices.    Everytime a midi device outputs a signal, the callback function on the hook is called.  Read up on the MIDI protocol to make better sense of everything -> https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html  Commands and their parameters:  0x80 NOTE_OFF              : param1 = key;                         param2 = velocity  0x90 NOTE_ON               : param1 = key;                         param2 = velocity  0xA0 AFTERTOUCH            : param1 = key;                         param2 = touch  0xB0 CONTINUOUS_CONTROLLER : param1 = button_number;               param2 = button_value  0xC0 PATCH_CHANGE          : param1 = patch number;  0xD0 CHANNEL_PRESSURE      : param1 = pressure;  0xE0 PITCH_BEND            : param1 = lsb(least signifigant bit);  param2 = msb(most signifigant bit)
+---| '"moneyPrinterCatchFire"' #  Called when a money printer is about to catch fire. DarkRP only. Called between moneyPrinterPrintMoney and moneyPrinterPrinted.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"moneyPrinterPrintMoney"' #  Called when a money printer is about to print money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  You should use moneyPrinterPrinted instead, as the printer is not guaranteed to print money even if this hook is called.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"moneyPrinterPrinted"' #  Called after a money printer is has printed money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"mouseWheeled"' #  Called when the mouse wheel is rotated
+---| '"mousemoved"' #  Called when the mouse is moved
+---| '"net"' #  Called when a net message arrives
+---| '"onLockpickCompleted"' #  Called when a player has finished picking a lock, successfully or otherwise. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
+---| '"permissionrequest"' #  Called when local client changed instance permissions
+---| '"playerWalletChanged"' #  Called when a player receives money. DarkRP only.  Will only be called if the recipient is the owner of the chip, or if the chip is running in superuser mode.
+---| '"postdraw2dskybox"' #  Called right after the 2D skybox has been drawn - allowing you to draw over it.
+---| '"postdrawhud"' #  Called after drawing HUD (2D Context)
+---| '"postdrawopaquerenderables"' #  Called after opaque entities are drawn. (Only works with HUD) (3D context)
+---| '"postdrawskybox"' #  Called after the 3D skybox is drawn. This will not be called if PreDrawSkyBox has prevented rendering of the skybox
+---| '"postdrawtranslucentrenderables"' #  Called after translucent entities are drawn. (Only works with HUD) (3D context)
+---| '"predrawhud"' #  Called before drawing HUD (2D Context)
+---| '"predrawopaquerenderables"' #  Called before opaque entities are drawn. (Only works with HUD) (3D context)
+---| '"predrawskybox"' #  Called before the 3D skybox is drawn. This will not be called for maps with no 3D skybox, or when the 3d skybox is disabled
+---| '"predrawtranslucentrenderables"' #  Called before translucent entities are drawn. (Only works with HUD) (3D context)
+---| '"predrawviewmodels"' #  Called before drawing the viewmodel rendergroup (3D Context)
+---| '"readcell"' #  Called when a high speed device reads from a wired SF chip
+---| '"remote"' #  Remote hook.  This hook can be called from other instances
+---| '"removeLaw"' #  Called when a law is removed. DarkRP only. Not usually called when /resetlaws is used.
+---| '"render"' #  Called when a frame is requested to be drawn on screen. (2D/3D Context)
+---| '"renderoffscreen"' #  Called when a frame is requested to be drawn. Doesn't require a screen or HUD but only works on rendertargets. (2D Context)
 ---| '"renderscene"' #  Called when a scene is requested to be drawn. This is used for the render.renderview function.
+---| '"resetLaws"' #  Called when laws are reset. DarkRP only. Usually the only hook called when /resetlaws is used.
+---| '"setupskyboxfog"' #  Called when skybox fog is drawn.
+---| '"setupworldfog"' #  Called when world fog is drawn.
+---| '"starfallUsed"' #  Called when a player uses the screen
+---| '"think"' #  Think hook. Called each frame on the client and each game tick on the server.
+---| '"tick"' #  Tick hook. Called each game tick on both the server and client.
+---| '"writecell"' #  Called when a high speed device writes to a wired SF chip
+---| '"xinputConnected"' #  Called when a controller has been connected. Client must have XInput Lua binary installed.
+---| '"xinputDisconnected"' #  Called when a controller has been disconnected. Client must have XInput Lua binary installed.
+---| '"xinputPressed"' #  Called when a controller button has been pressed. Client must have XInput Lua binary installed.
+---| '"xinputReleased"' #  Called when a controller button has been released. Client must have XInput Lua binary installed.
+---| '"xinputStick"' #  Called when a stick on the controller has moved. Client must have XInput Lua binary installed.
+---| '"xinputTrigger"' #  Called when a trigger on the controller has moved. Client must have XInput Lua binary installed.
 ---| string # A custom hook name called when triggered by hook.run
 
----@alias addLaw fun(index: number, law: string, player: Player?)
----@alias PlayerChangedTeam fun(ply: Player, oldTeam: number, newTeam: number)
----@alias OnNPCKilled fun(npc: Npc, attacker: Entity, inflictor: Entity)
----@alias predrawhud fun()
----@alias Removed fun()
----@alias predrawopaquerenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
----@alias hudshoulddraw fun(str: string) : boolean
----@alias predrawviewmodels fun()
----@alias input fun(input: string, value: any)
----@alias PostEntityFireBullets fun(ent: Entity, data: table)
----@alias moneyPrinterPrinted fun(moneyprinter: Entity, moneybag: Entity)
----@alias onLockpickCompleted fun(ply: Player, success: boolean, ent: Entity)
----@alias DupeFinished fun(entTbl: table)
----@alias net fun(name: string, len: number, ply: Player?)
----@alias PlayerEndVoice fun(ply: Player)
----@alias PlayerHurt fun(ply: Player, attacker: Entity, newHealth: number, damageTaken: number)
----@alias OnEntityWaterLevelChanged fun(ent: Entity, old: number, new: number)
----@alias PlayerCanPickupWeapon fun(ply: Player, wep: Weapon)
----@alias KeyPress fun(ply: Player, key: number)
----@alias renderoffscreen fun()
----@alias EntityFireBullets fun(ent: Entity, data: table) : function?
----@alias OnEntityCreated fun(ent: Entity)
----@alias render fun()
----@alias huddisconnected fun(ent: Entity, ply: Player)
----@alias PlayerNoClip fun(ply: Player, newState: boolean)
----@alias permissionrequest fun()
----@alias EntityTakeDamage fun(target: Entity, attacker: Entity, inflictor: Entity, amount: number, type: number, position: Vector, force: Vector) : boolean?
----@alias PlayerSay fun(ply: Player, text: string, teamChat: boolean) : string?
----@alias VRStart fun(ply: Player)
----@alias inputPressed fun(button: number)
----@alias PlayerSwitchFlashlight fun(ply: Player, state: boolean)
----@alias calcview fun(pos: Vector, ang: Angle, fov: number, znear: number, zfar: number) : table
----@alias xinputDisconnected fun(id: number, when: number)
----@alias mouseWheeled fun(delta: number)
----@alias OnContextMenuOpen fun()
----@alias StartEntityDriving fun(ent: Entity, ply: Player)
----@alias ClientInitialized fun(ply: Player)
----@alias PlayerChat fun(ply: Player, text: string, team: boolean, isdead: boolean) : boolean
----@alias xinputPressed fun(id: number, button: number, when: number)
----@alias mousemoved fun(x: number, y: number)
----@alias PlayerAmmoChanged fun(ply: Player, ammoID: number, oldcount: number, newcount: number)
----@alias OnContextMenuClose fun()
----@alias xinputConnected fun(id: number, when: number)
----@alias predrawtranslucentrenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
----@alias resetLaws fun(player: Player?)
----@alias NetworkEntityCreated fun(ent: Entity)
----@alias PlayerSwitchWeapon fun(ply: Player, oldwep: Weapon, newweapon: Weapon)
----@alias PropBreak fun(ply: Player, ent: Entity)
----@alias PlayerUnfrozeObject fun(ply: Player, ent: Entity, physobj: PhysObj)
----@alias PlayerDeath fun(ply: Player, inflictor: Entity, attacker: Entity)
----@alias StarfallError fun(ent: Entity, ply: Player, err: string)
----@alias PlayerSpray fun(ply: Player)
----@alias hologrammatrix fun()
----@alias EndEntityDriving fun(ent: Entity, ply: Player)
----@alias lockdownStarted fun(actor: Player?)
----@alias xinputReleased fun(id: number, button: number, when: number)
----@alias moneyPrinterCatchFire fun(moneyprinter: Entity)
----@alias think fun()
----@alias FinishChat fun()
 ---@alias ChatTextChanged fun(txt: string)
----@alias OnPhysgunFreeze fun(physgun: Weapon, physobj: PhysObj, ent: Entity, ply: Player)
----@alias postdrawtranslucentrenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
----@alias setupworldfog fun()
----@alias KeyRelease fun(ply: Player, key: number)
----@alias PlayerInitialSpawn fun(ply: Player, transition: boolean)
----@alias VRInput fun(actionname: string, state: boolean)
----@alias setupskyboxfog fun(scale: number)
----@alias VRPreRender fun()
----@alias readcell fun(address: any) : any
+---@alias ClientInitialized fun(ply: Player)
 ---@alias ComponentLinked fun(ent: Entity)
----@alias PhysgunPickup fun(ply: Player, ent: Entity)
----@alias PlayerEnteredVehicle fun(ply: Player, vehicle: Vehicle, num: number)
----@alias VRExit fun(ply: Player)
----@alias PlayerUse fun(ply: Player, ent: Entity)
----@alias PlayerDisconnect fun(networkid: string, name: string, player: Player, reason: string, isbot: boolean)
----@alias PlayerLeaveVehicle fun(ply: Player, vehicle: Vehicle)
----@alias lockdownEnded fun(actor: Player?)
----@alias OnPhysgunReload fun(physgun: Weapon, ply: Player)
----@alias hudconnected fun(ent: Entity, ply: Player)
----@alias inputReleased fun(button: number)
----@alias GravGunPunt fun(ply: Player, ent: Entity)
----@alias EntityEmitSound fun(data: table) : boolean?
----@alias OnPlayerPhysicsPickup fun(ply: Player, ent: Entity)
----@alias postdrawopaquerenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
----@alias starfallUsed fun(activator: Player, used: Entity)
----@alias GravGunOnDropped fun(ply: Player, ent: Entity)
----@alias tick fun()
----@alias PlayerConnect fun(networkid: string, name: string, userid: number, isbot: boolean)
----@alias DoAnimationEvent fun(ply: Player, event: number, data: number)
----@alias postdrawhud fun()
----@alias PhysgunDrop fun(ply: Player, ent: Entity)
----@alias StartChat fun(isTeamChat: boolean)
----@alias writecell fun(address: any, data: table)
----@alias PlayerSpawn fun(ply: Player)
----@alias midi fun(time: number, command: number, param1: number, param2: number)
----@alias postdrawskybox fun()
----@alias removeLaw fun(index: number, law: string, player: Player?)
----@alias lockpickStarted fun(ply: Player, ent: Entity, trace: table)
----@alias NotifyShouldTransmit fun(ent: Entity, shouldtransmit: boolean)
----@alias remote fun(sender: Entity, owner: Player, payload: ...)
----@alias VRPreRenderRight fun()
----@alias PlayerDisconnected fun(ply: Player)
----@alias xinputStick fun(id: number, x: number, y: number, stick: number, when: number)
----@alias OnPhysgunPickup fun(ply: Player, ent: Entity)
----@alias moneyPrinterPrintMoney fun(moneyprinter: Entity, amount: number)
----@alias PlayerChangename fun(player: Player, oldname: string, newname: string)
----@alias playerWalletChanged fun(ply: Player, amount: number, wallet: number)
----@alias PlayerFootstep fun(ply: Player, pos: Vector, foot: number, sound: string, volume: number) : boolean?
----@alias postdraw2dskybox fun()
----@alias xinputTrigger fun(id: number, value: number, trigger: number, when: number)
----@alias EntityRemoved fun(ent: Entity, isSnapshot: boolean)
----@alias predrawskybox fun() : boolean
----@alias GravGunOnPickedUp fun(ply: Player, ent: Entity)
----@alias OnPlayerPhysicsDrop fun(ply: Player, ent: Entity, thrown: boolean)
----@alias PlayerStartVoice fun(ply: Player) : boolean?
 ---@alias ComponentUnlinked fun(ent: Entity)
+---@alias DoAnimationEvent fun(ply: Player, event: number, data: number)
+---@alias DupeFinished fun(entTbl: table)
+---@alias EndEntityDriving fun(ent: Entity, ply: Player)
+---@alias EntityEmitSound fun(data: table) : boolean?
+---@alias EntityFireBullets fun(ent: Entity, data: table) : function?
+---@alias EntityRemoved fun(ent: Entity, isSnapshot: boolean)
+---@alias EntityTakeDamage fun(target: Entity, attacker: Entity, inflictor: Entity, amount: number, type: number, position: Vector, force: Vector) : boolean?
+---@alias FinishChat fun()
+---@alias GravGunOnDropped fun(ply: Player, ent: Entity)
+---@alias GravGunOnPickedUp fun(ply: Player, ent: Entity)
+---@alias GravGunPunt fun(ply: Player, ent: Entity)
+---@alias KeyPress fun(ply: Player, key: number)
+---@alias KeyRelease fun(ply: Player, key: number)
+---@alias NetworkEntityCreated fun(ent: Entity)
+---@alias NotifyShouldTransmit fun(ent: Entity, shouldtransmit: boolean)
+---@alias OnContextMenuClose fun()
+---@alias OnContextMenuOpen fun()
+---@alias OnEntityCreated fun(ent: Entity)
+---@alias OnEntityWaterLevelChanged fun(ent: Entity, old: number, new: number)
+---@alias OnNPCKilled fun(npc: Npc, attacker: Entity, inflictor: Entity)
+---@alias OnPhysgunFreeze fun(physgun: Weapon, physobj: PhysObj, ent: Entity, ply: Player)
+---@alias OnPhysgunPickup fun(ply: Player, ent: Entity)
+---@alias OnPhysgunReload fun(physgun: Weapon, ply: Player)
+---@alias OnPlayerHitGround fun(ply: Player, inWater: boolean, onFloater: boolean, speed: number)
+---@alias OnPlayerJump fun(ply: Player, speed: number)
+---@alias OnPlayerPhysicsDrop fun(ply: Player, ent: Entity, thrown: boolean)
+---@alias OnPlayerPhysicsPickup fun(ply: Player, ent: Entity)
+---@alias PhysgunDrop fun(ply: Player, ent: Entity)
+---@alias PhysgunPickup fun(ply: Player, ent: Entity)
+---@alias PlayerAmmoChanged fun(ply: Player, ammoID: number, oldcount: number, newcount: number)
+---@alias PlayerCanPickupWeapon fun(ply: Player, wep: Weapon)
+---@alias PlayerChangedTeam fun(ply: Player, oldTeam: number, newTeam: number)
+---@alias PlayerChangename fun(player: Player, oldname: string, newname: string)
+---@alias PlayerChat fun(ply: Player, text: string, team: boolean, isdead: boolean) : boolean
+---@alias PlayerConnect fun(networkid: string, name: string, userid: number, isbot: boolean)
+---@alias PlayerDeath fun(ply: Player, inflictor: Entity, attacker: Entity)
+---@alias PlayerDisconnect fun(networkid: string, name: string, player: Player, reason: string, isbot: boolean)
+---@alias PlayerDisconnected fun(ply: Player)
+---@alias PlayerEndVoice fun(ply: Player)
+---@alias PlayerEnteredVehicle fun(ply: Player, vehicle: Vehicle, num: number)
+---@alias PlayerFootstep fun(ply: Player, pos: Vector, foot: number, sound: string, volume: number) : boolean?
+---@alias PlayerHurt fun(ply: Player, attacker: Entity, newHealth: number, damageTaken: number)
+---@alias PlayerInitialSpawn fun(ply: Player, transition: boolean)
+---@alias PlayerLeaveVehicle fun(ply: Player, vehicle: Vehicle)
+---@alias PlayerNoClip fun(ply: Player, newState: boolean)
+---@alias PlayerSay fun(ply: Player, text: string, teamChat: boolean) : string?
+---@alias PlayerSpawn fun(ply: Player)
+---@alias PlayerSpray fun(ply: Player)
+---@alias PlayerStartVoice fun(ply: Player) : boolean?
+---@alias PlayerSwitchFlashlight fun(ply: Player, state: boolean)
+---@alias PlayerSwitchWeapon fun(ply: Player, oldwep: Weapon, newweapon: Weapon)
+---@alias PlayerUnfrozeObject fun(ply: Player, ent: Entity, physobj: PhysObj)
+---@alias PlayerUse fun(ply: Player, ent: Entity)
+---@alias PostEntityFireBullets fun(ent: Entity, data: table)
+---@alias PropBreak fun(ply: Player, ent: Entity)
+---@alias Removed fun()
+---@alias StarfallError fun(ent: Entity, ply: Player, err: string)
+---@alias StartChat fun(isTeamChat: boolean)
+---@alias StartEntityDriving fun(ent: Entity, ply: Player)
+---@alias VRExit fun(ply: Player)
+---@alias VRInput fun(actionname: string, state: boolean)
+---@alias VRPreRender fun()
+---@alias VRPreRenderRight fun()
+---@alias VRStart fun(ply: Player)
+---@alias addLaw fun(index: number, law: string, player: Player?)
+---@alias calcview fun(pos: Vector, ang: Angle, fov: number, znear: number, zfar: number) : table
 ---@alias drawhud fun()
+---@alias hologrammatrix fun()
+---@alias hudconnected fun(ent: Entity, ply: Player)
+---@alias huddisconnected fun(ent: Entity, ply: Player)
+---@alias hudshoulddraw fun(str: string) : boolean
+---@alias input fun(input: string, value: any)
+---@alias inputPressed fun(button: number)
+---@alias inputReleased fun(button: number)
+---@alias lockdownEnded fun(actor: Player?)
+---@alias lockdownStarted fun(actor: Player?)
+---@alias lockpickStarted fun(ply: Player, ent: Entity, trace: table)
+---@alias midi fun(time: number, command: number, param1: number, param2: number)
+---@alias moneyPrinterCatchFire fun(moneyprinter: Entity)
+---@alias moneyPrinterPrintMoney fun(moneyprinter: Entity, amount: number)
+---@alias moneyPrinterPrinted fun(moneyprinter: Entity, moneybag: Entity)
+---@alias mouseWheeled fun(delta: number)
+---@alias mousemoved fun(x: number, y: number)
+---@alias net fun(name: string, len: number, ply: Player?)
+---@alias onLockpickCompleted fun(ply: Player, success: boolean, ent: Entity)
+---@alias permissionrequest fun()
+---@alias playerWalletChanged fun(ply: Player, amount: number, wallet: number)
+---@alias postdraw2dskybox fun()
+---@alias postdrawhud fun()
+---@alias postdrawopaquerenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias postdrawskybox fun()
+---@alias postdrawtranslucentrenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias predrawhud fun()
+---@alias predrawopaquerenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias predrawskybox fun() : boolean
+---@alias predrawtranslucentrenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias predrawviewmodels fun()
+---@alias readcell fun(address: any) : any
+---@alias remote fun(sender: Entity, owner: Player, payload: ...)
+---@alias removeLaw fun(index: number, law: string, player: Player?)
+---@alias render fun()
+---@alias renderoffscreen fun()
 ---@alias renderscene fun(origin: Vector, angles: Angle, fov: number)
+---@alias resetLaws fun(player: Player?)
+---@alias setupskyboxfog fun(scale: number)
+---@alias setupworldfog fun()
+---@alias starfallUsed fun(activator: Player, used: Entity)
+---@alias think fun()
+---@alias tick fun()
+---@alias writecell fun(address: any, data: table)
+---@alias xinputConnected fun(id: number, when: number)
+---@alias xinputDisconnected fun(id: number, when: number)
+---@alias xinputPressed fun(id: number, button: number, when: number)
+---@alias xinputReleased fun(id: number, button: number, when: number)
+---@alias xinputStick fun(id: number, x: number, y: number, stick: number, when: number)
+---@alias xinputTrigger fun(id: number, value: number, trigger: number, when: number)
