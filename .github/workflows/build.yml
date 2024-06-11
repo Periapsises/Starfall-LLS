@@ -1,0 +1,48 @@
+name: Generate Documentation
+
+on:
+  schedule:
+    - cron: '45 4 * * *'
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the generator branch
+        uses: actions/checkout@v2
+        with:
+          ref: generator
+
+      - name: Set up LuaJIT
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y luajit
+
+      - name: Run Lua script to generate documentation
+        run: |
+          luajit generator.lua docs
+
+      - name: Save generated documentation
+        run: |
+          mkdir -p generated-docs
+          cp -r docs/* generated-docs/
+
+      - name: Check out the addon branch
+        uses: actions/checkout@v2
+        with:
+          ref: addon
+
+      - name: Compare generated documentation with library path
+        run: |
+          mkdir -p library
+          cp -r generated-docs/* library/
+          if ! git diff --quiet; then
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "Update documentation"
+            git push origin addon
+          else
+            echo "No changes detected"
+          fi
