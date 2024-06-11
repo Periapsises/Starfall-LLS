@@ -12,3 +12,8 @@ An addon for [Lua Language Server](https://luals.github.io) that provides [Starf
 
 > [!NOTE]
 > For VSCode this applies to the workspace settings meaning you have to enable the addon for every project you have.
+
+> [!IMPORTANT]
+> You need [git](https://www.git-scm.com) installed on your device and also have it in your `PATH`.  
+> LuaLS uses `git` to fetch all addons from their repository.  
+> You can run `git --version` in a terminal to see if it is installed.
