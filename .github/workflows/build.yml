@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Lua script to generate documentation
         run: |
-          luajit generator.lua docs
+          luajit generator.lua docs/
 
       - name: Save generated documentation
         run: |
