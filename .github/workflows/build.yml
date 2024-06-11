@@ -3,6 +3,7 @@ name: Generate Documentation
 on:
   schedule:
     - cron: '45 4 * * *'
+  workflow_dispatch:
 
 jobs:
   generate-docs:
