@@ -44,7 +44,6 @@ jobs:
           if ! git diff --quiet; then
             git config --global user.name "Periapsises"
             git config --global user.email "94928308+Periapsises@users.noreply.github.com"
-            git 
             git add .
             git commit -m "[Automatic] Update documentation"
             git push origin addon
