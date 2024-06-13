@@ -132,7 +132,7 @@
 ---@alias EndEntityDriving fun(ent: Entity, ply: Player)
 ---@alias EntityEmitSound fun(data: table) : boolean?
 ---@alias EntityFireBullets fun(ent: Entity, data: table) : function?
----@alias EntityRemoved fun(ent: Entity, isSnapshot: boolean)
+---@alias EntityRemoved fun(ent: Entity, fullupdate: boolean)
 ---@alias EntityTakeDamage fun(target: Entity, attacker: Entity, inflictor: Entity, amount: number, type: number, position: Vector, force: Vector) : boolean?
 ---@alias FinishChat fun()
 ---@alias GravGunOnDropped fun(ply: Player, ent: Entity)
