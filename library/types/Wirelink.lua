@@ -85,3 +85,4 @@ function Wirelink:outputType(name) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L732).
 ---@return table # All of the wirelink's outputs
 function Wirelink:outputs() end
+

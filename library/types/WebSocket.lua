@@ -48,3 +48,4 @@ function WebSocket:getState() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/websocket.lua#L137).
 ---@param msg string # What to send
 function WebSocket:write(msg) end
+

@@ -22,3 +22,4 @@ function effect.create() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/effect.lua#L51).
 ---@return number # Number of effects able to be created
 function effect.effectsLeft() end
+

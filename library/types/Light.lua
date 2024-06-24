@@ -88,3 +88,4 @@ function Light:setSize(size) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/light.lua#L228).
 ---@param style number # The number of the flicker style
 function Light:setStyle(style) end
+

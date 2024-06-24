@@ -11,7 +11,7 @@ wire = {}
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L345).
 ---@param names table # An array of input names. May be modified by the function.
 ---@param types table # An array of input types. Can be shortcuts. May be modified by the function.
----@param descriptions table? # An optional array of input descriptions.
+---@param descriptions table? # An optional array of input descriptions. 
 function wire.adjustInputs(names, types, descriptions) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -20,7 +20,7 @@ function wire.adjustInputs(names, types, descriptions) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L388).
 ---@param names table # An array of output names. May be modified by the function.
 ---@param types table # An array of output types. Can be shortcuts. May be modified by the function.
----@param descriptions table? # An optional array of output descriptions.
+---@param descriptions table? # An optional array of output descriptions. 
 function wire.adjustOutputs(names, types, descriptions) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -84,3 +84,4 @@ function wire.self() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L504).
 ---@return string # Server UUID
 function wire.serverUUID() end
+

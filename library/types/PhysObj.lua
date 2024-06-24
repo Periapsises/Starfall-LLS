@@ -376,3 +376,4 @@ function PhysObj:worldToLocal(vec) end
 ---@param vec Vector # The normal vector to transform
 ---@return Vector # The transformed vector
 function PhysObj:worldToLocalVector(vec) end
+

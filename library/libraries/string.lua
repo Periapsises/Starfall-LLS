@@ -407,3 +407,4 @@ function string.utf8len(str, startPos, endPos) end
 ---@param startPos number? # The offset for n. Defaults to 1 if n >= 0, otherwise -1
 ---@return number # Starting byte-index of the given position
 function string.utf8offset(str, n, startPos) end
+

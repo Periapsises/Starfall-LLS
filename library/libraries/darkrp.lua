@@ -155,3 +155,4 @@ function darkrp.requestMoney(sender, amount, message, callbackSuccess, callbackF
 --- Only works if the local player is the owner of the chip, or if the chip is running in superuser mode.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/darkrp2.lua#L787).
 function darkrp.toggleF4Menu() end
+

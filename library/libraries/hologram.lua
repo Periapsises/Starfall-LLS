@@ -31,3 +31,4 @@ function hologram.hologramsLeft() end
 --- Removes all holograms created by the calling chip.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L522).
 function hologram.removeAll() end
+

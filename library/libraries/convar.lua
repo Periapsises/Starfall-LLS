@@ -78,3 +78,4 @@ function convar.getString(name) end
 ---@param flag number # Convar Flag, see https://wiki.facepunch.com/gmod/Enums/FCVAR
 ---@return boolean # Whether the flag is set
 function convar.hasFlag(name, flag) end
+

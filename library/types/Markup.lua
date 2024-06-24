@@ -35,3 +35,4 @@ function Markup:getSize() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L1889).
 ---@return number # The width of the object
 function Markup:getWidth() end
+

@@ -187,3 +187,4 @@ function vr.isPlayerInVR(target) end
 ---@param target Player # Player to check
 ---@return boolean # True if player is using empty hands
 function vr.usingEmptyHands(target) end
+

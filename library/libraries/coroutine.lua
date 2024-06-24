@@ -52,3 +52,4 @@ function coroutine.wrap(func) end
 ---@param ... any # parameters that will be returned to the main thread
 ---@return ... # Any values passed to the coroutine
 function coroutine.yield(...) end
+

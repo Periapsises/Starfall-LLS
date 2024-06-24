@@ -43,7 +43,7 @@ function http.getActiveRequests() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets how many get/post operations can be in progress at the same time.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L44).
----@return number # Maximum amount of concurrent active HTTP get/post requests
+---@return number # Maximum amount of concurrent active HTTP get/post requests 
 function http.getMaximumRequests() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -83,3 +83,4 @@ function http.urlEncode(data) end
 ---@param url string # The url to convert
 ---@return string # The converted url
 function http.urlGoogleDriveToRaw(url) end
+

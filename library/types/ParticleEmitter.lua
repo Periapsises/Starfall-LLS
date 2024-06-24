@@ -19,18 +19,7 @@ local ParticleEmitter = {}
 ---@param endAlpha number # Sets the alpha value of the particle that it will reach when it dies.
 ---@param dieTime number # Sets the time where the particle will be removed. (0-60)
 ---@return Particle # A Particle object
-function ParticleEmitter:add(
-	material,
-	position,
-	startSize,
-	endSize,
-	startLength,
-	endLength,
-	startAlpha,
-	endAlpha,
-	dieTime
-)
-end
+function ParticleEmitter:add(material, position, startSize, endSize, startLength, endLength, startAlpha, endAlpha, dieTime) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Removes the emitter, making it no longer usable from Lua. If particles remain, the emitter will be removed when all particles die.
@@ -82,8 +71,8 @@ function ParticleEmitter:setBBox(mins, maxs) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- This function sets the the distance between the render camera and the emitter at which the particles should start fading and at which distance fade ends ( alpha becomes 0 ).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L161).
----@param distanceMin number #
----@param distanceMax number #
+---@param distanceMin number # 
+---@param distanceMax number # 
 function ParticleEmitter:setNearClip(distanceMin, distanceMax) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -105,3 +94,4 @@ function ParticleEmitter:setParticleCullRadius(radius) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L186).
 ---@param position Vector # The position
 function ParticleEmitter:setPos(position) end
+

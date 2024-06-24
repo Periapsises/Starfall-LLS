@@ -18,3 +18,4 @@ function particle.create(position, use3D) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L64).
 ---@return number # Number of particle emitters left
 function particle.particleEmittersLeft() end
+

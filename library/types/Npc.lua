@@ -71,3 +71,4 @@ function Npc:setEnemy(ent) end
 --- Stops the npc.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/npc.lua#L121).
 function Npc:stop() end
+

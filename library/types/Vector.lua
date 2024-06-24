@@ -52,9 +52,9 @@ function Vector:__mul(a, b) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a value at a key in the vector.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L63).
----@param Vec Vector #
----@param Key number|string #
----@param Value number #
+---@param Vec Vector # 
+---@param Key number|string # 
+---@param Value number # 
 function Vector:__newindex(Vec, Key, Value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -332,3 +332,4 @@ function Vector:vmul(v) end
 ---@param v2 Vector # Second Vector to define AABox
 ---@return boolean # True/False.
 function Vector:withinAABox(v1, v2) end
+

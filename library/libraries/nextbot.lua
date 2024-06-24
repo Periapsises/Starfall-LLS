@@ -23,3 +23,4 @@ function nextbot.create(spawnpos, model) end
 --- Removes the given nextbot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L108).
 function nextbot.remove() end
+

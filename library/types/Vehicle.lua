@@ -44,3 +44,4 @@ function Vehicle:stripDriver(class) end
 --- Will unlock the vehicle.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vehicles.lua#L105).
 function Vehicle:unlock() end
+

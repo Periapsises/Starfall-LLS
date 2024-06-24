@@ -15,3 +15,4 @@ function Mesh:destroy() end
 --- Draws the mesh. Must be in a 3D rendering context.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1122).
 function Mesh:draw() end
+

@@ -142,3 +142,4 @@ function Color:setR(r) end
 ---@param alpha boolean? # Optional boolean whether to include the alpha channel, False by default
 ---@return string # String hexadecimal color
 function Color:toHex(alpha) end
+

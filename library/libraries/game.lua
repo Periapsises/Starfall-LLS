@@ -147,3 +147,4 @@ function game.steamIDFrom64(id) end
 ---@param id string # The STEAM_0 style id
 ---@return string # 64bit Steam ID
 function game.steamIDTo64(id) end
+

@@ -371,21 +371,7 @@ function render.drawPixelsSubrectRGB(dstX, dstY, srcX, srcY, srcW, srcH, subrect
 ---@param dataG table # Green channel data.
 ---@param dataB table # Blue channel data.
 ---@param dataA table # Alpha channel data.
-function render.drawPixelsSubrectRGBA(
-	dstX,
-	dstY,
-	srcX,
-	srcY,
-	srcW,
-	srcH,
-	subrectW,
-	subrectH,
-	dataR,
-	dataG,
-	dataB,
-	dataA
-)
-end
+function render.drawPixelsSubrectRGBA(dstX, dstY, srcX, srcY, srcW, srcH, subrectW, subrectH, dataR, dataG, dataB, dataA) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws a polygon.
@@ -727,10 +713,10 @@ function render.isInRenderView() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L1920).
 ---@param on boolean # Whether to control the blend mode of upcoming rendering
 ---@param srcBlend number # http://wiki.facepunch.com/gmod/Enums/BLEND
----@param destBlend number #
+---@param destBlend number # 
 ---@param blendFunc number # http://wiki.facepunch.com/gmod/Enums/BLENDFUNC
 ---@param srcBlendAlpha number? # http://wiki.facepunch.com/gmod/Enums/BLEND
----@param destBlendAlpha number? #
+---@param destBlendAlpha number? # 
 ---@param blendFuncAlpha number? # http://wiki.facepunch.com/gmod/Enums/BLENDFUNC
 function render.overrideBlend(on, srcBlend, destBlend, blendFunc, srcBlendAlpha, destBlendAlpha, blendFuncAlpha) end
 
@@ -745,8 +731,8 @@ function render.parseMarkup(str, maxsize) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the visibility of a sphere in the world.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2710).
----@param position Vector #
----@param radius number #
+---@param position Vector # 
+---@param radius number # 
 ---@return number # Percentage visible, from 0-1
 function render.pixelVisible(position, radius) end
 
@@ -1053,7 +1039,7 @@ function render.setScreenDimensions(screen, x, y, w, h) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the compare function of the stencil. More: https://wiki.facepunch.com/gmod/render.SetStencilCompareFunction.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L644).
----@param compareFunction number #
+---@param compareFunction number # 
 function render.setStencilCompareFunction(compareFunction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -1065,13 +1051,13 @@ function render.setStencilEnable(enable) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the operation to be performed on the stencil buffer values if the compare function was not successful. More: http://wiki.facepunch.com/gmod/render.SetStencilFailOperation.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L652).
----@param operation number #
+---@param operation number # 
 function render.setStencilFailOperation(operation) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the operation to be performed on the stencil buffer values if the compare function was successful. More: http://wiki.facepunch.com/gmod/render.SetStencilPassOperation.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L660).
----@param operation number #
+---@param operation number # 
 function render.setStencilPassOperation(operation) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -1095,7 +1081,7 @@ function render.setStencilWriteMask(mask) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the operation to be performed on the stencil buffer values if the stencil test is passed but the depth buffer test fails. More: http://wiki.facepunch.com/gmod/render.SetStencilZFailOperation.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L668).
----@param operation number #
+---@param operation number # 
 function render.setStencilZFailOperation(operation) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -1145,3 +1131,4 @@ function render.suppressEngineLighting(suppress) end
 ---@param endpos Vector # The ending vector
 ---@return Color # The color
 function render.traceSurfaceColor(startpos, endpos) end
+

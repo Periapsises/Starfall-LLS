@@ -146,3 +146,4 @@ function Hologram:setVel(vel) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L424).
 ---@param suppress boolean # Boolean to represent if shading should be set or not.
 function Hologram:suppressEngineLighting(suppress) end
+

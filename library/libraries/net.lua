@@ -262,3 +262,4 @@ function net.writeUInt(t, n) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L410).
 ---@param t Vector # The vector to be written
 function net.writeVector(t) end
+

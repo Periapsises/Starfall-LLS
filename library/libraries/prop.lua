@@ -104,3 +104,4 @@ function prop.setPropUndo(on) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L692).
 ---@return number # Number of props per second the user can spawn
 function prop.spawnRate() end
+

@@ -33,3 +33,4 @@ function sql.tableExists(tabname) end
 ---@param tabname string # The table to remove.
 ---@return boolean # True if the table was successfully removed, false if not.
 function sql.tableRemove(tabname) end
+

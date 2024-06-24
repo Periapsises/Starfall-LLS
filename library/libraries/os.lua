@@ -36,3 +36,4 @@ function os.difftime(timeA, timeB) end
 ---@param dateData table? # Optional table to generate the time from. This table's data is interpreted as being in the local timezone
 ---@return number # Seconds passed since Unix epoch
 function os.time(dateData) end
+

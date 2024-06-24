@@ -136,3 +136,4 @@ function material.getWidth(path) end
 ---@param path string # The path of the material (don't include .vmt in the path)
 ---@return Material # The material object. Can't be modified.
 function material.load(path) end
+

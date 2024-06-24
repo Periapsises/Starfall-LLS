@@ -103,3 +103,4 @@ function input.screenToVector(x, y) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L334).
 ---@param weapon Weapon # The weapon entity to select
 function input.selectWeapon(weapon) end
+

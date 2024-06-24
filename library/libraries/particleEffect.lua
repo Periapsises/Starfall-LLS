@@ -14,3 +14,4 @@ particleEffect = {}
 ---@param options table # Table of options
 ---@return ParticleEffect # ParticleEffect type.
 function particleEffect.attach(entity, name, pattach, options) end
+

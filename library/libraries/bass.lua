@@ -28,3 +28,4 @@ function bass.loadURL(path, flags, callback) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L227).
 ---@return number # The number of sounds left.
 function bass.soundsLeft() end
+

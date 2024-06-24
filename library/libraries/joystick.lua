@@ -62,3 +62,4 @@ function joystick.numJoysticks() end
 ---@param enum number # Joystick number. Starts at 0
 ---@return number # Number of povs
 function joystick.numPovs(enum) end
+

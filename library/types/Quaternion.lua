@@ -37,7 +37,7 @@ function Quaternion:__eq(rhs) end
 --- Index metamethod.
 --- Can be indexed with: 1, 2, 3, 4, r, i, j, k, rr, ri, rj, rk, rrr, rijk, kjir, etc. Numerical lookup is the most efficient.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L248).
----@param Key number|string #
+---@param Key number|string # 
 ---@return number # Found value
 function Quaternion:__index(Key) end
 
@@ -52,7 +52,7 @@ function Quaternion:__mul(lhs, rhs) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Newindex metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L215).
----@param Key number|string #
+---@param Key number|string # 
 ---@param Value number # to set
 function Quaternion:__newindex(Key, Value) end
 
@@ -291,3 +291,4 @@ function Quaternion:setR(r) end
 ---@return number # j
 ---@return number # k
 function Quaternion:unpack() end
+

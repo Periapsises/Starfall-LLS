@@ -102,3 +102,4 @@ function socket.udp4() end
 ---@return table # New IPv6 UDP master object, or nil in case of error.
 ---@return string? # The error string if errored, else nil
 function socket.udp6() end
+

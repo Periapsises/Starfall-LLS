@@ -79,3 +79,4 @@ function team.getPlayers(ind) end
 ---@param ind number # Index of the team
 ---@return number # Number score of the team
 function team.getScore(ind) end
+

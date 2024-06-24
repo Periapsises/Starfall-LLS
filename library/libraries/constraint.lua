@@ -53,22 +53,7 @@ function constraint.ballsocket(e1, e2, bone1, bone2, pos, force_lim, torque_lim,
 ---@param rotateonly boolean? # If True, ballsocket will only affect the rotation allowing for free movement, otherwise it will limit both - rotation and movement. Default false
 ---@param nocollide boolean? # Bool whether or not to nocollide the two entities. Default false
 ---@return Constraint # The constraint entity
-function constraint.ballsocketadv(
-	e1,
-	e2,
-	bone1,
-	bone2,
-	v1,
-	v2,
-	force_lim,
-	torque_lim,
-	minv,
-	maxv,
-	frictionv,
-	rotateonly,
-	nocollide
-)
-end
+function constraint.ballsocketadv(e1, e2, bone1, bone2, v1, v2, force_lim, torque_lim, minv, maxv, frictionv, rotateonly, nocollide) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Breaks all constraints on an entity.
@@ -157,23 +142,7 @@ function constraint.removeAll() end
 ---@param rigid boolean? # Whether the rope is rigid. Default false
 ---@param color Color? # The color of the rope. Default white
 ---@return Constraint # The constraint entity
-function constraint.rope(
-	index,
-	e1,
-	e2,
-	bone1,
-	bone2,
-	v1,
-	v2,
-	length,
-	addlength,
-	force_lim,
-	width,
-	materialName,
-	rigid,
-	color
-)
-end
+function constraint.rope(index, e1, e2, bone1, bone2, v1, v2, length, addlength, force_lim, width, materialName, rigid, color) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the chip should remove created constraints when the chip is removed.
@@ -232,3 +201,4 @@ function constraint.slider(e1, e2, bone1, bone2, v1, v2, width) end
 ---@param nocollide boolean? # Bool whether or not to nocollide the two entities. Default false
 ---@return Constraint # The constraint entity
 function constraint.weld(e1, e2, bone1, bone2, force_lim, nocollide) end
+

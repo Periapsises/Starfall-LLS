@@ -182,3 +182,4 @@ function StringStream:writeUInt32(x) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L449).
 ---@param x number # UInt8 to write
 function StringStream:writeUInt8(x) end
+

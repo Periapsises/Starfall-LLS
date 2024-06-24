@@ -22,3 +22,4 @@ function Constraint:isValid() end
 --- Removes the constraint.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L71).
 function Constraint:remove() end
+

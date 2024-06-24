@@ -368,3 +368,4 @@ function NextBot:setVelocity(newvel) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L189).
 ---@param act number # The ACT enum to play.
 function NextBot:startActivity(act) end
+
