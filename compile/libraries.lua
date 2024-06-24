@@ -22,7 +22,7 @@ local function compileLibrary(name, contents)
 
 		for description in contents.description:gmatch("[^\n]+") do
 			if description:sub(#description) ~= "." then
-				print("Warning: Adding period to end of library description for " .. name)
+				--print("Warning: Adding period to end of library description for " .. name)
 				description = description .. "."
 			end
 
@@ -43,7 +43,7 @@ local function compileLibrary(name, contents)
 
 		for description in methodInfo.description:gmatch("[^\n]+") do
 			if description:sub(#description) ~= "." then
-				print("Warning: Adding period to end of method description for " .. name .. "." .. methodName)
+				--print("Warning: Adding period to end of method description for " .. name .. "." .. methodName)
 				description = description .. "."
 			end
 
@@ -67,8 +67,13 @@ local function compileLibrary(name, contents)
 				paramType = "HookName"
 			end
 
-			if paramType == "..." then
-				file:write("---@param ... any # " .. param.description .. "\n")
+			if paramType:sub(1, 3) == "..." then
+				local varargType = paramType:sub(4)
+				if not varargType or varargType == "" then
+					varargType = "any"
+				end
+
+				file:write("---@param ... " .. varargType .. " # " .. param.description .. "\n")
 				args = args .. "..."
 			else
 				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description .. "\n")
@@ -83,11 +88,9 @@ local function compileLibrary(name, contents)
 		if methodInfo.returns then
 			for i, ret in ipairs(methodInfo.returns) do
 				file:write(
-					"---@return " .. ret.type .. " # " .. ret.description .. (i < #methodInfo.returns and "\n" or "")
+					"---@return " .. ret.type .. " # " .. ret.description .. "\n"
 				)
 			end
-
-			file:write("\n")
 		end
 
 		file:write("function " .. tableHeader .. methodName .. "(" .. args .. ") end\n\n")

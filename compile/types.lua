@@ -1,3 +1,53 @@
+-- Takes a link in the form libs_sh/players.lua#L81 used as a path in https://raw.githubusercontent.com/thegrb93/StarfallEx/master/lua/starfall/.
+-- Fetches the contents of the file and gets the first line of code after the specified line number.
+-- The line of code should be a function call for which the fifth argument is the name of the inherited type.
+local function findInheritanceForType( link )
+	local url = "https://raw.githubusercontent.com/thegrb93/StarfallEx/master/lua/starfall/" .. link
+	local handle = io.popen("curl -s " .. url)
+	if not handle then
+		error("Failed to fetch " .. url)
+	end
+
+	local contents = handle:read("*a")
+	handle:close()
+
+	if not contents then
+		error("Failed to read " .. url)
+	end
+
+	local lines = {}
+	for line in contents:gmatch("([^\r\n]*)[\r\n]") do
+		lines[#lines + 1] = line
+	end
+
+	local lineNum = tonumber(link:match("L(%d+)"))
+	if not lineNum then
+		error("Failed to parse line number from " .. link)
+	end
+
+	for i = lineNum, #lines do
+		local line = lines[i]
+		if line:find("SF.RegisterType", 1, true) then
+			local argText = line:match("SF.RegisterType%(([^\r\n]+)")
+			if argText:sub(#argText) == ")" then
+				argText = argText:sub(1, #argText - 1)
+			end
+
+			local args = {}
+			for arg in argText:gmatch("[^, ]+") do
+				if arg:sub(1, 1) == "\"" then
+					arg = arg:sub(2, #arg - 1)
+				end
+				args[#args + 1] = arg
+			end
+
+			if args[5] and args[5] ~= "nil" then
+				return args[5]
+			end
+		end
+	end
+end
+
 local function compileType(name, contents)
 	local file = OpenOutputFile(name, "types")
 
@@ -5,14 +55,19 @@ local function compileType(name, contents)
 
 	for description in contents.description:gmatch("[^\r\n]+") do
 		if description:sub(#description) ~= "." then
-			print("Warning: Adding period to end of type description for " .. name)
+			--print("Warning: Adding period to end of type description for " .. name)
 			description = description .. "."
 		end
 
 		file:write("---" .. description .. "\n")
 	end
 
-	file:write("---@class " .. name .. "\n")
+	local inheritance = findInheritanceForType(contents.path)
+	if inheritance and inheritance:sub( 1, 6 ) ~= "Locked" then
+		file:write("---@class " .. name .. " : " .. inheritance .. "\n")
+	else
+		file:write("---@class " .. name .. "\n")
+	end
 	WriteSource(file, contents.path)
 
 	if contents.fields then
@@ -34,7 +89,7 @@ local function compileType(name, contents)
 
 		for description in methodInfo.description:gmatch("[^\r\n]+") do
 			if description:sub(#description) ~= "." then
-				print("Warning: Adding period to end of method description for " .. name .. "." .. methodName)
+				--print("Warning: Adding period to end of method description for " .. name .. "." .. methodName)
 				description = description .. "."
 			end
 
@@ -54,8 +109,13 @@ local function compileType(name, contents)
 
 			local paramType = param.type or "any"
 
-			if paramType == "..." then
-				file:write("---@param ... any # " .. param.description .. "\n")
+			if paramType:sub(1, 3) == "..." then
+				local varargType = paramType:sub(4)
+				if not varargType or varargType == "" then
+					varargType = "any"
+				end
+
+				file:write("---@param ... " .. varargType .. " # " .. param.description .. "\n")
 				args = args .. "..."
 			else
 				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description .. "\n")
@@ -75,7 +135,6 @@ local function compileType(name, contents)
 						.. ret.type
 						.. " # "
 						.. ret.description
-						.. (j < #methodInfo.returns and "\n" or "")
 						.. "\n"
 				)
 			end
