@@ -44,4 +44,3 @@ function sound.emitSoundsLeft() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/sound.lua#L101).
 ---@return number # The number of sounds left
 function sound.soundsLeft() end
-

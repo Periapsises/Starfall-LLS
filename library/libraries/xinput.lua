@@ -18,7 +18,7 @@ function xinput.getBatteryLevel(id) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/xinput.lua#L94).
 ---@param id number # Controller number. Starts at 0
 ---@param button number # The button to check for. See https://github.com/mitterdoo/garrysmod-xinput#xinput_gamepad_
----@return boolean # 
+---@return boolean #
 function xinput.getButton(id, button) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -58,4 +58,3 @@ function xinput.getTrigger(id, trigger) end
 ---@param softPercent number # A number between 0.0-1.0 for how much the soft rumble motor should vibrate.
 ---@param hardPercent number # A number between 0.0-1.0 for how much the hard rumble motor should vibrate.
 function xinput.setRumble(id, softPercent, hardPercent) end
-

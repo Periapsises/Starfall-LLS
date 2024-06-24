@@ -94,4 +94,3 @@ function trace.line(start, endpos, filter, mask, colgroup, ignworld) end
 ---@param position Vector # The position to get the CONTENTS of
 ---@return number # Contents bitflag, see the CONTENTS enums
 function trace.pointContents(position) end
-

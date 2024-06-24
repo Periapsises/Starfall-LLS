@@ -144,4 +144,3 @@ function navmesh.setMarkedArea(area) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L135).
 ---@param spawnPointClass string # The classname of what the player uses to spawn, automatically adds it to the walkable positions during map generation.
 function navmesh.setPlayerSpawnName(spawnPointClass) end
-

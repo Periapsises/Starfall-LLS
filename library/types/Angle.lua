@@ -37,7 +37,7 @@ function Angle:__eq(a1, a2) end
 --- Gets a value at a key in the angle.
 --- Can be indexed with: 1, 2, 3, p, y, r, pitch, yaw, roll. 1,2,3 is most efficient.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L64).
----@param Key number|string # 
+---@param Key number|string #
 ---@return number # Value
 function Angle:__index(Key) end
 
@@ -52,9 +52,9 @@ function Angle:__mul(a1, a2) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a value at a key in the angle.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L52).
----@param Ang Angle # 
----@param Key number|string # 
----@param Value number # 
+---@param Ang Angle #
+---@param Key number|string #
+---@param Value number #
 function Angle:__newindex(Ang, Key, Value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -162,4 +162,3 @@ function Angle:setY(y) end
 --- Self-Modifies. Does not return anything.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L221).
 function Angle:setZero() end
-

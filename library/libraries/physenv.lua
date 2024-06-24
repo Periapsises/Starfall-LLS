@@ -23,4 +23,3 @@ function physenv.getGravity() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physenv.lua#L27).
 ---@return table # Performance Settings Table.
 function physenv.getPerformanceSettings() end
-

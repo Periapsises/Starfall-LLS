@@ -157,4 +157,3 @@ function bit.tobit(value) end
 ---@param digits number? # The number of digits. Optional. (default 8)
 ---@return string # Hex string.
 function bit.tohex(value, digits) end
-

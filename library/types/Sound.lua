@@ -65,4 +65,3 @@ function Sound:setVolume(vol, fade) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/sound.lua#L122).
 ---@param fade number? # Time in seconds to fade out, if nil or 0 the sound stops instantly.
 function Sound:stop(fade) end
-

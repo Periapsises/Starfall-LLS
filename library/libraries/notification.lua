@@ -30,4 +30,3 @@ function notification.addProgress(id, text) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L79).
 ---@param id string # String index of the notification to kill
 function notification.kill(id) end
-

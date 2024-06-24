@@ -169,4 +169,3 @@ function Material:setUndefined(key) end
 ---@param key string # The key name to set
 ---@param v Vector # The value to set it to
 function Material:setVector(key, v) end
-

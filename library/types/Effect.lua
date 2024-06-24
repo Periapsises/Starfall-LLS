@@ -206,4 +206,3 @@ function Effect:setStart(start) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/effect.lua#L276).
 ---@param prop number # The surface property index
 function Effect:setSurfaceProp(prop) end
-

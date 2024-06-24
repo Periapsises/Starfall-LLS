@@ -107,10 +107,10 @@ function math.binToInt(str) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Basic code for Bezier-Spline algorithm.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L87).
----@param i number # 
----@param k number # 
----@param t number # 
----@param tinc number # 
+---@param i number #
+---@param k number #
+---@param t number #
+---@param tinc number #
 ---@return number # Number value
 function math.calcBSplineN(i, k, t, tinc) end
 
@@ -638,4 +638,3 @@ function math.timeFraction(start, _end, current) end
 ---@param digits number? # The amount of digits to keep after the point. Default 0
 ---@return number # Rounded number
 function math.truncate(val, digits) end
-

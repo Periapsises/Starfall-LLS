@@ -125,4 +125,3 @@ function Particle:setVelocity(vel) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L314).
 ---@param doScale boolean # Whether it should scale
 function Particle:setVelocityScale(doScale) end
-

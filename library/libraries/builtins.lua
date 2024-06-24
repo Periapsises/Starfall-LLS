@@ -474,7 +474,7 @@ function restart(chip) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Used to select single values from a vararg or get the count of values in it.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L92).
----@param parameter any # 
+---@param parameter any #
 ---@param ... any # Args to select from
 ---@return any # Returns a number or vararg, depending on the select method.
 function select(parameter, ...) end
@@ -620,4 +620,3 @@ function worldToLocal(pos, ang, newSystemOrigin, newSystemAngles) end
 ---@return boolean # Status of the execution; true for success, false for failure.
 ---@return ... # The returns of the first function if execution succeeded, otherwise the return values of the error callback.
 function xpcall(func, callback, ...) end
-

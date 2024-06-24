@@ -32,4 +32,3 @@ function debug.getlocal(funcOrStackLevel, index) end
 ---@param stacklevel number? # Which position in the execution stack to start the traceback at. Default: 1
 ---@return string # A dump of the execution stack.
 function debug.traceback(A, message, stacklevel) end
-

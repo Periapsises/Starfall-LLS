@@ -19,4 +19,3 @@ function von.deserialize(str) end
 ---@param checkRecursive boolean? # Enable checking for table recursion (default: false)
 ---@return string # String encoded from the table
 function von.serialize(tbl, checkRecursive) end
-

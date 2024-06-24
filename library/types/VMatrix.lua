@@ -255,4 +255,3 @@ function VMatrix:translate(vec) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vmatrix.lua#L201).
 ---@return ...number # The 16 fields
 function VMatrix:unpack() end
-

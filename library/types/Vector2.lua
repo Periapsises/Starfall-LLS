@@ -5,4 +5,3 @@
 ---@class Vector2 : Vector
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L30).
 local Vector2 = {}
-

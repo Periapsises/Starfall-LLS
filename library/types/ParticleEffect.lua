@@ -85,4 +85,3 @@ function ParticleEffect:startEmission() end
 --- Stops emission of the particle effect.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L114).
 function ParticleEffect:stopEmission() end
-

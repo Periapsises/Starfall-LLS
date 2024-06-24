@@ -95,4 +95,3 @@ function Weapon:maxClip1() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L55).
 ---@return number # Amount of ammo
 function Weapon:maxClip2() end
-

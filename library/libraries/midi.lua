@@ -60,4 +60,3 @@ function midi.isPortOpen() end
 ---@param port number # the midi port to open. Passing nothing defaults to 0.
 ---@return string # the name of the midi device opened at the given port.
 function midi.openPort(port) end
-
