@@ -2,7 +2,7 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Vehicle type.
----@class Vehicle
+---@class Vehicle : Entity
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vehicles.lua#L15).
 local Vehicle = {}
 

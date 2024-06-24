@@ -2,7 +2,7 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Hologram type.
----@class Hologram
+---@class Hologram : Entity
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L42).
 local Hologram = {}
 

@@ -27,10 +27,10 @@ function Color:__concat() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Division metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L173).
----@param b number|Color # Number or Color dividend
+---@param a number|Color # Number or Color dividend
 ---@param b number|Color # Number or Color divisor
 ---@return Color # Scaled color.
-function Color:__div(b, b) end
+function Color:__div(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Equivalence metamethod.

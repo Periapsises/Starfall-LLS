@@ -287,11 +287,8 @@ function Quaternion:setR(r) end
 --- Returns components of the quaternion.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L460).
 ---@return number # r
-
 ---@return number # i
-
 ---@return number # j
-
 ---@return number # k
 function Quaternion:unpack() end
 

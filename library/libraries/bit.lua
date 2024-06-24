@@ -17,9 +17,9 @@ function bit.arshift(value, shiftCount) end
 --- Performs the bitwise "and" for all values specified.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L573).
 ---@param value number # The value to be manipulated.
----@param otherValues ...number # Values bit to perform bitwise "and" with. Optional.
+---@param ... number # Values bit to perform bitwise "and" with. Optional.
 ---@return number # Result of bitwise "and" operation.
-function bit.band(value, otherValues) end
+function bit.band(value, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the bitwise not of the value.
@@ -32,9 +32,9 @@ function bit.bnot(value) end
 --- Returns the bitwise OR of all values specified.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L586).
 ---@param value1 number # The first value.
----@param Extra ...number # values to be evaluated. (must all be numbers)
+---@param ... number # values to be evaluated. (must all be numbers)
 ---@return number # The bitwise OR result between all numbers.
-function bit.bor(value1, Extra) end
+function bit.bor(value1, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Swaps the byte order.
@@ -47,9 +47,9 @@ function bit.bswap(value) end
 --- Returns the bitwise xor of all values specified.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L599).
 ---@param value number # The value to be manipulated.
----@param otherValues ...number # Values to bit xor with. Optional.
+---@param ... number # Values to bit xor with. Optional.
 ---@return number # Return value of bitwiseXOr operation
-function bit.bxor(value, otherValues) end
+function bit.bxor(value, ...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Compresses a string using LZMA.

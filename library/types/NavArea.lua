@@ -363,7 +363,6 @@ function NavArea:isValid() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L626).
 ---@param pos Vector # The position to check.
 ---@return boolean # Whether we can be seen or not.
-
 ---@return Vector # If we can be seen, this is returned with either the center or one of the corners of the Nav Area.
 function NavArea:isVisible(pos) end
 

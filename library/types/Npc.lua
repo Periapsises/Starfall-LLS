@@ -2,7 +2,7 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Npc type.
----@class Npc
+---@class Npc : Entity
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/npc.lua#L13).
 local Npc = {}
 

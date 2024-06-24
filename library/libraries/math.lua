@@ -475,16 +475,16 @@ function math.log10(x) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Picks the largest value of all provided arguments.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L200).
----@param numbers ...number # Any amount of number values
+---@param ... number # Any amount of number values
 ---@return number # The largest number
-function math.max(numbers) end
+function math.max(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Picks the smallest value of all provided arguments.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L206).
----@param numbers ...number # Any amount of number values
+---@param ... number # Any amount of number values
 ---@return number # The smallest number
-function math.min(numbers) end
+function math.min(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the integral and fractional component of the modulo operation.

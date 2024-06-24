@@ -2,7 +2,7 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- NextBot type.
----@class NextBot
+---@class NextBot : Entity
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L4).
 local NextBot = {}
 

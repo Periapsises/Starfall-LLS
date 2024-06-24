@@ -27,7 +27,6 @@ function Markup:getHeight() end
 --- Get the object size.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L1901).
 ---@return number # The width of the object
-
 ---@return number # The height of the object
 function Markup:getSize() end
 

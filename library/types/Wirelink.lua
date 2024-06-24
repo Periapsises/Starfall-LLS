@@ -2,7 +2,7 @@
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Wirelink type.
----@class Wirelink
+---@class Wirelink : Vector
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L23).
 local Wirelink = {}
 

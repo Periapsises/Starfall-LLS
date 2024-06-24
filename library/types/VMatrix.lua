@@ -52,7 +52,6 @@ function VMatrix:getAngles() end
 --- Gets the rotation axis and angle of rotation of the rotation matrix.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vmatrix.lua#L289).
 ---@return Vector # The axis of rotation
-
 ---@return number # The angle of rotation
 function VMatrix:getAxisAngle() end
 
@@ -229,8 +228,8 @@ function VMatrix:setTranslation(vec) end
 --- Allows you to set all 16 fields in row-major order.
 --- Self-Modifies. Does not return anything.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vmatrix.lua#L207).
----@param fields ...number # The 16 fields
-function VMatrix:setUnpacked(fields) end
+---@param ... number # The 16 fields
+function VMatrix:setUnpacked(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the up direction of the matrix. Third column.

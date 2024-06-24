@@ -128,7 +128,6 @@ function Vector:getAngleEx(v) end
 --- Returns an arbitrary orthogonal basis from the direction of the vector. Input must be a normalized vector.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L419).
 ---@return number # Basis 1
-
 ---@return number # Basis 2
 function Vector:getBasis() end
 

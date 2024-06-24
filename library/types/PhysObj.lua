@@ -58,7 +58,6 @@ function PhysObj:applyTorque(torque) end
 ---@param impulse Vector # The impulse acting on the object in world coordinates (kg*source_unit/s)
 ---@param position Vector # The location of the impulse in world coordinates
 ---@return Vector # The calculated linear impulse on the physics object's center of mass in kg*source_unit/s. (World frame)
-
 ---@return Vector # The calculated angular impulse on the physics object's center of mass in kg*m^2*degrees/s. (Local frame)
 function PhysObj:calculateForceOffset(impulse, position) end
 
@@ -69,7 +68,6 @@ function PhysObj:calculateForceOffset(impulse, position) end
 ---@param impulse Vector # The impulse acting on the object in world coordinates (kg*source_unit/s)
 ---@param position Vector # The location of the impulse in world coordinates
 ---@return Vector # The calculated linear velocity from the impulse on the physics object's center of mass in source_unit/s. (World frame)
-
 ---@return Vector # The calculated angular velocity from the impulse on the physics object's center of mass in degrees/s. (Local frame)
 function PhysObj:calculateVelocityOffset(impulse, position) end
 
@@ -107,7 +105,6 @@ function PhysObj:enableMotion(move) end
 --- Gets the axis aligned bounding box of the physics object.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L90).
 ---@return Vector # The mins of the AABB
-
 ---@return Vector # The maxs of the AABB
 function PhysObj:getAABB() end
 
@@ -127,7 +124,6 @@ function PhysObj:getAngles() end
 --- Returns Movement damping of the bone.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L476).
 ---@return number # Linear damping
-
 ---@return number # Angular damping
 function PhysObj:getDamping() end
 
@@ -209,7 +205,6 @@ function PhysObj:getPos() end
 --- Returns the stress of the entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L556).
 ---@return number # External stress. Usually about the mass of the object if on the ground, usually 0 if in freefall.
-
 ---@return number # Internal stress. Usually about the mass of every object resting on top of it combined.
 function PhysObj:getStress() end
 

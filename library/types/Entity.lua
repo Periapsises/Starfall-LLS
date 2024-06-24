@@ -185,7 +185,6 @@ function Entity:getAngles() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L677).
 ---@param index number # The index of the attachment
 ---@return Vector? # Position, nil if the attachment doesn't exist
-
 ---@return Angle? # Orientation, nil if the attachment doesn't exist
 function Entity:getAttachment(index) end
 
@@ -261,7 +260,6 @@ function Entity:getBoneParent(bone) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1085).
 ---@param bone number? # Bone index. (def 0)
 ---@return Vector # Position of the bone
-
 ---@return Angle # Angle of the bone
 function Entity:getBonePosition(bone) end
 
@@ -276,9 +274,7 @@ function Entity:getBoundingRadius() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1751).
 ---@param id number # Plane index. Starts from 0
 ---@return Vector # The origin of the plane
-
 ---@return Vector # The normal of the plane
-
 ---@return number # The distance to the plane
 function Entity:getBrushPlane(id) end
 
@@ -433,7 +429,6 @@ function Entity:getEyeAngles() end
 --- Gets the entity's eye position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1574).
 ---@return Vector # Eye position of the entity
-
 ---@return Vector? # In case of a ragdoll, the position of the second eye
 function Entity:getEyePos() end
 
@@ -502,7 +497,6 @@ function Entity:getHitBoxBone(hitbox, group) end
 ---@param hitbox number # The number of the hitbox.
 ---@param group number # The number of the hitbox group, 0 in most cases.
 ---@return Vector # Hitbox mins vector.
-
 ---@return Vector # Hitbox maxs vector.
 function Entity:getHitBoxBounds(hitbox, group) end
 
@@ -525,7 +519,6 @@ function Entity:getHitBoxHitGroup(hitbox, hitboxset) end
 --- Returns entity's current hit box set.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1712).
 ---@return number? # Hitbox set number, nil if entity has no hitboxes.
-
 ---@return string? # Hitbox set name, nil if entity has no hitboxes.
 function Entity:getHitBoxSet() end
 
@@ -648,7 +641,6 @@ function Entity:getModel() end
 --- This is not scaled with Entity:SetModelScale and will return the model's original, unmodified mins and maxs.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1522).
 ---@return Vector # Minimum vector of the bounds
-
 ---@return Vector # Maximum vector of the bounds
 function Entity:getModelBounds() end
 
@@ -790,7 +782,6 @@ function Entity:getPoseName(id) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1411).
 ---@param id number # Pose index (starting from 0)
 ---@return number? # Minimum pose value or nil if pose not found
-
 ---@return number? # Maximum pose value or nil if pose not found
 function Entity:getPoseRange(id) end
 
@@ -1562,7 +1553,6 @@ function Entity:use(usetype, value) end
 --- Returns Entity axis aligned bounding box in world coordinates.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1170).
 ---@return Vector # The min bounding box vector
-
 ---@return Vector # The max bounding box vector
 function Entity:worldSpaceAABB() end
 

@@ -30,9 +30,7 @@ function Bass:getFFT(n) end
 --- Gets the fade distance of the sound in 3D space. .
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L329).
 ---@return number # The distance before the sound starts to fade.
-
 ---@return number # The distance before the sound stops fading.
-
 ---@return boolean # Whether or not this sound uses simple fading.
 function Bass:getFade() end
 
@@ -62,7 +60,6 @@ function Bass:getLength() end
 --- Gets the left and right audio channel levels.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L394).
 ---@return number # The left sound level, a value between 0 and 1.
-
 ---@return number # The right sound level, a value between 0 and 1.
 function Bass:getLevels() end
 
