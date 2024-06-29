@@ -35,7 +35,7 @@ jobs:
           wget -O stylua-linux.zip https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip
           unzip stylua-linux.zip
           chmod +x stylua
-          ./stylua --verbose generator/
+          ./stylua --verbose generator/docs/
 
       - name: Check out the addon branch
         uses: actions/checkout@v2
