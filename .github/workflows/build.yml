@@ -29,6 +29,14 @@ jobs:
           cd generator
           luajit generator.lua docs/
           cd ..
+      
+      - name: Download StyLua from GitHub
+        run: |
+          wget -O stylua-linux.zip https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip
+          sudo apt-get install unzip
+          unzip stylua-linux.zip
+          chmod +x stylua
+          ./stylua generator/
 
       - name: Check out the addon branch
         uses: actions/checkout@v2
