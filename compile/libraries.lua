@@ -11,6 +11,11 @@ local specialHookMethods = {
 	run = true,
 }
 
+local tableBlacklist = {
+	["prop.SENT_Data_Structures"] = true,
+	["wire.ports"] = true
+}
+
 local function compileLibrary(name, contents)
 	local file = OpenOutputFile(name, "libraries")
 	local tableHeader = ""
@@ -32,6 +37,38 @@ local function compileLibrary(name, contents)
 		WriteSource(file, contents.path)
 		file:write(name .. " = {}\n\n")
 		tableHeader = name .. "."
+	end
+
+	local libraryTables = GetSorted(contents.tables)
+	for i = 1, #libraryTables do
+		local tableName = libraryTables[i].name
+		local tableInfo = libraryTables[i].value
+
+		if tableBlacklist[name .. "." .. tableName] then
+			print("Skipping blacklisted table " .. tableName)
+			goto continue
+		end
+
+		file:write("---@enum " .. tableName .. "\n")
+		WriteRealm(file, tableInfo.realm)
+		file:write("---" .. tableInfo.description .. "\n")
+		WriteSource(file, tableInfo.path)
+		file:write(tableHeader .. tableName .. " = {\n")
+
+		for i, field in ipairs(tableInfo.fields) do
+			if field.description and field.description ~= "" then
+				file:write("    ---" .. field.description .. "\n")
+			end
+
+			if field.name:find("^%d") then
+				field.name = "[" .. field.name .. "]"
+			end
+			file:write("    " .. field.name .. " = " .. i .. ",\n")
+		end
+
+		file:write("}\n\n")
+
+		::continue::
 	end
 
 	local libraryMethods = GetSorted(contents.methods)
