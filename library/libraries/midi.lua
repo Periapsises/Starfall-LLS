@@ -9,6 +9,20 @@
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/midi.lua#L5).
 midi = {}
 
+---@enum MIDI
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Midi Command ENUMS
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1194).
+midi.MIDI = {
+    NOTE_OFF = 1,
+    NOTE_ON = 2,
+    AFTERTOUCH = 3,
+    CONTINUOUS_CONTROLLER = 4,
+    PATCH_CHANGE = 5,
+    CHANNEL_PRESSURE = 6,
+    PITCH_BEND = 7,
+}
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Closes all midi ports.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/midi.lua#L66).

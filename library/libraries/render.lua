@@ -7,6 +7,48 @@
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L413).
 render = {}
 
+---@enum Screen
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+---
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2726).
+render.Screen = {
+    ---Pretty name of model
+    Name = 1,
+    ---Offset of screen from prop
+    offset = 2,
+    ---Resolution/scale
+    RS = 3,
+    ---Inverted Aspect ratio (height divided by width)
+    RatioX = 4,
+    ---Corner of screen in local coordinates (relative to offset?)
+    x1 = 5,
+    ---Corner of screen in local coordinates (relative to offset?)
+    x2 = 6,
+    ---Corner of screen in local coordinates (relative to offset?)
+    y1 = 7,
+    ---Corner of screen in local coordinates (relative to offset?)
+    y2 = 8,
+    ---Screen plane offset in local coordinates (relative to offset?)
+    z = 9,
+    ---Screen rotation
+    rot = 10,
+}
+
+---@enum Vertex
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Vertex format
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2740).
+render.Vertex = {
+    ---X coordinate
+    x = 1,
+    ---Y coordinate
+    y = 2,
+    ---U coordinate (optional, default is 0)
+    u = 3,
+    ---V coordinate (optional, default is 0)
+    v = 4,
+}
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Adds a beam segment to the beam started by render.start3DBeam.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2065).

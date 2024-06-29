@@ -5,6 +5,110 @@
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L17).
 navmesh = {}
 
+---@enum NAV_CORNER
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ENUMs used by NavArea methods. These Enums correspond to each corner of a CNavArea
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1274).
+navmesh.NAV_CORNER = {
+    ---0
+    NORTH_WEST = 1,
+    ---1
+    NORTH_EAST = 2,
+    ---2
+    SOUTH_EAST = 3,
+    ---3
+    SOUTH_WEST = 4,
+    ---Represents all corners, only applicable to certain functions, such as NavArea:placeOnGround.
+    NUM_CORNERS = 5,
+}
+
+---@enum NAV_DIR
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- NavArea direction ENUMs
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1214).
+navmesh.NAV_DIR = {
+    ---0
+    NORTH = 1,
+    ---1
+    SOUTH = 2,
+    ---2
+    EAST = 3,
+    ---3
+    WEST = 4,
+}
+
+---@enum NAV_MESH
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ENUMs used by NavArea:getAttributes and NavArea:hasAttributes
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1228).
+navmesh.NAV_MESH = {
+    ---The nav area is invalid.
+    INVALID = 1,
+    ---Must crouch to use this node/area
+    CROUCH = 2,
+    ---Must jump to traverse this area (only used during generation)
+    JUMP = 3,
+    ---Do not adjust for obstacles, just move along area
+    PRECISE = 4,
+    ---Inhibit discontinuity jumping
+    NO_JUMP = 5,
+    ---Must stop when entering this area
+    STOP = 6,
+    ---Must run to traverse this area
+    RUN = 7,
+    ---Must walk to traverse this area
+    WALK = 8,
+    ---Avoid this area unless alternatives are too dangerous
+    AVOID = 9,
+    ---Area may become blocked, and should be periodically checked
+    TRANSIENT = 10,
+    ---Area should not be considered for hiding spot generation
+    DONT_HIDE = 11,
+    ---Bots hiding in this area should stand
+    STAND = 12,
+    ---Hostages shouldn't use this area
+    NO_HOSTAGES = 13,
+    ---This area represents stairs, do not attempt to climb or jump them - just walk up
+    STAIRS = 14,
+    ---Don't merge this area with adjacent areas
+    NO_MERGE = 15,
+    ---This nav area is the climb point on the tip of an obstacle
+    OBSTACLE_TOP = 16,
+    ---This nav area is adjacent to a drop of at least CliffHeight
+    CLIFF = 17,
+    ---Area has designer specified cost controlled by func_nav_cost entities
+    FUNC_COST = 18,
+    ---Area is in an elevator's path
+    HAS_ELEVATOR = 19,
+    ----2147483648
+    NAV_BLOCKER = 20,
+}
+
+---@enum NAV_TRAVERSE_TYPE
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ENUMs used by NavArea:getParentHow.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1290).
+navmesh.NAV_TRAVERSE_TYPE = {
+    ---0
+    GO_NORTH = 1,
+    ---1
+    GO_EAST = 2,
+    ---2
+    GO_SOUTH = 3,
+    ---3
+    GO_WEST = 4,
+    ---4
+    GO_LADDER_UP = 5,
+    ---5
+    GO_LADDER_DOWN = 6,
+    ---6
+    GO_JUMP = 7,
+    ---7
+    GO_ELEVATOR_UP = 8,
+    ---8
+    GO_ELEVATOR_DOWN = 9,
+}
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Add this position and normal to the list of walkable positions, used before map generation with navmesh.beginGeneration.
 --- Requires the `navmesh.modify` permission.
