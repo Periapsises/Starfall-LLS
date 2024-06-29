@@ -244,4 +244,3 @@ function table.sortDesc(tbl) end
 ---@param displayName string? # Optional name for the table
 ---@param niceFormatting boolean? # Optional, adds new lines and tabs to the string. Defaults to false
 function table.toString(tbl, displayName, niceFormatting) end
-

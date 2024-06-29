@@ -1307,7 +1307,7 @@ function Entity:setDrawShadow(draw) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the elasticity of the entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L265).
----@param elasticity number # 
+---@param elasticity number #
 function Entity:setElasticity(elasticity) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -1326,7 +1326,7 @@ function Entity:setFlexWeight(flexid, weight) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the entity's friction multiplier.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L257).
----@param friction number # 
+---@param friction number #
 function Entity:setFriction(friction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -1576,4 +1576,3 @@ function Entity:worldToLocalAngles(data) end
 ---@param data Vector # World space direction vector
 ---@return Vector # data as local space direction vector
 function Entity:worldToLocalVector(data) end
-

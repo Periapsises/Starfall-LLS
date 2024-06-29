@@ -124,4 +124,3 @@ function timer.toggle(name) end
 ---@param name string # The timer name
 ---@return boolean # false if the timer didn't exist or was already running, true otherwise.
 function timer.unpause(name) end
-

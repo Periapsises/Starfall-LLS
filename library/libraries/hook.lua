@@ -36,4 +36,3 @@ function hook.run(hookname, ...) end
 ---@param ... any # Parameters that will be passed when calling hook functions
 ---@return table # A list of the resultset of each called hook
 function hook.runRemote(recipient, ...) end
-

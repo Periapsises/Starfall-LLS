@@ -38,4 +38,3 @@ function SurfaceInfo:isSky() end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/surfaceinfo.lua#L68).
 ---@return boolean # If the surface is water.
 function SurfaceInfo:isWater() end
-

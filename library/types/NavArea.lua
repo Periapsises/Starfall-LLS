@@ -54,7 +54,7 @@ function NavArea:computeDirection(pos) end
 --- Returns the height difference on the Z axis of the two CNavAreas. This is calculated from the center most point on both CNavAreas.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L321).
 ---@param other NavArea # The nav area to test against.
----@return number # 
+---@return number #
 function NavArea:computeGroundHeightChange(other) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -190,7 +190,7 @@ function NavArea:getParent() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how this CNavArea is connected to its parent.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L488).
----@return number # 
+---@return number #
 function NavArea:getParentHow() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -278,7 +278,7 @@ function NavArea:isConnected(other) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L295).
 ---@param other NavArea # The other NavArea to check for connection to.
 ---@param navDirType number # The direction, in which to look for the connection. See NAV_DIR enums
----@return boolean # 
+---@return boolean #
 function NavArea:isConnectedAtSide(other, navDirType) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -433,4 +433,3 @@ function NavArea:setTotalCost(cost) end
 --- Moves this open list to appropriate position based on its CNavArea:getTotalCost compared to the total cost of other areas in the open list.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L712).
 function NavArea:updateOnOpenList() end
-

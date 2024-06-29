@@ -137,4 +137,3 @@ function find.playersByName(name, casesensitive, exact) end
 ---@param furthest boolean # Whether to have the further entities first
 ---@return table # A table of the closest entities
 function find.sortByClosest(ents, pos, furthest) end
-

@@ -14,13 +14,13 @@ midi = {}
 --- Midi Command ENUMS
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1194).
 midi.MIDI = {
-    NOTE_OFF = 1,
-    NOTE_ON = 2,
-    AFTERTOUCH = 3,
-    CONTINUOUS_CONTROLLER = 4,
-    PATCH_CHANGE = 5,
-    CHANNEL_PRESSURE = 6,
-    PITCH_BEND = 7,
+	NOTE_OFF = 1,
+	NOTE_ON = 2,
+	AFTERTOUCH = 3,
+	CONTINUOUS_CONTROLLER = 4,
+	PATCH_CHANGE = 5,
+	CHANNEL_PRESSURE = 6,
+	PITCH_BEND = 7,
 }
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -74,4 +74,3 @@ function midi.isPortOpen() end
 ---@param port number # the midi port to open. Passing nothing defaults to 0.
 ---@return string # the name of the midi device opened at the given port.
 function midi.openPort(port) end
-

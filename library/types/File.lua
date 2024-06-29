@@ -131,4 +131,3 @@ function File:writeLong(x) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L516).
 ---@param x number # The short to write
 function File:writeShort(x) end
-

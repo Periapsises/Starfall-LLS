@@ -137,10 +137,10 @@ function mesh.writeQuad(v1, v2, v3, v4) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Draws a quad using a position, normal and size.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1106).
----@param position Vector # 
----@param normal Vector # 
----@param w number # 
----@param h number # 
+---@param position Vector #
+---@param normal Vector #
+---@param w number #
+---@param h number #
 function mesh.writeQuadEasy(position, normal, w, h) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -157,6 +157,5 @@ function mesh.writeUV(stage, u, v) end
 ---@param x number # x
 ---@param y number # y
 ---@param z number # z
----@param handedness number # 
+---@param handedness number #
 function mesh.writeUserData(x, y, z, handedness) end
-

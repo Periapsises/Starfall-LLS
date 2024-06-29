@@ -796,4 +796,3 @@ function Player:teamBanTimeLeft(team) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L838).
 ---@return number # Returns the players voice volume, how loud the player's voice communication currently is, as a normal number. Doesn't work on local player unless the voice_loopback convar is set to 1.
 function Player:voiceVolume() end
-

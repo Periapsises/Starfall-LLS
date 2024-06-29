@@ -14,4 +14,3 @@ light = {}
 ---@param color Color # The color of the light
 ---@return Light # Dynamic light
 function light.create(pos, size, brightness, color) end
-

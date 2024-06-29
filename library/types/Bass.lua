@@ -211,4 +211,3 @@ function Bass:setVolume(vol) end
 --- Stops playing the sound and destroys it. Use pause instead if you don't want it destroyed.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L240).
 function Bass:stop() end
-

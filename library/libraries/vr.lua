@@ -12,32 +12,32 @@ vr = {}
 --- VRmod library enums
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1028).
 vr.VR = {
-    BOOLEAN_PRIMARYFIRE = 1,
-    VECTOR1_PRIMARYFIRE = 2,
-    BOOLEAN_SECONDARYFIRE = 3,
-    BOOLEAN_CHANGEWEAPON = 4,
-    BOOLEAN_USE = 5,
-    BOOLEAN_SPAWNMENU = 6,
-    VECTOR2_WALKDIRECTION = 7,
-    BOOLEAN_WALK = 8,
-    BOOLEAN_FLASHLIGHT = 9,
-    BOOLEAN_TURNLEFT = 10,
-    BOOLEAN_TURNRIGHT = 11,
-    VECTOR2_SMOOTHTURN = 12,
-    BOOLEAN_CHAT = 13,
-    BOOLEAN_RELOAD = 14,
-    BOOLEAN_JUMP = 15,
-    BOOLEAN_LEFT_PICKUP = 16,
-    BOOLEAN_RIGHT_PICKUP = 17,
-    BOOLEAN_UNDO = 18,
-    BOOLEAN_SPRINT = 19,
-    VECTOR1_FORWARD = 20,
-    VECTOR1_REVERSE = 21,
-    BOOLEAN_TURBO = 22,
-    VECTOR2_STEER = 23,
-    BOOLEAN_HANDBRAKE = 24,
-    BOOLEAN_EXIT = 25,
-    BOOLEAN_TURRET = 26,
+	BOOLEAN_PRIMARYFIRE = 1,
+	VECTOR1_PRIMARYFIRE = 2,
+	BOOLEAN_SECONDARYFIRE = 3,
+	BOOLEAN_CHANGEWEAPON = 4,
+	BOOLEAN_USE = 5,
+	BOOLEAN_SPAWNMENU = 6,
+	VECTOR2_WALKDIRECTION = 7,
+	BOOLEAN_WALK = 8,
+	BOOLEAN_FLASHLIGHT = 9,
+	BOOLEAN_TURNLEFT = 10,
+	BOOLEAN_TURNRIGHT = 11,
+	VECTOR2_SMOOTHTURN = 12,
+	BOOLEAN_CHAT = 13,
+	BOOLEAN_RELOAD = 14,
+	BOOLEAN_JUMP = 15,
+	BOOLEAN_LEFT_PICKUP = 16,
+	BOOLEAN_RIGHT_PICKUP = 17,
+	BOOLEAN_UNDO = 18,
+	BOOLEAN_SPRINT = 19,
+	VECTOR1_FORWARD = 20,
+	VECTOR1_REVERSE = 21,
+	BOOLEAN_TURBO = 22,
+	VECTOR2_STEER = 23,
+	BOOLEAN_HANDBRAKE = 24,
+	BOOLEAN_EXIT = 25,
+	BOOLEAN_TURRET = 26,
 }
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -220,4 +220,3 @@ function vr.isPlayerInVR(target) end
 ---@param target Player # Player to check
 ---@return boolean # True if player is using empty hands
 function vr.usingEmptyHands(target) end
-
