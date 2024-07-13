@@ -29,7 +29,7 @@ function Player:canKeysUnlock(door) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Drops the player's weapon.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L550).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L543).
 ---@param weapon Weapon|string # The weapon instance or class name of the weapon to drop
 ---@param target Vector? # If set, launches the weapon at the given position
 ---@param velocity Vector? # If set and target is unset, launches the weapon with the given velocity
@@ -49,7 +49,7 @@ function Player:getAimVector() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the amount of ammo the player has.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L477).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L470).
 ---@param idOrName string|number # The string ammo name or number id of the ammo
 ---@return number # The amount of ammo player has in reserve.
 function Player:getAmmoCount(idOrName) end
@@ -90,7 +90,7 @@ function Player:getDarkRPVar(var) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets the player's death ragdoll.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L509).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L502).
 ---@return Entity? # The entity or nil if it doesn't exist
 function Player:getDeathRagdoll() end
 
@@ -114,7 +114,7 @@ function Player:getEntityInUse() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a table with information of what the player is looking at.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L408).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L401).
 ---@return table # Trace data https://wiki.facepunch.com/gmod/Structures/TraceResult
 function Player:getEyeTrace() end
 
@@ -144,7 +144,7 @@ function Player:getFriendStatus() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the entity that the player is standing on.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L470).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L463).
 ---@return Entity # Ground entity
 function Player:getGroundEntity() end
 
@@ -193,13 +193,13 @@ function Player:getName() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the packet loss of the client.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L631).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L624).
 ---@return number # Packets lost
 function Player:getPacketLoss() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's current ping.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L358).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L351).
 ---@return number # The player's ping
 function Player:getPing() end
 
@@ -207,7 +207,7 @@ function Player:getPing() end
 --- Returns a player's color.
 --- The part of the model that is colored is determined by the model itself, and is different for each model.
 --- The format is Vector(r,g,b), and each color should be between 0 and 1.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L461).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L454).
 ---@return Vector # The color
 function Player:getPlayerColor() end
 
@@ -237,7 +237,7 @@ function Player:getSlowWalkSpeed() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's SteamID.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L365).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L358).
 ---@return string # SteamID
 function Player:getSteamID() end
 
@@ -246,7 +246,7 @@ function Player:getSteamID() end
 --- In singleplayer, this will return no value serverside.
 --- For bots, this will return 90071996842377216 (equivalent to STEAM_0:0:0) for the first bot to join, and adds 1 to the id for the bot id.
 --- Returns no value for bots clientside.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L372).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L365).
 ---@param owner boolean? # Return the actual game owner account id
 ---@return string # SteamID64 aka Community ID
 function Player:getSteamID64(owner) end
@@ -259,25 +259,25 @@ function Player:getStepSize() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's current team.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L387).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L380).
 ---@return number # Team Index, from TEAM enums or custom teams
 function Player:getTeam() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the name of the player's current team.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L394).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L387).
 ---@return string # Team Name
 function Player:getTeamName() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the time in seconds since the player connected.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L638).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L631).
 ---@return number # Time connected
 function Player:getTimeConnected() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the number of seconds that the player has been timing out for.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L645).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L638).
 ---@return number # Timeout seconds
 function Player:getTimeoutSeconds() end
 
@@ -289,7 +289,7 @@ function Player:getUnDuckSpeed() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's UserID.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L401).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L394).
 ---@return number # UserID
 function Player:getUserID() end
 
@@ -301,20 +301,20 @@ function Player:getVehicle() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's current view entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L415).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L408).
 ---@return Entity # Player's current view entity
 function Player:getViewEntity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's view model.
 --- In the Client realm, other players' viewmodels are not available unless they are being spectated.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L422).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L415).
 ---@return Entity # Player's view model
 function Player:getViewModel() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the camera punch offset angle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L430).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L423).
 ---@return Angle # The angle of the view offset
 function Player:getViewPunchAngles() end
 
@@ -332,7 +332,7 @@ function Player:getWantedReason() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the specified weapon or nil if the player doesn't have it.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L443).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L436).
 ---@param wep string # Weapon class name
 ---@return Weapon # Weapon
 function Player:getWeapon(wep) end
@@ -341,13 +341,13 @@ function Player:getWeapon(wep) end
 --- Returns a player's weapon color.
 --- The part of the model that is colored is determined by the model itself, and is different for each model.
 --- The format is Vector(r,g,b), and each color should be between 0 and 1.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L452).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L445).
 ---@return Vector # The color
 function Player:getWeaponColor() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a table of weapons the player is carrying.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L436).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L429).
 ---@return table # Table of weapons
 function Player:getWeapons() end
 
@@ -366,7 +366,7 @@ function Player:hasDarkRPPrivilege() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether or not the player has godmode.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L543).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L536).
 ---@return boolean # True if the player has godmode
 function Player:hasGodMode() end
 
@@ -412,9 +412,9 @@ function Player:isCP() end
 ---@return boolean? # Whether this player is a Chief. May be nil instead of false.
 function Player:isChief() end
 
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the player is connected.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L329).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L652).
 ---@return boolean # True if player is connected
 function Player:isConnected() end
 
@@ -438,13 +438,13 @@ function Player:isFlashlightOn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is frozen.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L336).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L329).
 ---@return boolean # True if player is frozen
 function Player:isFrozen() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if the player is connected to a HUD component that's linked to this chip.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L526).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L519).
 ---@return boolean # True if a HUD component is connected and active for the player, nil otherwise
 function Player:isHUDActive() end
 
@@ -498,31 +498,31 @@ function Player:isSpeaking() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is sprinting.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L494).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L487).
 ---@return boolean # Whether they are sprinting
 function Player:isSprinting() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is a super admin.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L343).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L336).
 ---@return boolean # True if player is super admin
 function Player:isSuperAdmin() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns true if the player is timing out.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L652).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L645).
 ---@return boolean # isTimingOut
 function Player:isTimingOut() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is typing in their chat.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L487).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L480).
 ---@return boolean # Whether they are typing in the chat
 function Player:isTyping() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player belongs to a usergroup.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L350).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L343).
 ---@param groupName string # Group to check against
 ---@return boolean # True if player belongs to group
 function Player:isUserGroup(groupName) end
@@ -530,7 +530,7 @@ function Player:isUserGroup(groupName) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is walking.
 --- In singleplayer, this will return false clientside.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L501).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L494).
 ---@return boolean # Whether they are walking
 function Player:isWalking() end
 
@@ -554,7 +554,7 @@ function Player:keysUnOwnAll() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the hitgroup where the player was last hit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L612).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L605).
 ---@return number # Hitgroup, see https://wiki.facepunch.com/gmod/Enums/HITGROUP
 function Player:lastHitGroup() end
 
@@ -599,7 +599,7 @@ function Player:say(text, teamOnly) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the player's ammo.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L588).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L581).
 ---@param amount number # The ammo value
 ---@param ammoType number|string # Ammo type id or name
 function Player:setAmmo(amount, ammoType) end
@@ -684,7 +684,7 @@ function Player:setDuckSpeed(newduckspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a player's eye angles.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L619).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L612).
 ---@param ang Angle # New angles
 function Player:setEyeAngles(ang) end
 
@@ -727,7 +727,7 @@ function Player:setMaxSpeed(newmaxspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Lets you change the size of yourself if the server has sf_permissions_entity_owneraccess 1.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L516).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L509).
 ---@param scale number # The scale to apply, will be truncated to the first two decimal places (min 0.01, max 100)
 function Player:setModelScale(scale) end
 
@@ -757,7 +757,7 @@ function Player:setUnDuckSpeed(newunduckspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the view entity of the player. Only works if they are linked to a hud.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L533).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L526).
 ---@param ent Entity # Entity to set the player's view entity to, or nothing to reset it
 function Player:setViewEntity(ent) end
 
@@ -769,18 +769,18 @@ function Player:setWalkSpeed(newwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes all a player's ammo.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L604).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L597).
 function Player:stripAmmo() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Strips the player's weapon.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L570).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L563).
 ---@param weapon string # The weapon class name of the weapon to strip
 function Player:stripWeapon(weapon) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Strips all the player's weapons.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L580).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L573).
 function Player:stripWeapons() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
