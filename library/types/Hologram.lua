@@ -8,7 +8,7 @@ local Hologram = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Applies engine effects to the hologram.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L488).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L500).
 ---@param effect number # The effects to add. See EF Enums
 function Hologram:addEffects(effect) end
 
@@ -40,12 +40,12 @@ function Hologram:getSuppressEngineLighting() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes a hologram.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L512).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L524).
 function Hologram:remove() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes engine effects from the hologram.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L500).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L512).
 ---@param effect number # The effects to remove. See EF Enums
 function Hologram:removeEffects(effect) end
 
@@ -78,6 +78,12 @@ function Hologram:setAnimation(animation, frame, rate) end
 ---@param normal Vector # The the direction of the clip plane in world coordinates, or local to entity if it is specified
 ---@param entity Entity? # (Optional) The entity to make coordinates local to, otherwise the world is used
 function Hologram:setClip(index, enabled, origin, normal, entity) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Set the cull mode for a hologram.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L488).
+---@param mode number # Cull mode. 0 for counter clock wise, 1 for clock wise
+function Hologram:setCullMode(mode) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the texture filtering function when viewing a close texture.
