@@ -779,6 +779,12 @@ function Player:setViewEntity(ent) end
 ---@param newwalkspeed number # New Walk speed.
 function Player:setWalkSpeed(newwalkspeed) end
 
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns whether the player's player model will be drawn at the time the function is called.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1134).
+---@return boolean # True if the player's playermodel is visible
+function Player:shouldDrawLocalPlayer() end
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes all a player's ammo.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L604).
