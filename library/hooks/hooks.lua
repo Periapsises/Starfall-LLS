@@ -183,7 +183,7 @@
 ---@alias PostEntityFireBullets fun(ent: Entity, data: table)
 ---@alias PropBreak fun(ply: Player, ent: Entity)
 ---@alias Removed fun()
----@alias StarfallError fun(ent: Entity, ply: Player, err: string)
+---@alias StarfallError fun(ent: Entity, ply: Player|Entity, err: string)
 ---@alias StartChat fun(isTeamChat: boolean)
 ---@alias StartEntityDriving fun(ent: Entity, ply: Player)
 ---@alias VRExit fun(ply: Player)
