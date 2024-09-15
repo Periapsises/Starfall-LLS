@@ -21,7 +21,7 @@ function file.asyncRead(path, callback) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a directory.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L344).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L362).
 ---@param path string # Filepath relative to data/sf_filedata/.
 function file.createDir(path) end
 
@@ -31,6 +31,13 @@ function file.createDir(path) end
 ---@param path string # Filepath relative to data/sf_filedata/.
 ---@return boolean? # True if successful, nil if it wasn't found
 function file.delete(path) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Deletes a temp file.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L344).
+---@param filename string # The temp file name. Must be only a file and not a path
+---@return boolean? # True if successful, nil if it wasn't found
+function file.deleteTemp(filename) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Checks if a file exists.
@@ -48,7 +55,7 @@ function file.existsTemp(filename) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Enumerates a directory.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L352).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L370).
 ---@param path string # The folder to enumerate, relative to data/sf_filedata/.
 ---@param sorting string? # Optional sorting argument. Either nameasc, namedesc, dateasc, datedesc
 ---@return table # Table of file names
@@ -57,7 +64,7 @@ function file.find(path, sorting) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Enumerates a directory relative to gmod.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L364).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L382).
 ---@param path string # The folder to enumerate, relative to garrysmod.
 ---@param sorting string? # Optional sorting argument. Either nameasc, namedesc, dateasc, datedesc
 ---@return table # Table of file names
@@ -103,7 +110,7 @@ function file.readTemp(filename) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns when the file or folder was last modified in Unix time.
 --- Can then be used with something like os.date for a human-readable date.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L376).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L394).
 ---@param path string # Filepath relative to data/sf_filedata/.
 ---@return number # Last modified time in Unix time
 function file.time(path) end
