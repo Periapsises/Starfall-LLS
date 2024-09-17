@@ -40,6 +40,13 @@ function sound.duration(path) end
 function sound.emitSoundsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns true if the sound or sound property exists.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/sound.lua#L119).
+---@param path string # String path to the sound file
+---@return boolean # True if exists, false if not
+function sound.exists(path) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the number of sounds left that can be created.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/sound.lua#L105).
 ---@return number # The number of sounds left
