@@ -3,7 +3,20 @@ local builtinsExtraContent = [[
 CLIENT = nil
 ---@type boolean
 SERVER = nil
+
+--- Returns an iterator for a for loop that iterates over the key-value pairs of a table.
+---@generic T
+---@param tbl T[]
+---@return fun(tbl: T[], index: number): number, T
+---@return T[]
+---@return number
+function ipairs(tbl) end
+
 ]]
+
+local blacklistedMethodName = {
+	["ipairs"] = true
+}
 
 local specialHookMethods = {
 	add = true,
@@ -46,7 +59,7 @@ local function compileLibrary(name, contents)
 
 		if tableBlacklist[name .. "." .. tableName] then
 			print("Skipping blacklisted table " .. tableName)
-			goto continue
+			goto SKIP_TABLE
 		end
 
 		file:write("---@enum " .. tableName .. "\n")
@@ -68,13 +81,18 @@ local function compileLibrary(name, contents)
 
 		file:write("}\n\n")
 
-		::continue::
+		::SKIP_TABLE::
 	end
 
 	local libraryMethods = GetSorted(contents.methods)
 	for i = 1, #libraryMethods do
 		local methodName = libraryMethods[i].name
 		local methodInfo = libraryMethods[i].value
+
+		if blacklistedMethodName[methodName] then
+			print( "Skipping blacklisted method: " .. methodName )
+			goto SKIP_METHOD
+		end
 
 		WriteRealm(file, methodInfo.realm)
 
@@ -131,6 +149,8 @@ local function compileLibrary(name, contents)
 		end
 
 		file:write("function " .. tableHeader .. methodName .. "(" .. args .. ") end\n\n")
+
+		::SKIP_METHOD::
 	end
 
 	file:close()
