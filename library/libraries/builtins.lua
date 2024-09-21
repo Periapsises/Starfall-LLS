@@ -4,6 +4,15 @@
 CLIENT = nil
 ---@type boolean
 SERVER = nil
+
+--- Returns an iterator for a for loop that iterates over the key-value pairs of a table.
+---@generic T
+---@param tbl T[]
+---@return fun(tbl: T[], index: number): number, T
+---@return T[]
+---@return number
+function ipairs(tbl) end
+
 ---@enum BLEND
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs of blend functions
@@ -990,15 +999,6 @@ function getmetatable(tbl) end
 ---@return boolean # Whether the client has granted the specified permission.
 ---@return string # The reason the permission check failed
 function hasPermission(perm, obj) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Returns an iterator function for a for loop, to return ordered key-value pairs from a table.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/builtins.lua#L114).
----@param tbl table # Table to iterate over
----@return function # Iterator function
----@return table # Table being iterated over
----@return number # Origin index. Equals 0.
-function ipairs(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns if this is the first time this hook was predicted.
