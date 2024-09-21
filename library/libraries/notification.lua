@@ -23,10 +23,11 @@ function notification.addLegacy(text, type, length) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L51).
 ---@param id string # String index of the notification
 ---@param text string # The text to display
-function notification.addProgress(id, text) end
+---@param progress number? # An optional progress val 0-1 indicating progress.
+function notification.addProgress(id, text, progress) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Removes the notification with the given index after 0.8 seconds.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L79).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L84).
 ---@param id string # String index of the notification to kill
 function notification.kill(id) end

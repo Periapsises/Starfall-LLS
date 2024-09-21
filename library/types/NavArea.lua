@@ -15,25 +15,25 @@ local NavArea = {}
 --- 4 = perfect sniper spot, can see either very far, or a large area, or both.
 --- 8 = exposed, spot in the open, usually on a ledge or cliff.
 --- Values over 255 will be clamped.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L724).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L722).
 ---@param pos Vector # The position of the hiding spot on the nav area
 ---@param flags number # Flags describing what kind of hiding spot this is.
 function NavArea:addHidingSpot(pos, flags) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds this CNavArea to the closed list, a list of areas that have been checked by A* pathfinding algorithm.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L739).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L737).
 function NavArea:addToClosedList() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds this CNavArea to the Open List.
 --- Requires `navarea.openlist` permission.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L744).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L742).
 function NavArea:addToOpenList() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Clears the open and closed lists for a new search.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L751).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L749).
 function NavArea:clearSearchLists() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -59,7 +59,7 @@ function NavArea:computeGroundHeightChange(other) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Connects this CNavArea to another CNavArea with a one way connection. ( From this area to the target ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L756).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L754).
 ---@param other NavArea # The CNavArea this area leads to.
 function NavArea:connectTo(other) end
 
@@ -72,7 +72,7 @@ function NavArea:contains(v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Disconnects this nav area from given area or ladder. (Only disconnects one way).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L717).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L715).
 ---@param other NavArea # The other NavArea to disconnect from.
 function NavArea:disconnect(other) end
 
@@ -386,31 +386,31 @@ function NavArea:remove() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes the given NavArea from the Closed List.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L662).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L660).
 function NavArea:removeFromClosedList() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the attributes for given CNavArea.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L667).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L665).
 ---@param attributes number # The attribute bitflag. See NAV_MESH enums
 function NavArea:setAttributes(attributes) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the position of a corner of a nav area.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L674).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L672).
 ---@param corner number # The corner to set, uses NAV_CORNER enums
 ---@param pos Vector # The new position to set.
 function NavArea:setCorner(corner, pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the cost from starting area this area when pathfinding.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L682).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L680).
 ---@param cost number # The cost so far
 function NavArea:setCostSoFar(cost) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the new parent of this CNavArea.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L689).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L687).
 ---@param parent NavArea # The new parent to set
 ---@param how number # How we get from parent to us using NAV_TRAVERSE_TYPE
 function NavArea:setParent(parent, how) end
@@ -418,18 +418,18 @@ function NavArea:setParent(parent, how) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the Place of the nav area.
 --- There is a limit of 256 Places per nav file.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L697).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L695).
 ---@param place string? # Place to set. Leave as nil to remove place from NavArea
 ---@return boolean # True if operation succeeded, false otherwise.
 function NavArea:setPlace(place) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the total cost when passing from starting area to the goal area through this node.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L705).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L703).
 ---@param cost number # The total cost of the path to set. (>= 0)
 function NavArea:setTotalCost(cost) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Moves this open list to appropriate position based on its CNavArea:getTotalCost compared to the total cost of other areas in the open list.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L712).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/navmesh.lua#L710).
 function NavArea:updateOnOpenList() end

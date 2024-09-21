@@ -56,13 +56,13 @@ function Player:getAmmoCount(idOrName) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets the progress of the animation ranging 0-1.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1094).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1112).
 ---@return number # Progress ranging 0-1
 function Player:getAnimationProgress() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets the animation time.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1105).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1123).
 ---@return number # Time in seconds
 function Player:getAnimationTime() end
 
@@ -138,7 +138,7 @@ function Player:getFriction() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the relationship of the player to the local client.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L816).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L834).
 ---@return string # One of: "friend", "blocked", "none", "requested"
 function Player:getFriendStatus() end
 
@@ -288,6 +288,12 @@ function Player:getTimeoutSeconds() end
 function Player:getUnDuckSpeed() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the usergroup of the player.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L351).
+---@return string # Usergroup, "user" if player has no group
+function Player:getUserGroup() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the player's UserID.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L401).
 ---@return number # UserID
@@ -412,9 +418,9 @@ function Player:isCP() end
 ---@return boolean? # Whether this player is a Chief. May be nil instead of false.
 function Player:isChief() end
 
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the player is connected.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L329).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L659).
 ---@return boolean # True if player is connected
 function Player:isConnected() end
 
@@ -438,7 +444,7 @@ function Player:isFlashlightOn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is frozen.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L336).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L329).
 ---@return boolean # True if player is frozen
 function Player:isFrozen() end
 
@@ -474,7 +480,7 @@ function Player:isMedic() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether the local player has muted the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L824).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L842).
 ---@return boolean # True if the player was muted
 function Player:isMuted() end
 
@@ -486,13 +492,13 @@ function Player:isNoclipped() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets whether a animation is playing.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1086).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1104).
 ---@return boolean # If an animation is playing
 function Player:isPlayingAnimation() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether the player is heard by the local player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L831).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L849).
 ---@return boolean # Whether they are speaking and able to be heard by LocalPlayer
 function Player:isSpeaking() end
 
@@ -504,7 +510,7 @@ function Player:isSprinting() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player is a super admin.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L343).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L336).
 ---@return boolean # True if player is super admin
 function Player:isSuperAdmin() end
 
@@ -522,7 +528,7 @@ function Player:isTyping() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the player belongs to a usergroup.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L350).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L343).
 ---@param groupName string # Group to check against
 ---@return boolean # True if player belongs to group
 function Player:isUserGroup(groupName) end
@@ -542,7 +548,7 @@ function Player:isWanted() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether or not the player is pushing the key.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L805).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L823).
 ---@param key number # Key to check. IN_KEY table values
 ---@return boolean # Whether they key is down
 function Player:keyDown(key) end
@@ -553,6 +559,12 @@ function Player:keyDown(key) end
 function Player:keysUnOwnAll() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Kills the target.
+--- Requires 'entities.setHealth' permission.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L811).
+function Player:kill() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the hitgroup where the player was last hit.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L612).
 ---@return number # Hitgroup, see https://wiki.facepunch.com/gmod/Enums/HITGROUP
@@ -560,7 +572,7 @@ function Player:lastHitGroup() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Plays gesture animations on a player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L845).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L863).
 ---@param animation string|number # Sequence string or act number. https://wiki.facepunch.com/gmod/Enums/ACT
 ---@param loop boolean? # Optional boolean (Default true), should the gesture loop
 ---@param slot number? # Optional int (Default GESTURE_SLOT.CUSTOM), the gesture slot to use. GESTURE_SLOT table values
@@ -580,19 +592,19 @@ function Player:requestMoney(message, amount, callbackSuccess, callbackFailure, 
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Resets the animation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L949).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L967).
 function Player:resetAnimation() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Resets gesture animations on a player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L875).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L893).
 ---@param slot number? # Optional int (Default GESTURE_SLOT.CUSTOM), the gesture slot to use. GESTURE_SLOT table values
 function Player:resetGesture(slot) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Forces the player to say the first argument.
 --- Only works on the chip's owner.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L659).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L666).
 ---@param text string # The text to force the player to say
 ---@param teamOnly boolean? # Team chat only?, Defaults to false.
 function Player:say(text, teamOnly) end
@@ -606,7 +618,7 @@ function Player:setAmmo(amount, ammoType) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Plays an animation on the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L901).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L919).
 ---@param sequence number|string # Sequence number or string name
 ---@param progress number? # Optional float (Default 0), the progress of the animation. Ranging from 0-1
 ---@param rate number? # Optional float (Default 1), the playback rate of the animation
@@ -617,68 +629,68 @@ function Player:setAnimation(sequence, progress, rate, loop, auto_advance, act) 
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation activity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L958).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L976).
 ---@param activity number|string|nil # Activity, nil to use the current animation sequence
 function Player:setAnimationActivity(activity) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation auto advance.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1022).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1040).
 ---@param auto_advance boolean # Should the animation handle advancing itself?
 function Player:setAnimationAutoAdvance(auto_advance) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation bounce.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1037).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1055).
 ---@param bounce boolean # Should the animation bounce instead of loop?
 function Player:setAnimationBounce(bounce) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation loop.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1052).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1070).
 ---@param loop boolean # Should the animation loop?
 function Player:setAnimationLoop(loop) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation progress.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L977).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L995).
 ---@param progress number # The progress of the animation. Ranging from 0-1
 function Player:setAnimationProgress(progress) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation range.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1067).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1085).
 ---@param min number # Min. Ranging from 0-1
 ---@param max number # Max. Ranging from 0-1
 function Player:setAnimationRange(min, max) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation playback rate.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1007).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1025).
 ---@param rate number # The playback rate of the animation. Float
 function Player:setAnimationRate(rate) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the animation time.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L992).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1010).
 ---@param time number # The time of the animation in seconds. Float
 function Player:setAnimationTime(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the armor of the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L674).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L681).
 ---@param newarmor number # New armor value.
 function Player:setArmor(newarmor) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Crouched Walk Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L694).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L701).
 ---@param newcwalkspeed number # New Crouch Walk speed, This is a multiplier from 0 to 1.
 function Player:setCrouchedWalkSpeed(newcwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Duck Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L704).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L711).
 ---@param newduckspeed number # New Duck speed, This is a multiplier from 0 to 1.
 function Player:setDuckSpeed(newduckspeed) end
 
@@ -690,38 +702,38 @@ function Player:setEyeAngles(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Friction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L794).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L801).
 ---@param newfriction number # New Friction.
 function Player:setFriction(newfriction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the weight of the gesture animation in the given gesture slot.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L887).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L905).
 ---@param slot number? # Optional int (Default GESTURE_SLOT.CUSTOM), the gesture slot to use. GESTURE_SLOT table values
 ---@param weight number? # Optional float (Default 1), the weight of the gesture. Ranging from 0-1
 function Player:setGestureWeight(slot, weight) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Jump Power.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L774).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L781).
 ---@param newjumppower number # New Jump Power.
 function Player:setJumpPower(newjumppower) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Ladder Climb Speed, probably unstable.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L724).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L731).
 ---@param newladderclimbspeed number # New Ladder Climb speed.
 function Player:setLadderClimbSpeed(newladderclimbspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the maximum armor for player. You can still set a player's armor above this amount with Player:setArmor.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L684).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L691).
 ---@param newmaxarmor number # New max armor value.
 function Player:setMaxArmor(newmaxarmor) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Max Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L734).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L741).
 ---@param newmaxspeed number # New Max speed.
 function Player:setMaxSpeed(newmaxspeed) end
 
@@ -733,25 +745,25 @@ function Player:setModelScale(scale) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Run Speed ( +speed ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L744).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L751).
 ---@param newrunspeed number # New Run speed.
 function Player:setRunSpeed(newrunspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Slow Walk Speed ( +walk ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L754).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L761).
 ---@param newslowwalkspeed number # New Slow Walk speed.
 function Player:setSlowWalkSpeed(newslowwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Step Size.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L784).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L791).
 ---@param newstepsize number # New Step Size.
 function Player:setStepSize(newstepsize) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets UnDuck Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L714).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L721).
 ---@param newunduckspeed number # New UnDuck speed, This is a multiplier from 0 to 1.
 function Player:setUnDuckSpeed(newunduckspeed) end
 
@@ -763,9 +775,15 @@ function Player:setViewEntity(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Walk Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L764).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L771).
 ---@param newwalkspeed number # New Walk speed.
 function Player:setWalkSpeed(newwalkspeed) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns whether the player's player model will be drawn at the time the function is called.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L1134).
+---@return boolean # True if the player's playermodel is visible
+function Player:shouldDrawLocalPlayer() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes all a player's ammo.
@@ -793,6 +811,6 @@ function Player:teamBanTimeLeft(team) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the voice volume of the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L838).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L856).
 ---@return number # Returns the players voice volume, how loud the player's voice communication currently is, as a normal number. Doesn't work on local player unless the voice_loopback convar is set to 1.
 function Player:voiceVolume() end

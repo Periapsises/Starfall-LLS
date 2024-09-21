@@ -190,7 +190,7 @@ function string.niceTime(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a path with all .. accounted for.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L327).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L329).
 ---@param str string # Path
 ---@return string # Path with all .. replaced
 function string.normalizePath(str) end
@@ -258,11 +258,11 @@ function string.split(str, separator) end
 ---@param str string # String to be checked
 ---@param start string # String to check with
 ---@return boolean # True if the first string starts with the second
-function string.startWith(str, start) end
+function string.startsWith(str, start) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes the extension of a path.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L246).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L248).
 ---@param path string # The file-path to change
 ---@return string # Path without the extension
 function string.stripExtension(path) end
@@ -271,7 +271,7 @@ function string.stripExtension(path) end
 --- Returns a sub-string, starting from the character at position startPos of the string (inclusive).
 --- and optionally ending at the character at position endPos of the string (also inclusive).
 --- If EndPos is not given, the rest of the string is returned.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L252).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L254).
 ---@param str string # The string you'll take a sub-string out of
 ---@param startPos number # The position of the first character that will be included in the sub-string
 ---@param endPos number? # The position of the last character to be included in the sub-string. It can be negative to count from the end
@@ -287,28 +287,28 @@ function string.toColor(str) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts time to hours, minutes and seconds string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L274).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L276).
 ---@param time number # Time in seconds
 ---@return string # Given time in "HH:MM:SS" format
 function string.toHoursMinutesSeconds(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts time to hours, minutes, seconds and milliseconds string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L283).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L285).
 ---@param time number # Time in seconds
 ---@return string # Returns given time in "HH:MM:SS.MS" format
 function string.toHoursMinutesSecondsMilliseconds(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts time to minutes and seconds string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L262).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L264).
 ---@param time number # Time in seconds
 ---@return string # Given time in "MM:SS" format
 function string.toMinutesSeconds(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts time to minutes, seconds and milliseconds string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L268).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L270).
 ---@param time number # Time in seconds
 ---@return string # Returns given time in "MM:SS:MS" format
 function string.toMinutesSecondsMilliseconds(time) end
@@ -317,14 +317,14 @@ function string.toMinutesSecondsMilliseconds(time) end
 --- Splits the string into characters and creates a sequential table of characters.
 --- As a result of the encoding, non-ASCII characters will be split into more than one character in the output table.
 --- Each character value in the output table will always be 1 byte.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L292).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L294).
 ---@param str string # The string to turn into a table
 ---@return table # A sequential table where each value is a character from the given string
 function string.toTable(str) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes leading and trailing spaces/characters of a string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L300).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L302).
 ---@param str string # The string to trim
 ---@param char string? # Optional character to be trimmed. Defaults to space character
 ---@return string # Trimmed string
@@ -332,7 +332,7 @@ function string.trim(str, char) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes leading spaces/characters from a string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L307).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L309).
 ---@param str string # The string to trim
 ---@param char string? # Optional character to be trimmed. Defaults to space character
 ---@return string # Trimmed string
@@ -340,7 +340,7 @@ function string.trimLeft(str, char) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Removes trailing spaces/characters from a string.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L314).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L316).
 ---@param str string # The string to trim
 ---@param char string # Optional character to be trimmed. Defaults to space character
 ---@return string # Trimmed string
@@ -348,7 +348,7 @@ function string.trimRight(str, char) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Changes any lower-case letters in a string to upper-case letters.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L321).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L323).
 ---@param str string # The string to convert
 ---@return string # String with all letters upper case
 function string.upper(str) end
@@ -356,7 +356,7 @@ function string.upper(str) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Receives zero or more integers, converts each one to its corresponding UTF-8 byte sequence.
 --- and returns a string with the concatenation of all these sequences.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L335).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L337).
 ---@param ... any # Unicode code points to be converted in to a UTF-8 string
 ---@return string # UTF-8 string generated from given arguments
 function string.utf8char(...) end
@@ -364,7 +364,7 @@ function string.utf8char(...) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the codepoints (as numbers) from all characters in the given string that start between byte position startPos and endPos.
 --- It raises an error if it meets any invalid byte sequence.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L342).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L344).
 ---@param str string # The string that you will get the code(s) from
 ---@param startPos number? # The starting byte of the string to get the codepoint of
 ---@param endPos number? # The ending byte of the string to get the codepoint of
@@ -374,14 +374,14 @@ function string.utf8codepoint(str, startPos, endPos) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns an iterator (like string.gmatch) which returns both the position and codepoint of each utf8 character in the string.
 --- It raises an error if it meets any invalid byte sequence.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L351).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L353).
 ---@param str string # The string that you will get the codes from
 ---@return function # The iterator (to be used in a for loop)
 function string.utf8codes(str) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Forces a string to contain only valid UTF-8 data. Invalid sequences are replaced with U+FFFD (the Unicode replacement character).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L358).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L360).
 ---@param str string # The string that will become a valid UTF-8 string
 ---@return string # The UTF-8 string
 function string.utf8force(str) end
@@ -389,7 +389,7 @@ function string.utf8force(str) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the number of UTF-8 sequences in the given string between positions startPos and endPos (both inclusive).
 --- If it finds any invalid UTF-8 byte sequence, returns false as well as the position of the first invalid byte.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L364).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L366).
 ---@param str string # The string to calculate the length of
 ---@param startPos number? # The starting position to get the length from
 ---@param endPos number? # The ending position to get the length from
@@ -401,7 +401,7 @@ function string.utf8len(str, startPos, endPos) end
 --- Returns the byte-index of the n'th UTF-8-character after the given startPos (nil if none).
 --- startPos defaults to 1 when n is positive and -1 when n is negative. If n is zero,.
 --- this function instead returns the byte-index of the UTF-8-character startPos lies within.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L374).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L376).
 ---@param str string # The string that you will get the byte position from
 ---@param n number # The position to get the beginning byte position from
 ---@param startPos number? # The offset for n. Defaults to 1 if n >= 0, otherwise -1
