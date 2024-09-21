@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
     "name": "Starfall Ex API",
     "settings": {
         "Lua.runtime.version": "LuaJIT",
@@ -23,6 +24,10 @@
             "string.buffer": "disable",
             "table.clear": "disable",
             "table.new": "disable"
-        }
+        },
+        "Lua.runtime.nonstandardSymbol": ["continue", "!", "!=", "&&", "||", "//", "/**/"],
+        "Lua.diagnostics.disable": [
+            "duplicate-set-field"
+        ]
     }
 }
