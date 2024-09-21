@@ -8,7 +8,7 @@ local PhysObj = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies a angular velocity to an object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L327).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L337).
 ---@param angvel Vector # The local angvel vector to apply
 function PhysObj:addAngleVelocity(angvel) end
 
@@ -20,7 +20,7 @@ function PhysObj:addAngleVelocity(angvel) end
 --- FVPHYSICS.NO_IMPACT_DMG.
 --- FVPHYSICS.NO_NPC_IMPACT_DMG.
 --- FVPHYSICS.NO_PLAYER_PICKUP.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L385).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L395).
 ---@param flags number # The flags to add. FVPHYSICS enum.
 function PhysObj:addGameFlags(flags) end
 
@@ -32,20 +32,20 @@ function PhysObj:addVelocity(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies a force to the center of the physics object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L285).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L295).
 ---@param force Vector # The force vector to apply
 function PhysObj:applyForceCenter(force) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies an offset force to a physics object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L298).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L308).
 ---@param force Vector # The force vector in world coordinates
 ---@param position Vector # The force position in world coordinates
 function PhysObj:applyForceOffset(force, position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies a torque to a physics object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L340).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L350).
 ---@param torque Vector # The world torque vector to apply
 function PhysObj:applyTorque(torque) end
 
@@ -54,7 +54,7 @@ function PhysObj:applyTorque(torque) end
 --- The outputs can be used with PhysObj:applyForceCenter and PhysObj:applyTorque, respectively.
 --- Be careful to convert the angular impulse to world frame (PhysObj:localToWorldVector).
 --- if you are going to use it with applyTorque.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L564).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L574).
 ---@param impulse Vector # The impulse acting on the object in world coordinates (kg*source_unit/s)
 ---@param position Vector # The location of the impulse in world coordinates
 ---@return Vector # The calculated linear impulse on the physics object's center of mass in kg*source_unit/s. (World frame)
@@ -64,7 +64,7 @@ function PhysObj:calculateForceOffset(impulse, position) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Calculates the linear and angular velocities on the center of mass for an offset impulse.
 --- The outputs can be directly passed to PhysObj:addVelocity and PhysObj:addAngleVelocity, respectively.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L586).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L596).
 ---@param impulse Vector # The impulse acting on the object in world coordinates (kg*source_unit/s)
 ---@param position Vector # The location of the impulse in world coordinates
 ---@return Vector # The calculated linear velocity from the impulse on the physics object's center of mass in source_unit/s. (World frame)
@@ -79,25 +79,25 @@ function PhysObj:calculateVelocityOffset(impulse, position) end
 --- FVPHYSICS.NO_IMPACT_DMG.
 --- FVPHYSICS.NO_NPC_IMPACT_DMG.
 --- FVPHYSICS.NO_PLAYER_PICKUP.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L405).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L415).
 ---@param flags number # The flags to clear. FVPHYSICS enum.
 function PhysObj:clearGameFlags(flags) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the bone drag state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L443).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L453).
 ---@param drag boolean # Should the bone have air resistance?
 function PhysObj:enableDrag(drag) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets bone gravity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L434).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L444).
 ---@param grav boolean # Should the bone respect gravity?
 function PhysObj:enableGravity(grav) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the bone movement state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L497).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L507).
 ---@param move boolean # Should the bone move?
 function PhysObj:enableMotion(move) end
 
@@ -122,7 +122,7 @@ function PhysObj:getAngles() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns Movement damping of the bone.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L476).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L486).
 ---@return number # Linear damping
 ---@return number # Angular damping
 function PhysObj:getDamping() end
@@ -143,7 +143,7 @@ function PhysObj:getEntity() end
 --- Vector ContactPoint - Contact point of the friction event.
 --- number Material - Surface Property ID of our physics obj.
 --- number MaterialOther - Surface Property ID of the physics obj we came in contact with.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L530).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L540).
 ---@return table # Table of tables of data. Each table will contain:
 function PhysObj:getFrictionSnapshot() end
 
@@ -203,7 +203,7 @@ function PhysObj:getPos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the stress of the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L556).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L566).
 ---@return number # External stress. Usually about the mass of the object if on the ground, usually 0 if in freefall.
 ---@return number # Internal stress. Usually about the mass of every object resting on top of it combined.
 function PhysObj:getStress() end
@@ -230,26 +230,26 @@ function PhysObj:getVelocityAtPoint(vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the volume in source units cubed. Or nil if the PhysObj is a generated sphere or box.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L549).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L559).
 ---@return number? # The volume or nil if the PhysObj is a generated sphere or box.
 function PhysObj:getVolume() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether the game flags of the physics object are set.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L425).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L435).
 ---@param flags number # The flags to test. FVPHYSICS enum.
 ---@return boolean # If the flags are set
 function PhysObj:hasGameFlags(flags) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the physobj is asleep.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L506).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L516).
 ---@return boolean # If the physobj is asleep
 function PhysObj:isAsleep() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Check if bone is affected by air resistance.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L451).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L461).
 ---@return boolean # If bone is affected by drag
 function PhysObj:isDragEnabled() end
 
@@ -288,13 +288,13 @@ function PhysObj:localToWorldVector(vec) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets coefficient of air resistance affecting the bone when rotating. Air resistance depends on the cross-section of the object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L467).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L477).
 ---@param coeff number # How much drag affects the bone when rotating
 function PhysObj:setAngleDragCoefficient(coeff) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the angular velocity of an object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L314).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L324).
 ---@param angvel Vector # The local angvel vector to set
 function PhysObj:setAngleVelocity(angvel) end
 
@@ -310,28 +310,34 @@ function PhysObj:setAngles(ang) end
 ---@param ratio number # The buoyancy ratio to use
 function PhysObj:setBuoyancyRatio(ratio) end
 
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Sets the contents flag of the physobject.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L285).
+---@param contents number # The CONTENTS enum
+function PhysObj:setContents(contents) end
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the movement damping of the bone. Unlike air drag, it doesn't take into account the cross-section of the object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L484).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L494).
 ---@param linear number # Number of the linear damping
 ---@param angular number # Number of the angular damping
 function PhysObj:setDamping(linear, angular) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets coefficient of air resistance affecting the bone. Air resistance depends on the cross-section of the object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L458).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L468).
 ---@param coeff number # How much drag affects the bone
 function PhysObj:setDragCoefficient(coeff) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the inertia of a physics object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L366).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L376).
 ---@param inertia Vector # The inertia vector to set it to
 function PhysObj:setInertia(inertia) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the mass of a physics object.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L353).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L363).
 ---@param mass number # The mass to set it to
 function PhysObj:setMass(mass) end
 
@@ -355,12 +361,12 @@ function PhysObj:setVelocity(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes a physobj go to sleep. (like it's frozen but interacting wakes it back up).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L514).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L524).
 function PhysObj:sleep() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes a sleeping physobj wakeup.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L522).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L532).
 function PhysObj:wake() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
