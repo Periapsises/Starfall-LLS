@@ -74,9 +74,9 @@ function Hologram:setAnimation(animation, frame, rate) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L358).
 ---@param index number # Whatever number you want the clip to be
 ---@param enabled boolean # Whether the clip is enabled
----@param origin Vector # The center of the clip plane in world coordinates, or local to entity if it is specified
----@param normal Vector # The the direction of the clip plane in world coordinates, or local to entity if it is specified
----@param entity Entity? # (Optional) The entity to make coordinates local to, otherwise the world is used
+---@param origin Vector? # The center of the clip plane in world coordinates, or local to entity if it is specified. Only used if enabled.
+---@param normal Vector? # The the direction of the clip plane in world coordinates, or local to entity if it is specified. Only used if enabled.
+---@param entity Entity? # (Optional) The entity to make coordinates local to, otherwise the world is used. Only used if enabled.
 function Hologram:setClip(index, enabled, origin, normal, entity) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
