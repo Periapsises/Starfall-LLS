@@ -496,7 +496,7 @@ function math.modf(base) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs normalized linear interpolation between two quaternions.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L876).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L875).
 ---@param quat1 Quaternion # Quaternion to start with
 ---@param quat2 Quaternion # Quaternion to end with
 ---@param t number # Ratio, 0 = quat1; 1 = quat2
