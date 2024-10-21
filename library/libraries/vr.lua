@@ -10,7 +10,7 @@ vr = {}
 ---@enum VR
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- VRmod library enums
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1028).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1054).
 vr.VR = {
 	BOOLEAN_PRIMARYFIRE = 1,
 	VECTOR1_PRIMARYFIRE = 2,

@@ -126,7 +126,7 @@ CONTENTS = {
 ---@enum DAMAGE
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs used for anything that returns a damage type.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1314).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1340).
 DAMAGE = {
 	GENERIC = 1,
 	CRUSH = 2,
@@ -184,7 +184,7 @@ EF = {
 ---@enum FSASYNC
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- file.asyncRead ENUMs
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1162).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1188).
 FSASYNC = {
 	ERR_NOT_MINE = 1,
 	ERR_RETRY_LATER = 2,
@@ -255,7 +255,7 @@ GESTURE_SLOT = {
 ---@enum GMOD_CHANNEL
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs used by Bass:getState()
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1386).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1412).
 GMOD_CHANNEL = {
 	---0
 	STOPPED = 1,
@@ -270,7 +270,7 @@ GMOD_CHANNEL = {
 ---@enum HITGROUP
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Player and NPC hitgroup ENUMs
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1138).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1164).
 HITGROUP = {
 	GENERIC = 1,
 	HEAD = 2,
@@ -502,7 +502,7 @@ MASK = {
 ---@enum MAT
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs describing surface material. Used in TraceResult
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1086).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1112).
 MAT = {
 	ANTLION = 1,
 	BLOODYFLESH = 2,
@@ -652,6 +652,23 @@ RENDERFX = {
 	SPOTLIGHT = 23,
 	RAGDOLL = 24,
 	PULSEFASTWIDER = 25,
+}
+
+---@enum RENDERGROUP
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ENUMs of entity rendergroups
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1028).
+RENDERGROUP = {
+	STATIC_HUGE = 1,
+	OPAQUE_HUGE = 2,
+	STATIC = 3,
+	OPAQUE = 4,
+	TRANSLUCENT = 5,
+	BOTH = 6,
+	VIEWMODEL = 7,
+	VIEWMODEL_TRANSLUCENT = 8,
+	OPAQUE_BRUSH = 9,
+	OTHER = 10,
 }
 
 ---@enum RENDERMODE

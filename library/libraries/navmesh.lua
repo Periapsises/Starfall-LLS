@@ -8,7 +8,7 @@ navmesh = {}
 ---@enum NAV_CORNER
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs used by NavArea methods. These Enums correspond to each corner of a CNavArea
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1274).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1300).
 navmesh.NAV_CORNER = {
 	---0
 	NORTH_WEST = 1,
@@ -25,7 +25,7 @@ navmesh.NAV_CORNER = {
 ---@enum NAV_DIR
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- NavArea direction ENUMs
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1214).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1240).
 navmesh.NAV_DIR = {
 	---0
 	NORTH = 1,
@@ -40,7 +40,7 @@ navmesh.NAV_DIR = {
 ---@enum NAV_MESH
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs used by NavArea:getAttributes and NavArea:hasAttributes
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1228).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1254).
 navmesh.NAV_MESH = {
 	---The nav area is invalid.
 	INVALID = 1,
@@ -87,7 +87,7 @@ navmesh.NAV_MESH = {
 ---@enum NAV_TRAVERSE_TYPE
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- ENUMs used by NavArea:getParentHow.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1290).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1316).
 navmesh.NAV_TRAVERSE_TYPE = {
 	---0
 	GO_NORTH = 1,
