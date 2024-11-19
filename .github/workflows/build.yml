@@ -32,7 +32,7 @@ jobs:
       
       - name: Download and Run StyLua
         run: |
-          wget -O stylua-linux.zip https://github.com/JohnnyMorganz/StyLua/releases/latest/download/stylua-linux.zip
+          wget -O stylua-linux.zip https://github.com/JohnnyMorganz/StyLua/releases/download/v2.0.1/stylua-linux-x86_64.zip
           unzip stylua-linux.zip
           chmod +x stylua
           ./stylua --verbose generator/docs/
