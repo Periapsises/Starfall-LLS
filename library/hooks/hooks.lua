@@ -77,6 +77,7 @@
 ---| '"huddisconnected"' #  Called when the player disconnects from a HUD component linked to the Starfall Chip
 ---| '"hudshoulddraw"' #  Called when a hud element is attempting to be drawn
 ---| '"input"' #  Called when an input on a wired SF chip is written to
+---| '"inputBindPressed"' #  Called when a keybind is pressed
 ---| '"inputPressed"' #  Called when a button is pressed
 ---| '"inputReleased"' #  Called when a button is released
 ---| '"lockdownEnded"' #  Called when a lockdown has ended. DarkRP only.
@@ -199,6 +200,7 @@
 ---@alias huddisconnected fun(ent: Entity, ply: Player)
 ---@alias hudshoulddraw fun(str: string) : boolean
 ---@alias input fun(input: string, value: any)
+---@alias inputBindPressed fun(ply: Player, bind: string)
 ---@alias inputPressed fun(button: number)
 ---@alias inputReleased fun(button: number)
 ---@alias lockdownEnded fun(actor: Player?)
