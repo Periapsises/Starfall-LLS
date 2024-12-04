@@ -768,7 +768,7 @@ TEXT_ALIGN = {
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Creates an Angle struct.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L33).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L34).
 ---@param p number? # Pitch
 ---@param y number? # Yaw
 ---@param r number? # Roll
@@ -814,7 +814,7 @@ function Vector(x, y, z) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a Vector2 struct for use with wire xv2 type.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L163).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L160).
 ---@param x number? # X value
 ---@param y number? # Y value
 ---@return Vector2 # Vector2

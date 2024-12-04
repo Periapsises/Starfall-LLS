@@ -976,7 +976,7 @@ function Entity:getWaterLevel() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns an entities wirelink.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L629).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L709).
 ---@return Wirelink # Wirelink of the entity
 function Entity:getWirelink() end
 
