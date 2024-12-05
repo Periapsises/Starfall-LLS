@@ -200,7 +200,7 @@
 ---@alias huddisconnected fun(ent: Entity, ply: Player)
 ---@alias hudshoulddraw fun(str: string) : boolean
 ---@alias input fun(input: string, value: any)
----@alias inputBindPressed fun(ply: Player, bind: string)
+---@alias inputBindPressed fun(bind: string)
 ---@alias inputPressed fun(button: number)
 ---@alias inputReleased fun(button: number)
 ---@alias lockdownEnded fun(actor: Player?)
