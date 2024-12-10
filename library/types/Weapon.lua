@@ -50,7 +50,7 @@ function Weapon:getPrimaryAmmoType() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets Display name of weapon.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L127).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L141).
 ---@return string # Display name of weapon
 function Weapon:getPrintName() end
 
@@ -66,9 +66,21 @@ function Weapon:getSecondaryAmmoType() end
 ---@return string # The tool mode of the toolgun
 function Weapon:getToolMode() end
 
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the view model of the weapon.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L126).
+---@return string # The view model of the weapon.
+function Weapon:getViewModel() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the world model of the weapon.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L133).
+---@return string # The world model of the weapon.
+function Weapon:getWorldModel() end
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns if the weapon is carried by the local player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L134).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/weapons.lua#L148).
 ---@return boolean # Whether or not the weapon is carried by the local player
 function Weapon:isCarriedByLocalPlayer() end
 
