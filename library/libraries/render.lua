@@ -732,7 +732,7 @@ function render.getResolution() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the entity currently being rendered to.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2297).
----@return Entity # Entity of the screen or hud being rendered
+---@return Entity # Entity of the screen being rendered
 function render.getScreenEntity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
