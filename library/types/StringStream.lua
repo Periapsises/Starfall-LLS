@@ -106,7 +106,7 @@ function StringStream:setEndian(endian) end
 function StringStream:size() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Move the internal pointer by amount i.
+--- Move the internal pointer by amount i. The position will be clamped to [1, buffersize+1].
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L272).
 ---@param length number # The offset
 function StringStream:skip(length) end
