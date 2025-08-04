@@ -13,7 +13,7 @@ function prop.canManipulateBones() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if a user can spawn anymore props.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L680).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L708).
 ---@return boolean # True if user can spawn props, False if not.
 function prop.canSpawn() end
 
@@ -32,7 +32,7 @@ function prop.create(pos, ang, model, frozen) end
 --- Allowed components:.
 --- starfall_hud.
 --- starfall_screen.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L257).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L280).
 ---@param pos Vector # Position of created component
 ---@param ang Angle # Angle of created component
 ---@param class string # Class of created component
@@ -43,7 +43,7 @@ function prop.createComponent(pos, ang, class, model, frozen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a custom prop.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L158).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L174).
 ---@param pos Vector # The position to spawn the prop
 ---@param ang Angle # The angles to spawn the prop
 ---@param vertices table # The table of tables of vertices that make up the physics mesh {{v1,v2,...},{v1,v2,...},...}
@@ -53,7 +53,7 @@ function prop.createCustom(pos, ang, vertices, frozen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a ragdoll.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L109).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L117).
 ---@param model string # Model path
 ---@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
 ---@return Entity # The ragdoll entity
@@ -61,7 +61,7 @@ function prop.createRagdoll(model, frozen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a seat.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L355).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L383).
 ---@param pos Vector # Position of created seat
 ---@param ang Angle # Angle of created seat
 ---@param model string # Model of created seat
@@ -71,7 +71,7 @@ function prop.createSeat(pos, ang, model, frozen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a sent.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L419).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L447).
 ---@param pos Vector # Position of created sent
 ---@param ang Angle # Angle of created sent
 ---@param class string # Class of created sent
@@ -82,19 +82,19 @@ function prop.createSent(pos, ang, class, frozen, data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the chip will automatically remove created props when the chip is removed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L703).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L731).
 ---@return boolean # Determines whether props will be cleaned
 function prop.getPropClean() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the props are undo-able.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L710).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L738).
 ---@return boolean # Determines whether props are undo-able
 function prop.getPropUndo() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Get a list of all spawnable sents.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L324).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L352).
 ---@param categorized boolean? # True to get an categorized list
 ---@return table # The table
 function prop.getSpawnableSents(categorized) end
@@ -113,24 +113,24 @@ function prop.manipulateBonesRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how many props can be spawned.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L688).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L716).
 ---@return number # Number of props able to be spawned
 function prop.propsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the chip should remove created props when the chip is removed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L717).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L745).
 ---@param on boolean # Whether the props should be cleaned or not
 function prop.setPropClean(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the props should be undo-able.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L725).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L753).
 ---@param on boolean # Whether the props should be undo-able
 function prop.setPropUndo(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how many props per second the user can spawn.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L696).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L724).
 ---@return number # Number of props per second the user can spawn
 function prop.spawnRate() end
