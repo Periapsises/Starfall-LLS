@@ -13,8 +13,13 @@ local Constraint = {}
 function Constraint:__tostring() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Overrides entity isConstraint to return true.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L79).
+function Constraint:isConstraint() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the constraint is valid or not.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L85).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L91).
 ---@return boolean # True if valid, false if not
 function Constraint:isValid() end
 
