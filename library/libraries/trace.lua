@@ -7,7 +7,7 @@ trace = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the aim vector from a 2D screen position. This is essentially a generic version of input.screenToVector, where you can define the view angles and screen size manually.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L202).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L204).
 ---@param viewAngles Angle # View angles
 ---@param viewFOV number # View field of view
 ---@param x number # X position on the screen
@@ -19,13 +19,13 @@ function trace.aimVector(viewAngles, viewFOV, x, y, screenWidth, screenHeight) e
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns True if player is allowed to use trace.decal.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L182).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L184).
 ---@return boolean # Whether the decal trace can be used
 function trace.canCreateDecal() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Does a line trace and applies a decal to wherever is hit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L164).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L166).
 ---@param name string # The decal name, see https://wiki.facepunch.com/gmod/util.Decal
 ---@param start Vector # Start position
 ---@param endpos Vector # End position
@@ -34,7 +34,7 @@ function trace.decal(name, start, endpos, filter) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the number of decals player is allowed to use.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L188).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L190).
 ---@return number # The number of decals left
 function trace.decalsLeft() end
 
@@ -55,7 +55,7 @@ function trace.hull(start, endpos, minbox, maxbox, filter, mask, colgroup, ignwo
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Does a ray box intersection returning the position hit, normal, and trace fraction, or nil if not hit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L113).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L115).
 ---@param rayStart Vector # The origin of the ray
 ---@param rayDelta Vector # The direction and length of the ray
 ---@param boxOrigin Vector # The origin of the box
@@ -69,7 +69,7 @@ function trace.intersectRayWithOBB(rayStart, rayDelta, boxOrigin, boxAngles, box
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Does a ray plane intersection returning the position hit or nil if not hit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L148).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L150).
 ---@param rayStart Vector # The origin of the ray
 ---@param rayDelta Vector # The direction and length of the ray
 ---@param planeOrigin Vector # The origin of the plane
@@ -79,7 +79,7 @@ function trace.intersectRayWithPlane(rayStart, rayDelta, planeOrigin, planeNorma
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs a box-sphere intersection and returns whether there was an intersection or not.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L135).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L137).
 ---@param boxMins Vector # The minimum extents of the World Axis-Aligned box.
 ---@param boxMaxs Vector # The maximum extents of the World Axis-Aligned box.
 ---@param spherePos Vector # Position of the sphere.
@@ -102,7 +102,7 @@ function trace.line(start, endpos, filter, mask, colgroup, ignworld, whitelist) 
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the contents of the position specified.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L194).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L196).
 ---@param position Vector # The position to get the CONTENTS of
 ---@return number # Contents bitflag, see the CONTENTS enums
 function trace.pointContents(position) end
