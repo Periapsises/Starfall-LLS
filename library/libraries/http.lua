@@ -78,6 +78,13 @@ function http.urlDropboxToRaw(url) end
 function http.urlEncode(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Converts a github file url to a raw one.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L206).
+---@param url string # The url to convert
+---@return string # The converted url
+function http.urlGithubToRaw(url) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a simple google drive url to a raw one.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L186).
 ---@param url string # The url to convert
