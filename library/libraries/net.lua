@@ -7,13 +7,13 @@ net = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether a readStream can be initiated.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L624).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L625).
 ---@return boolean # Whether a readStream can be initiated
 function net.canReadStream() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether a writeStream can be initiated.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L630).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L631).
 ---@return boolean # Whether a writeStream can be initiated
 ---@return number # The number of active write streams
 function net.canWriteStream() end
@@ -25,13 +25,13 @@ function net.cancelStream() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns available bandwidth in bits.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L611).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L612).
 ---@return number # Number of bits that can be sent
 function net.getBitsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns available bandwidth in bytes.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L605).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L606).
 ---@return number # Number of bytes that can be sent
 function net.getBytesLeft() end
 
@@ -43,7 +43,7 @@ function net.getStreamProgress() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether or not the library is currently reading data from a stream.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L617).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L618).
 ---@return boolean # Whether we're currently reading data from a stream
 ---@return boolean # Whether we're currently writing data to a stream
 function net.isStreaming() end
@@ -89,7 +89,7 @@ function net.readDouble() end
 --- Reads a entity from the net message.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L577).
 ---@param callback function? # (Client only) optional callback to be ran whenever the entity becomes valid; returns nothing if this is used. The callback passes the entity if it succeeds or nil if it fails.
----@return Entity # The entity that was read
+---@return Entity? # The entity that was read or nil if callback used
 function net.readEntity(callback) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -158,7 +158,7 @@ function net.readVector() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Like glua net.Receive, adds a callback that is called when a net message with the matching name is received. If this happens, the net hook won't be called.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L595).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L596).
 ---@param name string # The name of the net message
 ---@param func function # The callback or nil to remove callback. (len - length of the net message, ply - player that sent it or nil if clientside)
 function net.receive(name, func) end
