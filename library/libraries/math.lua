@@ -480,6 +480,13 @@ function math.log10(x) end
 function math.max(...) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the averaged of all numbers provided.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L610).
+---@param numbers table # Any amount of number values
+---@return number # Number average of all values
+function math.mean(numbers) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Picks the smallest value of all provided arguments.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L213).
 ---@param ... number # Any amount of number values
