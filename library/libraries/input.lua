@@ -7,7 +7,7 @@ input = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets whether the player's control can be locked.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L386).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L403).
 ---@return boolean # Whether the player's control can be locked
 function input.canLockControls() end
 
@@ -19,7 +19,7 @@ function input.enableCursor(enabled) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the digital value of an analog stick on the current (set up via convars) controller.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L400).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L417).
 ---@param axis number # The analog axis to poll. See https://wiki.facepunch.com/gmod/Enums/ANALOG
 ---@return number # The digital value.
 function input.getAnalogValue(axis) end
@@ -52,13 +52,13 @@ function input.isControlDown() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets whether the player's control is currently locked.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L379).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L396).
 ---@return boolean # Whether the player's control is locked
 function input.isControlLocked() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether the game menu overlay ( main menu ) is open or not.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L393).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L410).
 ---@return boolean # Whether the game menu overlay ( main menu ) is open or not
 function input.isGameUIVisible() end
 
@@ -84,7 +84,7 @@ function input.isShiftDown() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Locks game controls for typing purposes. Alt will unlock the controls. Has a 10 second cooldown.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L361).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L378).
 ---@param enabled boolean # Whether to lock or unlock the controls
 function input.lockControls(enabled) end
 
@@ -116,3 +116,10 @@ function input.screenToVector(x, y) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L351).
 ---@param weapon Weapon # The weapon entity to select
 function input.selectWeapon(weapon) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Sets the position of your cursor. Your cursor must be enabled.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L361).
+---@param X number #
+---@param Y number #
+function input.setCursorPos(X, Y) end
