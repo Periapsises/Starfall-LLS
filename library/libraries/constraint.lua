@@ -7,7 +7,7 @@ constraint = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Axis two entities. v1 in e1's coordinates and v2 in e2's coordinates (or laxis in e1's coordinates again) define the axis.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L144).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L155).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
@@ -24,7 +24,7 @@ function constraint.axis(e1, e2, bone1, bone2, v1, v2, force_lim, torque_lim, fr
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Ballsocket two entities together. For more options, see constraint.ballsocketadv.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L190).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L201).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
@@ -38,7 +38,7 @@ function constraint.ballsocket(e1, e2, bone1, bone2, pos, force_lim, torque_lim,
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Ballsocket two entities together with more options.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L229).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L240).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
@@ -72,26 +72,26 @@ end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Breaks all constraints on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L553).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L564).
 ---@param e Entity # Entity to remove the constraints from
 function constraint.breakAll(e) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Breaks all constraints of a certain type on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L563).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L574).
 ---@param e Entity # Entity to be affected
 ---@param typename string # Name of the constraint type, ie. Weld, Elastic, NoCollide, etc.
 function constraint.breakType(e, typename) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how many constraints can be spawned.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L597).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L608).
 ---@return number # Number of constraints able to be spawned
 function constraint.constraintsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Elastic constraint between two entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L278).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L289).
 ---@param index number # Index of the elastic constraint
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
@@ -109,14 +109,14 @@ function constraint.elastic(index, e1, e2, bone1, bone2, v1, v2, const, damp, rd
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the table of constraints on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L578).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L589).
 ---@param ent Entity # The entity
 ---@return table # Table of tables containing constraint information
 function constraint.getTable(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies a keepupright constraint on an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L459).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L470).
 ---@param e Entity # The entity
 ---@param ang Angle # The upright angle
 ---@param bone number # Number bone of the entity. Default 0
@@ -126,7 +126,7 @@ function constraint.keepupright(e, ang, bone, lim) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Nocollides two entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L429).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L440).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
@@ -141,7 +141,7 @@ function constraint.removeAll() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a rope between two entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L333).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L344).
 ---@param index number # Index of the rope constraint
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
@@ -177,13 +177,13 @@ end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the chip should remove created constraints when the chip is removed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L591).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L602).
 ---@param on boolean # Whether the constraints should be cleaned or not
 function constraint.setConstraintClean(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the constant of an elastic attached to the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L531).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L542).
 ---@param index number # Index of the elastic constraint
 ---@param e Entity # Entity that has the elastic
 ---@param constant number # New constant value of the elastic
@@ -192,7 +192,7 @@ function constraint.setElasticConstant(index, e, constant) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the damping of an elastic attached to the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L509).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L520).
 ---@param index number # Index of the elastic constraint
 ---@param e Entity # Entity that has the elastic
 ---@param damping number # New Damping value of the elastic
@@ -201,7 +201,7 @@ function constraint.setElasticDamping(index, e, damping) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the length of an elastic attached to the entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L487).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L498).
 ---@param index number # Index of the elastic constraint
 ---@param e Entity # Entity that has the constraint
 ---@param length number # New length of the constraint
@@ -210,7 +210,7 @@ function constraint.setElasticLength(index, e, length) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sliders two entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L392).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L403).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
@@ -223,7 +223,7 @@ function constraint.slider(e1, e2, bone1, bone2, v1, v2, width) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Welds two entities.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L110).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/constraint.lua#L121).
 ---@param e1 Entity # The first entity
 ---@param e2 Entity # The second entity
 ---@param bone1 number? # Number bone of the first entity. Default 0
