@@ -143,8 +143,8 @@ function NextBot:getJumpHeight() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the max rate at which the NextBot can visually rotate.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L536).
----@param The number # NextBot's max yaw rate.
-function NextBot:getMaxYawRate(The) end
+---@return number # The nextbot's current maximum yaw rate.
+function NextBot:getMaxYawRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the move speed of the NextBot.
