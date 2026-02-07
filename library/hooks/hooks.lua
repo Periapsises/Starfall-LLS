@@ -87,6 +87,7 @@
 ---| '"PostDraw2DSkyBox"' #  Called right after the 2D skybox has been drawn - allowing you to draw over it.
 ---| '"PostDrawHUD"' #  Called after drawing HUD (2D Context)
 ---| '"PostDrawOpaqueRenderables"' #  Called after opaque entities are drawn. (Only works with HUD) (3D context)
+---| '"PostDrawPlayer"' #  Called after drawing the player. (Only works with HUD) (3D Context)
 ---| '"PostDrawSkyBox"' #  Called after the 3D skybox is drawn. This will not be called if PreDrawSkyBox has prevented rendering of the skybox
 ---| '"PostDrawTranslucentRenderables"' #  Called after translucent entities are drawn. (Only works with HUD) (3D context)
 ---| '"PostEntityFireBullets"' #  Called after a bullet is fired and it's trace has been calculated
@@ -212,6 +213,7 @@
 ---@alias PostDraw2DSkyBox fun()
 ---@alias PostDrawHUD fun()
 ---@alias PostDrawOpaqueRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
+---@alias PostDrawPlayer fun(ply: Player, flags: number)
 ---@alias PostDrawSkyBox fun()
 ---@alias PostDrawTranslucentRenderables fun(depth: boolean, skybox: boolean, skybox3d: boolean)
 ---@alias PostEntityFireBullets fun(ent: Entity, data: table)

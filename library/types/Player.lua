@@ -745,5 +745,5 @@ function Player:stripWeapons() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the voice volume of the player.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L537).
----@return number # Returns the players voice volume, how loud the player's voice communication currently is, as a normal number. Doesn't work on local player unless the voice_loopback convar is set to 1.
+---@return number # Returns the players voice volume, how loud the player's voice communication currently is, as a normal number.
 function Player:voiceVolume() end
