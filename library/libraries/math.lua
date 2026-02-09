@@ -646,3 +646,13 @@ function math.timeFraction(start, _end, current) end
 ---@param digits number? # The amount of digits to keep after the point. Default 0
 ---@return number # Rounded number
 function math.truncate(val, digits) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Provides a conversion factor given input units.
+--- Example: local mph = math.unitConversion(UNIT.MILE / UNIT.HOUR).
+---          local converted = x * mph.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L629).
+---@param to number # the UNIT to convert the number to
+---@param from number? # the UNIT to convert the number from (Default: 1, works if converting from gmod natural units)
+---@return number # A conversion factor multipled by values to convert units
+function math.unitConversion(to, from) end

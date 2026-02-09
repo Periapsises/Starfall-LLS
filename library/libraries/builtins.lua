@@ -766,6 +766,31 @@ TEXT_ALIGN = {
 	BOTTOM = 5,
 }
 
+---@enum UNIT
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- ENUMs used by math.unitConversion. They represent conversion factors from gmod natural units (gmod length (3/4 inches), pounds, seconds)
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/enum.lua#L1448).
+UNIT = {
+	GMOD_LENGTH = 1,
+	INCH = 2,
+	FEET = 3,
+	YARD = 4,
+	MILE = 5,
+	NAUTICAL_MILE = 6,
+	METER = 7,
+	MACH = 8,
+	GMOD_MASS = 9,
+	POUND = 10,
+	OUNCE = 11,
+	KILOGRAM = 12,
+	GRAM = 13,
+	TON = 14,
+	GMOD_TIME = 15,
+	SECOND = 16,
+	MINUTE = 17,
+	HOUR = 18,
+}
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Creates an Angle struct.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L50).
