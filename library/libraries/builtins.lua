@@ -4,6 +4,8 @@
 CLIENT = nil
 ---@type boolean
 SERVER = nil
+---@type boolean
+OWNER = nil
 
 --- Returns an iterator for a for loop that iterates over the key-value pairs of a table.
 ---@generic T
