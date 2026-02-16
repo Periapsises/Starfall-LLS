@@ -12,6 +12,12 @@ local File = {}
 function File:close() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns whether the File object has reached the end of file or not.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L605).
+---@return boolean # Whether the file has reached end or not.
+function File:endOfFile() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Wait until all changes to the file are complete.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L427).
 function File:flush() end
