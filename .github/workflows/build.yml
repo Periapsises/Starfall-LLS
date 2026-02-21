@@ -19,15 +19,17 @@ jobs:
           ref: generator
           path: generator
 
-      - name: Set up LuaJIT
+      - name: Install LuaJIT via Lua-Batteries
         run: |
-          sudo apt-get update
-          sudo apt-get install -y luajit
+          curl -L https://github.com/lua-batteries/lua-batteries/releases/download/v0.5.15/lua-batteries-v0.5.15-x86_64-unknown-linux-gnu.tar.xz -o lua-batteries.tar.xz
+          mkdir -p /opt/lua-batteries
+          tar -xf lua-batteries.tar.xz -C /opt/lua-batteries
+          echo "/opt/lua-batteries/bin" >> $GITHUB_PATH
 
       - name: Run Lua script to generate documentation
         run: |
           cd generator
-          luajit generator.lua docs/
+          luajit51 generator.lua docs/
           cd ..
       
       - name: Download and Run StyLua
