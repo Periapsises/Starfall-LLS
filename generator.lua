@@ -1,3 +1,5 @@
+package.path = package.path .. ";./?.lua"
+
 local json = require("json")
 local compileLibraries = require("compile/libraries")
 local compileTypes = require("compile/types")
