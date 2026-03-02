@@ -45,7 +45,7 @@
 ---| '"NotifyShouldTransmit"' #  Called when a clientside entity transmit state is changed. Usually when changing PVS  If you want clientside render changes to persist on an entity you have to re-apply them  each time it begins transmitting again
 ---| '"OnContextMenuClose"' #  Called when the player closes the context menu
 ---| '"OnContextMenuOpen"' #  Called when the player opens the context menu
----| '"OnEntityCreated"' #  Called when an entity gets created
+---| '"OnEntityCreated"' #  Called the next frame after an entity is created
 ---| '"OnEntityWaterLevelChanged"' #  Called when the Entity:getWaterLevel of an entity is changed.
 ---| '"OnLockpickCompleted"' #  Called when a player has finished picking a lock, successfully or otherwise. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
 ---| '"OnNPCKilled"' #  Called whenever an NPC is killed.
