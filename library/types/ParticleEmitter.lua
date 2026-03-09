@@ -8,7 +8,7 @@ local ParticleEmitter = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a new Particle with the given material and position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L77).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L92).
 ---@param material Material # The material object to set the particle
 ---@param position Vector # The position to create the particle
 ---@param startSize number # Sets the initial size value of the particle.
@@ -34,61 +34,61 @@ end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Removes the emitter, making it no longer usable from Lua. If particles remain, the emitter will be removed when all particles die.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L123).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L140).
 function ParticleEmitter:destroy() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Manually renders all particles the emitter has created.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L117).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L134).
 function ParticleEmitter:draw() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the amount of active particles of this emitter.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L131).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L145).
 ---@return number # Number of active particles
 function ParticleEmitter:getNumActiveParticles() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns number of particles left able to be created from the emitter.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L137).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L151).
 ---@return number # Number of particles left
 function ParticleEmitter:getParticlesLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the position of this emitter. This is set when creating the emitter with ParticleEmitter.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L143).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L157).
 ---@return Vector # Position of the Emitter
 function ParticleEmitter:getPos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether this emitter is 3D or not. This is set when creating the emitter with ParticleEmitter.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L149).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L163).
 ---@return boolean # If it's 3D
 function ParticleEmitter:is3D() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether this object is valid or not.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L155).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L169).
 ---@return boolean # If it's valid
 function ParticleEmitter:isValid() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the bounding box for this emitter. Usually the bounding box is automatically determined by the particles, but this function overrides it.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L161).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L175).
 ---@param mins Vector # Min vector
 ---@param maxs Vector # Max vector
 function ParticleEmitter:setBBox(mins, maxs) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- This function sets the the distance between the render camera and the emitter at which the particles should start fading and at which distance fade ends ( alpha becomes 0 ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L168).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L182).
 ---@param distanceMin number #
 ---@param distanceMax number #
 function ParticleEmitter:setNearClip(distanceMin, distanceMax) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Prevents all particles of the emitter from automatically drawing. They can be manually drawn with draw().
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L177).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L191).
 ---@param noDraw boolean # Whether not to draw
 function ParticleEmitter:setNoDraw(noDraw) end
 
@@ -96,12 +96,12 @@ function ParticleEmitter:setNoDraw(noDraw) end
 --- The function name has not much in common with its actual function.
 --- It applies a radius to every particles that affects the building of the bounding box, as it usually is constructed by the particle that has the lowest x, y and z and the highest x, y and z.
 --- This function just adds/subtracts the radius and inflates the bounding box.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L184).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L198).
 ---@param radius number # Particle radius
 function ParticleEmitter:setParticleCullRadius(radius) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the position of the particle emitter.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L193).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle.lua#L207).
 ---@param position Vector # The position
 function ParticleEmitter:setPos(position) end

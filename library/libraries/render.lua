@@ -10,7 +10,7 @@ render = {}
 ---@enum Screen
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 ---
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2788).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2807).
 render.Screen = {
 	---Pretty name of model
 	Name = 1,
@@ -37,7 +37,7 @@ render.Screen = {
 ---@enum Vertex
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Vertex format
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2802).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2821).
 render.Vertex = {
 	---X coordinate
 	x = 1,
@@ -200,7 +200,7 @@ function render.cursorPos(ply, screen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Set's the depth range of the upcoming render.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2764).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2783).
 ---@param min number # The minimum depth of the upcoming render. 0.0 = render normally; 1.0 = render nothing.
 ---@param max number # The maximum depth of the upcoming render. 0.0 = render everything (through walls); 1.0 = render normally.
 function render.depthRange(min, max) end
@@ -822,7 +822,7 @@ function render.parseMarkup(str, maxsize) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the visibility of a sphere in the world.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2772).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2791).
 ---@param position Vector #
 ---@param radius number #
 ---@return number # Percentage visible, from 0-1
@@ -915,7 +915,7 @@ function render.resetStencil() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Makes the screen shake, client must be connected to a HUD.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2755).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2774).
 ---@param amplitude number # The strength of the effect
 ---@param frequency number # The frequency of the effect in hertz
 ---@param duration number # The duration of the effect in seconds, max 10.
@@ -943,7 +943,7 @@ function render.setBlend(alpha) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the overlay of the chip to a user's rendertarget.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2715).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2734).
 ---@param name string? # The name of the RT to use or nil to set it back to normal
 function render.setChipOverlay(name) end
 
@@ -1120,7 +1120,7 @@ function render.setRenderTargetTexture(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Using the custom screen model, sets the screen offset and size as long as its within bounds of -1024 to 1024 units.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2727).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2746).
 ---@param screen Entity # The custom screen to be resized
 ---@param x number # The x offset of the screen
 ---@param y number # The y offset of the screen
