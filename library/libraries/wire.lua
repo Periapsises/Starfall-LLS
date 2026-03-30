@@ -75,7 +75,7 @@ function wire.getWirelink(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets a value from an entity's wire memory.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L722).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L726).
 ---@param ent Entity # Entity with wire memory
 ---@param index number # The cell address
 ---@return number # The value at the address
@@ -83,7 +83,7 @@ function wire.readCell(ent, index) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the value of an entity's input.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L700).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L704).
 ---@param ent Entity # Entity with input
 ---@param inputname string # Input name
 ---@return any # value The value to set the input to (must match the input type)
@@ -91,7 +91,7 @@ function wire.readInput(ent, inputname) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the value of an entity's output.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L711).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L715).
 ---@param ent Entity # Entity with output
 ---@param outputname string # Output name
 ---@return any # value The value to set the output to (must match the output type)
@@ -111,7 +111,7 @@ function wire.serverUUID() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's wire memory, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L688).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L692).
 ---@param ent Entity # Entity with wire memory
 ---@param index number # The cell address
 ---@param value number # The value to set the cell
@@ -119,7 +119,7 @@ function wire.triggerCell(ent, index, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's input, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L666).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L670).
 ---@param ent Entity # Entity with input
 ---@param inputname string # Input name
 ---@param value any # The value to set the input to (must match the input type)
@@ -127,7 +127,7 @@ function wire.triggerInput(ent, inputname, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's output, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L677).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L681).
 ---@param ent Entity # Entity with output
 ---@param outputname string # Output name
 ---@param value any # The value to set the output to (must match the output type)
