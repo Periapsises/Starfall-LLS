@@ -7,7 +7,7 @@ trace = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Calculates the aim vector from a 2D screen position. This is essentially a generic version of input.screenToVector, where you can define the view angles and screen size manually.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L204).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L244).
 ---@param viewAngles Angle # View angles
 ---@param viewFOV number # View field of view
 ---@param x number # X position on the screen
@@ -19,7 +19,7 @@ function trace.aimVector(viewAngles, viewFOV, x, y, screenWidth, screenHeight) e
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns True if player is allowed to use trace.decal.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L184).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L224).
 ---@return boolean # Whether the decal trace can be used
 function trace.canCreateDecal() end
 
@@ -32,9 +32,21 @@ function trace.canCreateDecal() end
 ---@param filter Entity|table|nil # (Optional) Entity/array of entities to filter
 function trace.decal(name, start, endpos, filter) end
 
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Paints a decal on a specific entity.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L188).
+---@param material Material # The material to paint.
+---@param ent Entity # The entity to apply the decal to
+---@param position Vector # The position of the decal.
+---@param normal Vector # The direction of the decal.
+---@param color Color # The color of the decal. This only works when used on a brush model and only if the decal material has set $vertexcolor to 1.
+---@param w number # The width scale of the decal.
+---@param h number # The height scale of the decal.
+function trace.decalEx(material, ent, position, normal, color, w, h) end
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the number of decals player is allowed to use.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L190).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L230).
 ---@return number # The number of decals left
 function trace.decalsLeft() end
 
@@ -102,7 +114,15 @@ function trace.line(start, endpos, filter, mask, colgroup, ignworld, whitelist) 
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the contents of the position specified.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L196).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L236).
 ---@param position Vector # The position to get the CONTENTS of
 ---@return number # Contents bitflag, see the CONTENTS enums
 function trace.pointContents(position) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Removes world decals at given position, in given radius. Does not remove decals on models!.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/trace.lua#L209).
+---@param pos Vector # The position at which to remove decals.
+---@param distance number # Radius of the sphere to remove decals in.
+---@param limit number? # If set to above 0, only remove this many decals.
+function trace.removeDecalsAt(pos, distance, limit) end

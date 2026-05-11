@@ -8,18 +8,18 @@ local Player = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Add the player's linear velocity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L519).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L538).
 ---@param vel Vector # Add velocity
 function Player:addVelocity(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Clears a given player's PVS override points set by this chip.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L493).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L512).
 function Player:clearPVSPoints() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Drops the player's weapon.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L196).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L215).
 ---@param weapon Weapon|string # The weapon instance or class name of the weapon to drop
 ---@param target Vector? # If set, launches the weapon at the given position
 ---@param velocity Vector? # If set and target is unset, launches the weapon with the given velocity
@@ -28,18 +28,18 @@ function Player:dropWeapon(weapon, target, velocity) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Attempts to force the target into a vehicle.
 --- Requires 'player.enterVehicle' permission on the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L470).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L489).
 ---@param vehicle Vehicle #
 function Player:enterVehicle(vehicle) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Forces the player out of a vehicle.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L498).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L517).
 function Player:exitVehicle() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Extinguishes a player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L562).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L581).
 function Player:extinguish() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -177,7 +177,7 @@ function Player:getName() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the packet loss of the client.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L267).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L286).
 ---@return number # Packets lost
 function Player:getPacketLoss() end
 
@@ -249,13 +249,13 @@ function Player:getTeamName() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the time in seconds since the player connected.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L273).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L292).
 ---@return number # Time connected
 function Player:getTimeConnected() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the number of seconds that the player has been timing out for.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L279).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L298).
 ---@return number # Timeout seconds
 function Player:getTimeoutSeconds() end
 
@@ -330,14 +330,22 @@ function Player:getWeaponColor() end
 function Player:getWeapons() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Gives the player a weapon.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L197).
+---@param weapon string # The class name of the weapon to give
+---@param noAmmo boolean? # Prevent giving ammo on weapon spawn?, Defaults to false.
+---@return Weapon # The weapon
+function Player:giveWeapon(weapon, noAmmo) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether or not the player has godmode.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L190).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L191).
 ---@return boolean # True if the player has godmode
 function Player:hasGodMode() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Ignites a player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L544).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L563).
 ---@param length number # How long the fire lasts
 ---@param radius number? # (optional) How large the fire hitbox is (entity obb is the max)
 function Player:ignite(length, radius) end
@@ -368,7 +376,7 @@ function Player:isBot() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the player is connected.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L291).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L310).
 ---@return boolean # True if player is connected
 function Player:isConnected() end
 
@@ -392,7 +400,7 @@ function Player:isFrozen() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if the player is connected to a HUD component that's linked to this chip.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L174).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L175).
 ---@return boolean # If a HUD component is connected and active for the player
 function Player:isHUDActive() end
 
@@ -440,7 +448,7 @@ function Player:isSuperAdmin() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns true if the player is timing out.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L285).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L304).
 ---@return boolean # isTimingOut
 function Player:isTimingOut() end
 
@@ -495,12 +503,12 @@ function Player:keyReleased(key) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Kills the target.
 --- Requires 'entities.setHealth' permission.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L460).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L479).
 function Player:kill() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the hitgroup where the player was last hit.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L253).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L272).
 ---@return number # Hitgroup, see https://wiki.facepunch.com/gmod/Enums/HITGROUP
 function Player:lastHitGroup() end
 
@@ -527,14 +535,14 @@ function Player:resetGesture(slot) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Forces the player to say the first argument.
 --- Only works on the chip's owner.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L297).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L316).
 ---@param text string # The text to force the player to say
 ---@param teamOnly boolean? # Team chat only?, Defaults to false.
 function Player:say(text, teamOnly) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the player's ammo.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L231).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L250).
 ---@param amount number # The ammo value
 ---@param ammoType number|string # Ammo type id or name
 function Player:setAmmo(amount, ammoType) end
@@ -601,31 +609,31 @@ function Player:setAnimationTime(time) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the armor of the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L312).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L331).
 ---@param newarmor number # New armor value.
 function Player:setArmor(newarmor) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Crouched Walk Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L352).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L371).
 ---@param newcwalkspeed number # New Crouch Walk speed, This is a multiplier from 0 to 1.
 function Player:setCrouchedWalkSpeed(newcwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Duck Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L361).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L380).
 ---@param newduckspeed number # New Duck speed, This is a multiplier from 0 to 1.
 function Player:setDuckSpeed(newduckspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a player's eye angles.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L259).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L278).
 ---@param ang Angle # New angles
 function Player:setEyeAngles(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Friction.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L442).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L461).
 ---@param newfriction number # New Friction.
 function Player:setFriction(newfriction) end
 
@@ -638,106 +646,106 @@ function Player:setGestureWeight(slot, weight) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the gravity multiplier of the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L530).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L549).
 ---@param multiplier number # By how much to multiply the gravity. 1 is normal gravity, 0.5 is half-gravity, etc.
 function Player:setGravity(multiplier) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the health of the player.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L330).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L349).
 ---@param newhealth number # New health value.
 function Player:setHealth(newhealth) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Jump Power.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L424).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L443).
 ---@param newjumppower number # New Jump Power.
 function Player:setJumpPower(newjumppower) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Ladder Climb Speed, probably unstable.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L379).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L398).
 ---@param newladderclimbspeed number # New Ladder Climb speed.
 function Player:setLadderClimbSpeed(newladderclimbspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the maximum armor for player. You can still set a player's armor above this amount with Player:setArmor.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L321).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L340).
 ---@param newmaxarmor number # New max armor value.
 function Player:setMaxArmor(newmaxarmor) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the maximum health for player. Note, that you can still set player's health above this amount with Player:setHealth.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L341).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L360).
 ---@param newmaxhealth number # New max health value.
 function Player:setMaxHealth(newmaxhealth) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Max Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L388).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L407).
 ---@param newmaxspeed number # New Max speed.
 function Player:setMaxSpeed(newmaxspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Lets you change the size of yourself if the server has sf_permissions_entity_owneraccess 1.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L165).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L166).
 ---@param scale number # The scale to apply, will be truncated to the first two decimal places (min 0.01, max 100)
 function Player:setModelScale(scale) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- sets ID of a given point to add PVS points.
 --- can only be used on either the chip's owner, or HUD connected players.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L479).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L498).
 ---@param ID number # ID to set position of, clamped between 1 and the PVS Points limit.
 ---@param position Vector? # position to set the override point to, nil to delete this point if it exists.
 function Player:setPVSPoint(ID, position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the player's position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L505).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L524).
 ---@param vec Vector # New position
 ---@param revive boolean? # Revive the player if they are dead
 function Player:setPos(vec, revive) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Run Speed ( +speed ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L397).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L416).
 ---@param newrunspeed number # New Run speed.
 function Player:setRunSpeed(newrunspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Slow Walk Speed ( +walk ).
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L406).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L425).
 ---@param newslowwalkspeed number # New Slow Walk speed.
 function Player:setSlowWalkSpeed(newslowwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Step Size.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L433).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L452).
 ---@param newstepsize number # New Step Size.
 function Player:setStepSize(newstepsize) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets UnDuck Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L370).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L389).
 ---@param newunduckspeed number # New UnDuck speed, This is a multiplier from 0 to 1.
 function Player:setUnDuckSpeed(newunduckspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the view entity of the player. Only works if they are linked to a hud.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L180).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L181).
 ---@param ent Entity? # Entity to set the player's view entity to, or nothing to reset it
 function Player:setViewEntity(ent) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets Walk Speed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L415).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L434).
 ---@param newwalkspeed number # New Walk speed.
 function Player:setWalkSpeed(newwalkspeed) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the player's weapon color.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L451).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L470).
 ---@param col Vector # The new color with values 0-1 in each vector component
 function Player:setWeaponColor(col) end
 
@@ -749,18 +757,18 @@ function Player:shouldDrawLocalPlayer() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes all a player's ammo.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L246).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L265).
 function Player:stripAmmo() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Strips the player's weapon.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L215).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L234).
 ---@param weapon string # The weapon class name of the weapon to strip
 function Player:stripWeapon(weapon) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Strips all the player's weapons.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L224).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/players.lua#L243).
 function Player:stripWeapons() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
