@@ -13,7 +13,7 @@ function sound.canCreate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns if a sound is able to be emitted from an entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L265).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L264).
 ---@return boolean # If it is possible to emit a sound
 function sound.canEmitSound() end
 
@@ -35,7 +35,7 @@ function sound.duration(path) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Emits a sound not attached to any entity at the specified position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L277).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L276).
 ---@param snd string # Sound path
 ---@param position Vector # Where the sound originates from
 ---@param soundLevel number? # Default 75
@@ -48,7 +48,7 @@ function sound.emitSound(snd, position, soundLevel, pitchPercent, volume, channe
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the number of sound emits left.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L271).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L270).
 ---@return number # The number of sounds left
 function sound.emitSoundsLeft() end
 
