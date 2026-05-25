@@ -1639,7 +1639,7 @@ function Entity:testPVS(other) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Casts a hologram entity into the hologram type.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L92).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L103).
 ---@return Hologram # Hologram instance
 function Entity:toHologram() end
 
