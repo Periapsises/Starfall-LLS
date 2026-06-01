@@ -183,21 +183,21 @@ function Vector:getNormalized() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts vector to quaternion.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L783).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L781).
 ---@param up Vector # Upward direction. If specified, the original vector will act like a forward pointing one
 ---@return Quaternion # Quaternion from the given vector
 function Vector:getQuaternion(up) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns quaternion for rotation about axis represented by the vector by an angle in degrees.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L811).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L809).
 ---@param ang number # Number rotation angle in degrees
 ---@return Quaternion # Rotated quaternion
 function Vector:getQuaternionFromAxis(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Constructs a quaternion from the rotation vector. Vector direction is axis of rotation, it's magnitude is angle in degrees.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L823).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L821).
 ---@return Quaternion # Rotated quaternion
 function Vector:getQuaternionFromRotation() end
 

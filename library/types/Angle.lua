@@ -91,7 +91,7 @@ function Angle:getForward() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts angle to a quaternion.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L839).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L837).
 ---@return Quaternion # Constructed quaternion
 function Angle:getQuaternion() end
 

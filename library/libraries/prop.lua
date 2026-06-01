@@ -6,8 +6,8 @@
 prop = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks if a user can manipulate anymore bones. .
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L436).
+--- Checks if a user can manipulate anymore bones.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L426).
 ---@return boolean # True if user can manipulate bones, False if not.
 function prop.canManipulateBones() end
 
@@ -101,13 +101,13 @@ function prop.getSpawnableSents(categorized) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns the current number of calls to bone manipuation functions the player is allowed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L443).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L433).
 ---@return number # Amount of manipulate bones calls remaining
 function prop.manipulateBonesLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how many bone manipulations per second the user can do.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L450).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L440).
 ---@return number # Number of props per second the user can spawn
 function prop.manipulateBonesRate() end
 
