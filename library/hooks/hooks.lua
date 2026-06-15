@@ -9,6 +9,7 @@
 ---| '"ClientInitialized"' #  Called after a client's starfall has initialized. Use this to know when it's safe to send net messages to the client.
 ---| '"ComponentLinked"' #  Called when a component is linked to the starfall
 ---| '"ComponentUnlinked"' #  Called when a component is unlinked to the starfall
+---| '"CreateMove"' #  Called whenever a CUserCmd is made for the local player. This runs twice per frame, one for movement one for camera. You can use cmd:getCommandNumber to check which one it is if you want to only run on one of them. Camera will have a 0 command number.
 ---| '"DoAnimationEvent"' #  Called when a player animation event occurs
 ---| '"DrawHUD"' #  Called when a frame is requested to be drawn on hud. (2D Context)
 ---| '"DupeFinished"' #  Called after the starfall chip is duplicated and the duplication is finished.
@@ -18,6 +19,7 @@
 ---| '"EntityRemoved"' #  Called when an entity is removed
 ---| '"EntityTakeDamage"' #  Called when an entity is damaged
 ---| '"FinishChat"' #  Called when the local player closes their chat window.
+---| '"FinishMove"' #  Called each UserCmd for each player after their move has been processed.
 ---| '"GravGunOnDropped"' #  Called when an entity is being dropped by a gravity gun
 ---| '"GravGunOnPickedUp"' #  Called when an entity is being picked up by a gravity gun
 ---| '"GravGunPunt"' #  Called when a player punts with the gravity gun
@@ -107,11 +109,13 @@
 ---| '"RenderOffscreen"' #  Called when a frame is requested to be drawn. Doesn't require a screen or HUD but only works on rendertargets. (2D Context)
 ---| '"RenderScene"' #  Called when a scene is requested to be drawn. This is used for the render.renderview function.
 ---| '"ResetLaws"' #  Called when laws are reset. DarkRP only. Usually the only hook called when /resetlaws is used.
+---| '"SetupMove"' #  Called each UserCmd for each player to transfer information from the UserCmd to the CMoveData before the move is processed.
 ---| '"SetupSkyboxFog"' #  Called when skybox fog is drawn.
 ---| '"SetupWorldFog"' #  Called when world fog is drawn.
 ---| '"StarfallError"' #  Called when starfall chip errors
 ---| '"StarfallUsed"' #  Called when a player uses the screen
 ---| '"StartChat"' #  Called when the local player opens their chat window.
+---| '"StartCommand"' #  This is basically a shared version of createMove.
 ---| '"StartEntityDriving"' #  Called when a player starts driving an entity
 ---| '"Think"' #  Think hook. Called each frame on the client and each game tick on the server.
 ---| '"Tick"' #  Tick hook. Called each game tick on both the server and client.
@@ -135,6 +139,7 @@
 ---@alias ClientInitialized fun(ply: Player)
 ---@alias ComponentLinked fun(ent: Entity)
 ---@alias ComponentUnlinked fun(ent: Entity)
+---@alias CreateMove fun(cmd: CUserCmd)
 ---@alias DoAnimationEvent fun(ply: Player, event: number, data: number)
 ---@alias DrawHUD fun()
 ---@alias DupeFinished fun(entTbl: table)
@@ -144,6 +149,7 @@
 ---@alias EntityRemoved fun(ent: Entity, fullupdate: boolean)
 ---@alias EntityTakeDamage fun(target: Entity, attacker: Entity, inflictor: Entity, amount: number, type: number, position: Vector, force: Vector) : boolean?
 ---@alias FinishChat fun()
+---@alias FinishMove fun(ply: Player, move: CMoveData)
 ---@alias GravGunOnDropped fun(ply: Player, ent: Entity)
 ---@alias GravGunOnPickedUp fun(ply: Player, ent: Entity)
 ---@alias GravGunPunt fun(ply: Player, ent: Entity)
@@ -233,11 +239,13 @@
 ---@alias RenderOffscreen fun()
 ---@alias RenderScene fun(origin: Vector, angles: Angle, fov: number)
 ---@alias ResetLaws fun(player: Player?)
+---@alias SetupMove fun(ply: Player, move: CMoveData, cmd: CUserCmd)
 ---@alias SetupSkyboxFog fun(scale: number)
 ---@alias SetupWorldFog fun()
 ---@alias StarfallError fun(ent: Entity, ply: Player|Entity, err: string)
 ---@alias StarfallUsed fun(activator: Player, used: Entity)
 ---@alias StartChat fun(isTeamChat: boolean)
+---@alias StartCommand fun(ply: Player, cmd: CUserCmd)
 ---@alias StartEntityDriving fun(ent: Entity, ply: Player)
 ---@alias Think fun()
 ---@alias Tick fun()

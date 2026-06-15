@@ -10,7 +10,7 @@ render = {}
 ---@enum Screen
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 ---
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2805).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2809).
 render.Screen = {
 	---Pretty name of model
 	Name = 1,
@@ -37,7 +37,7 @@ render.Screen = {
 ---@enum Vertex
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Vertex format
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2819).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2823).
 render.Vertex = {
 	---X coordinate
 	x = 1,
@@ -122,7 +122,7 @@ function render.clearStencilBufferRectangle(originX, originY, endX, endY, stenci
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Calculates the lighting caused by dynamic lights for the specified surface.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2626).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2630).
 ---@param pos Vector # Vector position to sample from
 ---@param normal Vector # Normal vector of the surface
 ---@return Vector # Vector representing color of the light
@@ -130,7 +130,7 @@ function render.computeDynamicLighting(pos, normal) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Calculates the light color of a certain surface.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2616).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2620).
 ---@param pos Vector # Vector position to sample from
 ---@param normal Vector # Normal vector of the surface
 ---@return Vector # Vector representing color of the light
@@ -200,7 +200,7 @@ function render.cursorPos(ply, screen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Set's the depth range of the upcoming render.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2781).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2785).
 ---@param min number # The minimum depth of the upcoming render. 0.0 = render normally; 1.0 = render nothing.
 ---@param max number # The maximum depth of the upcoming render. 0.0 = render everything (through walls); 1.0 = render normally.
 function render.depthRange(min, max) end
@@ -636,7 +636,7 @@ function render.drawTriangle(x1, y1, x2, y2, x3, y3) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the status of the clip renderer, returning previous state.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2575).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2579).
 ---@param state boolean # New clipping state.
 ---@return boolean # Previous clipping state.
 function render.enableClipping(state) end
@@ -663,7 +663,7 @@ function render.end3DBeam() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the ambient color of the map.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2644).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2648).
 ---@return Vector # Vector representing color of the light
 function render.getAmbientLightColor() end
 
@@ -720,7 +720,7 @@ function render.getGameResolution() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Gets the light exposure on the specified position.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2636).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2640).
 ---@param pos Vector # Vector position to sample from
 ---@return Vector # Vector representing color of the light
 function render.getLightColor(pos) end
@@ -796,7 +796,7 @@ function render.isInRenderTarget() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether render.renderView is being executed.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2563).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2567).
 ---@return boolean # Whether render.renderView is being executed
 function render.isInRenderView() end
 
@@ -822,7 +822,7 @@ function render.parseMarkup(str, maxsize) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the visibility of a sphere in the world.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2789).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2793).
 ---@param position Vector #
 ---@param radius number #
 ---@return number # Percentage visible, from 0-1
@@ -830,7 +830,7 @@ function render.pixelVisible(position, radius) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Removes the current active clipping plane from the clip plane stack.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2606).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2610).
 function render.popCustomClipPlane() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -845,7 +845,7 @@ function render.popViewMatrix() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Pushes a new clipping plane of the clip plane stack.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2590).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2594).
 ---@param normal Vector # The normal of the clipping plane.
 ---@param distance number # The normal of the clipping plane.
 function render.pushCustomClipPlane(normal, distance) end
@@ -896,7 +896,7 @@ function render.renderView(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns how many render.renderView calls can be done in the current frame.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2569).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2573).
 ---@return number # How many render.renderView calls are left
 function render.renderViewsLeft() end
 
@@ -915,7 +915,7 @@ function render.resetStencil() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Makes the screen shake, client must be connected to a HUD.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2772).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2776).
 ---@param amplitude number # The strength of the effect
 ---@param frequency number # The frequency of the effect in hertz
 ---@param duration number # The duration of the effect in seconds, max 10.
@@ -943,7 +943,7 @@ function render.setBlend(alpha) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the overlay of the chip to a user's rendertarget.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2732).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2736).
 ---@param name string? # The name of the RT to use or nil to set it back to normal
 function render.setChipOverlay(name) end
 
@@ -981,37 +981,37 @@ function render.setFilterMin(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Changes color of the fog.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2659).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2663).
 ---@param col Color # Color (alpha won't have any effect)
 function render.setFogColor(col) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Changes density of the fog.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2668).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2672).
 ---@param density number # Density between 0 and 1
 function render.setFogDensity(density) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets distance at which the fog will reach it's target density.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2686).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2690).
 ---@param distance number # End distance
 function render.setFogEnd(distance) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the height below which fog will be rendered. Only works with fog mode 2, MATERIAL_FOG.LINEAR_BELOW_FOG_Z.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2695).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2699).
 ---@param height number # The fog height
 function render.setFogHeight(height) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the fog mode. See: https://wiki.facepunch.com/gmod/Enums/MATERIAL_FOG.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2650).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2654).
 ---@param mode number # Fog mode
 function render.setFogMode(mode) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets distance at which the fog will start appearing.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2677).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2681).
 ---@param distance number # Start distance
 function render.setFogStart(distance) end
 
@@ -1120,7 +1120,7 @@ function render.setRenderTargetTexture(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Using the custom screen model, sets the screen offset and size as long as its within bounds of -1024 to 1024 units.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2744).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2748).
 ---@param screen Entity # The custom screen to be resized
 ---@param x number # The x offset of the screen
 ---@param y number # The y offset of the screen
