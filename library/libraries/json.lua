@@ -9,8 +9,9 @@ json = {}
 --- Convert JSON string to table.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/json.lua#L37).
 ---@param s string # String to decode
+---@param ignoreConversions boolean? # Optional. If true, ignore string to number conversions for table keys
 ---@return table # Table representing the JSON object
-function json.decode(s) end
+function json.decode(s, ignoreConversions) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Convert table to JSON string.

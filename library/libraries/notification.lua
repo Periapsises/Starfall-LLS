@@ -28,6 +28,6 @@ function notification.addProgress(id, text, progress) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Removes the notification with the given index after 0.8 seconds.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L75).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L69).
 ---@param id string # String index of the notification to kill
 function notification.kill(id) end
