@@ -20,10 +20,10 @@ function nextbot.canSpawnRagdoll() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Creates a customizable NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L88).
----@param spawnpos Vector # The position the nextbot will be spawned at.
----@param model string # The model the nextbot will use.
+---@param pos Vector # The position the nextbot will be spawned at.
+---@param mdl string # The model the nextbot will use.
 ---@return NextBot # The nextbot.
-function nextbot.create(spawnpos, model) end
+function nextbot.create(pos, mdl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how many nextbots can be spawned.

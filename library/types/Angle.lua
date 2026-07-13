@@ -12,58 +12,58 @@ local Angle = {}
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Addition metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L152).
----@param a1 Angle # Initial angle.
----@param a2 Angle # Angle to add to the first.
+---@param a Angle # Initial angle.
+---@param b Angle # Angle to add to the first.
 ---@return Angle # Resultant angle.
-function Angle:__add(a1, a2) end
+function Angle:__add(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Division metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L120).
----@param a1 number|Angle # Number or Angle dividend.
----@param a2 number|Angle # Number or Angle divisor.
+---@param a number|Angle # Number or Angle dividend.
+---@param b number|Angle # Number or Angle divisor.
 ---@return Angle # Resultant angle.
-function Angle:__div(a1, a2) end
+function Angle:__div(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Equivalence metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L144).
----@param a1 Angle # Initial angle.
----@param a2 Angle # Angle to check against.
+---@param a Angle # Initial angle.
+---@param b Angle # Angle to check against.
 ---@return boolean # Whether their fields are equal
-function Angle:__eq(a1, a2) end
+function Angle:__eq(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a value at a key in the angle.
 --- Can be indexed with: 1, 2, 3, p, y, r, pitch, yaw, roll. 1,2,3 is most efficient.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L81).
----@param Key number|string #
----@return number # Value
-function Angle:__index(Key) end
+---@param k number|string #
+---@return number|function|nil # Value
+function Angle:__index(k) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Multiplication metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L102).
----@param a1 number|Angle # Number or Angle multiplicand.
----@param a2 number|Angle # Number or Angle multiplier.
+---@param a number|Angle # Number or Angle multiplicand.
+---@param b number|Angle # Number or Angle multiplier.
 ---@return Angle # Resultant angle.
-function Angle:__mul(a1, a2) end
+function Angle:__mul(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a value at a key in the angle.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L69).
----@param Ang Angle #
----@param Key number|string #
----@param Value number #
-function Angle:__newindex(Ang, Key, Value) end
+---@param t Angle #
+---@param k number|string #
+---@param v number #
+function Angle:__newindex(t, k, v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Subtraction metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L160).
----@param a1 Angle # Initial angle.
----@param a2 Angle # Angle to subtract.
+---@param a Angle # Initial angle.
+---@param b Angle # Angle to subtract.
 ---@return Angle # Resultant angle.
-function Angle:__sub(a1, a2) end
+function Angle:__sub(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Turns an angle into a string.
@@ -91,7 +91,7 @@ function Angle:getForward() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts angle to a quaternion.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L837).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L838).
 ---@return Quaternion # Constructed quaternion
 function Angle:getQuaternion() end
 

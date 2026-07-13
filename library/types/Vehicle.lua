@@ -9,10 +9,10 @@ local Vehicle = {}
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Tries to find an exit point for leaving the vehicle.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vehicles.lua#L222).
----@param yaw number #
----@param distance number #
+---@param yaw number # Yaw/roll from vehicle angle to check for exit
+---@param dist number # Distance from origin to drop player
 ---@return Vector # The exit position, or nil if unable to exit in that direction
-function Vehicle:checkExitPoint(yaw, distance) end
+function Vehicle:checkExitPoint(yaw, dist) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Ejects the driver of the vehicle.

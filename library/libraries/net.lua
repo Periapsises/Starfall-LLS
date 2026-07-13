@@ -266,8 +266,8 @@ function net.writeString(t) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Writes a table to a net message automatically typing it.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L264).
----@param v table # The table to write
-function net.writeTable(v) end
+---@param t table # The table to write
+function net.writeTable(t) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Writes an object to a net message automatically typing it.

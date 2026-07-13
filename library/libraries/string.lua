@@ -93,9 +93,9 @@ function string.formattedTime(time, format) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts color to a string.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/string.lua#L17).
----@param col Color # The color to put in the string
+---@param color Color # The color to put in the string
 ---@return string # String with the color RGBA values separated by spaces
-function string.fromColor(col) end
+function string.fromColor(color) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns extension of the file-path.

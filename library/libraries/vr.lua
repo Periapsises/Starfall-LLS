@@ -167,7 +167,7 @@ function vr.getOriginPos() end
 function vr.getRightEyePos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Returns the left hand angles.
+--- Returns the right hand angles.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vr.lua#L144).
 ---@param target Player # Player to get the right hand angles from
 ---@return Angle # Angles
@@ -187,7 +187,7 @@ function vr.getRightHandAngularVelocity() end
 function vr.getRightHandPos(target) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Returns the left hand pose.
+--- Returns the right hand pose.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vr.lua#L151).
 ---@param target Player # Player to get the right hand pose from
 ---@return Vector # Position

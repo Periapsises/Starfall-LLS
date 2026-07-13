@@ -47,10 +47,11 @@ function table.concat(tbl, concatenator, startPos, endPos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Creates a deep copy and returns that copy. This function does NOT copy userdata, such as Vectors and Angles!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L214).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L215).
 ---@param tbl table # The table to be copied
+---@param lookup_table table? # An optional lookup table for cyclic reference detection
 ---@return table # A deep copy of the original table
-function table.copy(tbl) end
+function table.copy(tbl, lookup_table) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Empties the target table, and merges all values from the source table into it.
@@ -165,7 +166,7 @@ function table.maxn(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Merges the contents of the second table with the content in the first one.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L241).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L243).
 ---@param dest table # The table you want the source table to merge with
 ---@param source table # The table you want to merge with the destination table
 ---@return table # Destination table
@@ -243,4 +244,5 @@ function table.sortDesc(tbl) end
 ---@param tbl table # The table to iterate over
 ---@param displayName string? # Optional name for the table
 ---@param niceFormatting boolean? # Optional, adds new lines and tabs to the string. Defaults to false
+---@return string # The table formatted as a string
 function table.toString(tbl, displayName, niceFormatting) end

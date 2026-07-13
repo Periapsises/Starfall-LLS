@@ -136,8 +136,8 @@ function mesh.writeNormal(normal) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes the vertex position to the vertex data.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/mesh.lua#L1082).
----@param position Vector # Position
-function mesh.writePosition(position) end
+---@param pos Vector # Position
+function mesh.writePosition(pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes a quad using 4 vertices to the vertex data.

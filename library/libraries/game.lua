@@ -17,16 +17,16 @@ function game.blastDamage(damageOrigin, damageRadius, damage) end
 --- Fires a bullet. Bullet made with this function will not have any tracer, you will have to make them yourself.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L189).
 ---@param src Vector # The position to fire the bullets from.
----@param Dir Vector # The fire direction.
+---@param dir Vector # The fire direction.
 ---@param damage number? # The damage dealt by the bullet. Default: (1-100)
 ---@param num number? # The amount of bullets to fire. Default: (1-40)
 ---@param force number? # The force of the bullets. Default: (0-100)
 ---@param distance number? # Maximum distance the bullet can travel.
----@param Spread Vector? # The spread, only x and y are needed.
+---@param spread Vector? # The spread, only x and y are needed.
 ---@param hullSize number? # The hull size of the bullet. Default: (0-10)
 ---@param ignoreEntity Entity? # The entity that the bullet will ignore when it will be shot.
----@param callback function? # Function to be called with attacker, traceResult after the bullet was fired but before the damage is applied (the callback is called even if no damage is applied).
-function game.bulletDamage(src, Dir, damage, num, force, distance, Spread, hullSize, ignoreEntity, callback) end
+---@param cb function? # Function to be called with attacker, traceResult after the bullet was fired but before the damage is applied (the callback is called even if no damage is applied).
+function game.bulletDamage(src, dir, damage, num, force, distance, spread, hullSize, ignoreEntity, cb) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Return the amount of damage left bullets can deal.

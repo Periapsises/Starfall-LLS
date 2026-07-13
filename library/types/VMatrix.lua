@@ -178,8 +178,8 @@ function VMatrix:setAngles(ang) end
 --- Self-Modifies. Does not return anything.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vmatrix.lua#L271).
 ---@param axis Vector # The normalized axis of rotation
----@param angle number # The angle of rotation in radians
-function VMatrix:setAxisAngle(axis, angle) end
+---@param ang number # The angle of rotation in radians
+function VMatrix:setAxisAngle(axis, ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a specific field in the matrix.

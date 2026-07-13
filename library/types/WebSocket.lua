@@ -20,6 +20,7 @@ function WebSocket:__newindex(k, v) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns "WebSocket: " alongside the address of the websocket.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/websocket.lua#L180).
+---@return string #
 function WebSocket:__tostring() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)

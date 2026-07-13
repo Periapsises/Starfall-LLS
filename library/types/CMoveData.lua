@@ -31,6 +31,12 @@ function CMoveData:getForwardSpeed() end
 function CMoveData:getImpulse() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the maximum client speed of the player.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/usercmd.lua#L135).
+---@return number # The max speed
+function CMoveData:getMaxClientSpeed() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the maximum speed of the player.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/usercmd.lua#L141).
 ---@return number # The max speed

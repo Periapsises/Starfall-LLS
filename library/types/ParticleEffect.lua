@@ -53,15 +53,15 @@ function ParticleEffect:setControlPointParent(id, parentid) end
 --- Sets the forward direction for given control point.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L198).
 ---@param id number # Control Point ID (0-63)
----@param fwd Vector # Forward vector
-function ParticleEffect:setForwardVector(id, fwd) end
+---@param value Vector # Forward vector
+function ParticleEffect:setForwardVector(id, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the right direction for given control point.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L211).
 ---@param id number # Control Point ID (0-63)
----@param right Vector # Right vector
-function ParticleEffect:setRightVector(id, right) end
+---@param value Vector # Right vector
+function ParticleEffect:setRightVector(id, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the sort origin for given particle effect system. This is used as a helper to determine which particles are in front of which.
@@ -73,8 +73,8 @@ function ParticleEffect:setSortOrigin(origin) end
 --- Sets the up direction for given control point.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/particle_effect.lua#L225).
 ---@param id number # Control Point ID (0-63)
----@param up Vector # Up vector
-function ParticleEffect:setUpVector(id, up) end
+---@param value Vector # Up vector
+function ParticleEffect:setUpVector(id, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Starts emission of the particle effect.

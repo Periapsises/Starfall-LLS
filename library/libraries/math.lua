@@ -71,7 +71,7 @@ function math.atan2(y, x) end
 --- Calculates B-Spline point.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L334).
 ---@param tDiff number # From 0 to tMax, where alongside the spline the point will be
----@param tPoints number # A table of Vectors. The amount cannot be less than 4
+---@param tPoints table # A table of Vectors. The amount cannot be less than 4
 ---@param tMax number # Dictates maximum value for tDiff
 ---@return number # Point on Bezier curve, related to tDiff
 function math.bSplinePoint(tDiff, tPoints, tMax) end
@@ -79,23 +79,23 @@ function math.bSplinePoint(tDiff, tPoints, tMax) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a point along a bezier curve.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L391).
----@param ratio number # Number representing how far along the curve, 0-1.
----@param start Vector # The start position of the curve.
----@param middle Vector # The middle position of the curve.
----@param _end Vector # The end position of the curve.
+---@param r number # Number representing how far along the curve, 0-1.
+---@param v1 Vector # The start position of the curve.
+---@param v2 Vector # The middle position of the curve.
+---@param v3 Vector # The end position of the curve.
 ---@return Vector # Vector representing the point along the curve.
-function math.bezierVector(ratio, start, middle, _end) end
+function math.bezierVector(r, v1, v2, v3) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns a point along a cubic bezier curve.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L409).
----@param ratio number # Number representing how far along the curve, 0-1.
----@param start Vector # The start position of the curve.
----@param tangent1 Vector # First tangent
----@param tangent2 Vector # Second tangent
----@param _end Vector # The end position of the curve.
+---@param r number # Number representing how far along the curve, 0-1.
+---@param v1 Vector # The start position of the curve.
+---@param v2 Vector # First tangent
+---@param v3 Vector # Second tangent
+---@param v4 Vector # The end position of the curve.
 ---@return Vector # Vector representing the point along the curve.
-function math.bezierVectorCubic(ratio, start, tangent1, tangent2, _end) end
+function math.bezierVectorCubic(r, v1, v2, v3, v4) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts a binary string into a number.
@@ -452,9 +452,9 @@ function math.lerpAngle(ratio, from, to) end
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L368).
 ---@param ratio number # Ratio of progress through values
 ---@param from Vector # Vector to begin from
----@param Vector Vector # to end at
+---@param to Vector # Vector to end at
 ---@return Vector # The interpolated vector
-function math.lerpVector(ratio, from, Vector) end
+function math.lerpVector(ratio, from, to) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- With one argument, returns the natural logarithm of x (to base e).
@@ -503,7 +503,7 @@ function math.modf(base) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs normalized linear interpolation between two quaternions.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L876).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L877).
 ---@param quat1 Quaternion # Quaternion to start with
 ---@param quat2 Quaternion # Quaternion to end with
 ---@param t number # Ratio, 0 = quat1; 1 = quat2
@@ -602,7 +602,7 @@ function math.sinh(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Performs spherical linear interpolation between two quaternions.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L849).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L850).
 ---@param quat1 Quaternion # Quaternion to start with
 ---@param quat2 Quaternion # Quaternion to end with
 ---@param t number # Ratio, 0 = quat1; 1 = quat2

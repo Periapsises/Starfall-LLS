@@ -120,6 +120,6 @@ function input.selectWeapon(weapon) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the position of your cursor. Your cursor must be enabled.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/input.lua#L358).
----@param X number #
----@param Y number #
-function input.setCursorPos(X, Y) end
+---@param x number #
+---@param y number #
+function input.setCursorPos(x, y) end

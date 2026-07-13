@@ -100,7 +100,7 @@ function Hologram:setLocalAngles(ang) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the hologram's local angular velocity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L183).
----@param angvel Angle # *Vector* local angular velocity.
+---@param angvel Angle # The local angular velocity.
 function Hologram:setLocalAngularVelocity(angvel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)

@@ -12,34 +12,34 @@ local Vector = {}
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Addition metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L172).
----@param v1 Vector # Initial vector.
----@param v2 Vector # Vector to add to the first.
+---@param a Vector # Initial vector.
+---@param b Vector # Vector to add to the first.
 ---@return Vector # Resultant vector after addition operation.
-function Vector:__add(v1, v2) end
+function Vector:__add(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Division metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L154).
----@param v1 number|Vector # Number or Vector dividend.
----@param v2 number|Vector # Number or Vector divisor.
+---@param a number|Vector # Number or Vector dividend.
+---@param b number|Vector # Number or Vector divisor.
 ---@return Vector # Scaled vector.
-function Vector:__div(v1, v2) end
+function Vector:__div(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Equivalence metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L194).
----@param v1 Vector # Initial vector.
----@param v2 Vector # Vector to check against.
+---@param a Vector # Initial vector.
+---@param b Vector # Vector to check against.
 ---@return boolean # Whether both sides are equal.
-function Vector:__eq(v1, v2) end
+function Vector:__eq(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Gets a value at a key in the vector.
 --- Can be indexed with: 1, 2, 3, x, y, z, xx, xy, xz, xxx, xyz, zyx, etc.. 1,2,3 is most efficient.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L99).
----@param Key number|string # to get the value at
----@return number # The value at the index
-function Vector:__index(Key) end
+---@param k number|string # to get the value at
+---@return number|function|Vector|nil # The value at the index
+function Vector:__index(k) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Multiplication metamethod.
@@ -52,18 +52,18 @@ function Vector:__mul(a, b) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets a value at a key in the vector.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L73).
----@param Vec Vector #
----@param Key number|string #
----@param Value number #
-function Vector:__newindex(Vec, Key, Value) end
+---@param t Vector #
+---@param k number|string #
+---@param v number #
+function Vector:__newindex(t, k, v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Subtraction metamethod.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L180).
----@param v1 Vector # Initial Vector
----@param v2 Vector # Vector to subtract
+---@param a Vector # Initial Vector
+---@param b Vector # Vector to subtract
 ---@return Vector # Resultant vector after subtraction operation.
-function Vector:__sub(v1, v2) end
+function Vector:__sub(a, b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Turns a vector into a string.
@@ -127,8 +127,8 @@ function Vector:getAngleEx(v) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns an arbitrary orthogonal basis from the direction of the vector. Input must be a normalized vector.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L429).
----@return number # Basis 1
----@return number # Basis 2
+---@return Vector # Basis 1
+---@return Vector # Basis 2
 function Vector:getBasis() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -183,21 +183,21 @@ function Vector:getNormalized() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Converts vector to quaternion.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L781).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L782).
 ---@param up Vector # Upward direction. If specified, the original vector will act like a forward pointing one
 ---@return Quaternion # Quaternion from the given vector
 function Vector:getQuaternion(up) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns quaternion for rotation about axis represented by the vector by an angle in degrees.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L809).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L810).
 ---@param ang number # Number rotation angle in degrees
 ---@return Quaternion # Rotated quaternion
 function Vector:getQuaternionFromAxis(ang) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Constructs a quaternion from the rotation vector. Vector direction is axis of rotation, it's magnitude is angle in degrees.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L821).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/quaternion.lua#L822).
 ---@return Quaternion # Rotated quaternion
 function Vector:getQuaternionFromRotation() end
 

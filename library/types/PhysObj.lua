@@ -301,8 +301,8 @@ function PhysObj:setAngleVelocity(angvel) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the angular velocity of the physics object instantly.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L266).
----@param ang Angle # The angular velocity that will be set
-function PhysObj:setAngleVelocityInstantaneous(ang) end
+---@param vel Vector # The angular velocity that will be set
+function PhysObj:setAngleVelocityInstantaneous(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the angles of the physics object. Will cause interpolation of the entity in clientside, use entity.setAngles to avoid this.
@@ -350,8 +350,8 @@ function PhysObj:setMass(mass) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Sets the physical material of a physics object.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L175).
----@param materialName string # The physical material to set it to
-function PhysObj:setMaterial(materialName) end
+---@param material string # The physical material to set it to
+function PhysObj:setMaterial(material) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the position of the physics object. Will cause interpolation of the entity in clientside, use entity.setPos to avoid this.

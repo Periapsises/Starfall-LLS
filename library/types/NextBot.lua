@@ -9,71 +9,71 @@ local NextBot = {}
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a callback function that will be run when this nextbot touches another entity. Only 1 per NB. Setting a new callback will replace the old one.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L476).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB touches another entity. The arguments are: (The entity the NB touched.)
-function NextBot:addContactCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB touches another entity. The arguments are: (The entity the NB touched.)
+function NextBot:addContactCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot dies.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L344).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB dies. The arguments are: (Damage, Attacker, Inflictor, Damage Pos, Damage Force, Damage Type)
-function NextBot:addDeathCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB dies. The arguments are: (Damage, Attacker, Inflictor, Damage Pos, Damage Force, Damage Type)
+function NextBot:addDeathCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot gets ignited.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L432).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB gets ignited.
-function NextBot:addIgniteCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB gets ignited.
+function NextBot:addIgniteCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot is injured.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L366).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB gets injured. The arguments are: (Damage, Attacker, Inflictor, Damage Pos, Damage Force, Damage Type)
-function NextBot:addInjuredCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB gets injured. The arguments are: (Damage, Attacker, Inflictor, Damage Pos, Damage Force, Damage Type)
+function NextBot:addInjuredCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot lands on the ground.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L388).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB lands on the ground. The arguments are: (The entity the NB landed on.)
-function NextBot:addLandCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB lands on the ground. The arguments are: (The entity the NB landed on.)
+function NextBot:addLandCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot leaves the ground.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L410).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB leaves the ground. The arguments are: (The entity the NB "jumped" from.)
-function NextBot:addLeaveGroundCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB leaves the ground. The arguments are: (The entity the NB "jumped" from.)
+function NextBot:addLeaveGroundCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when the nextbot enters a new nav area.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L454).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB enters a new nav area. The arguments are: (Old Nav Area, New Nav Area)
-function NextBot:addNavChangeCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB enters a new nav area. The arguments are: (Old Nav Area, New Nav Area)
+function NextBot:addNavChangeCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when the nextbot create a ragdoll. Note: this will be called only if nb:ragdollOnDeath() is set to True.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L498).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB create a ragdoll. The arguments are: (The ragdoll entity the NB created.)
-function NextBot:addRagdollCreationCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB create a ragdoll. The arguments are: (The ragdoll entity the NB created.)
+function NextBot:addRagdollCreationCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Adds a callback function that will be run when this nextbot reaches a destination set by setApproachPos or setGotoPos.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L322).
----@param callbackid string # The unique ID this callback will use.
----@param callback function # The function to run when the NB reaches its destination.
-function NextBot:addReachCallback(callbackid, callback) end
+---@param id string # The unique ID this callback will use.
+---@param func function # The function to run when the NB reaches its destination.
+function NextBot:addReachCallback(id, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes the nextbot face towards a specified position. Has to be called continuously to be effective.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L246).
----@param facepos Vector # Position to face towards.
-function NextBot:faceTowards(facepos) end
+---@param pos Vector # Position to face towards.
+function NextBot:faceTowards(pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the acceleration speed of the NextBot.
@@ -180,9 +180,9 @@ function NextBot:getVelocity() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether this nextbot can reach and/or traverse/move in given NavArea.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L673).
----@param NavArea NavArea # to check.
+---@param nav NavArea # NavArea to check.
 ---@return boolean # Whether this nextbot can traverse given NavArea.
-function NextBot:isAreaTraversable(NavArea) end
+function NextBot:isAreaTraversable(nav) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns whether the nextbot this locomotion is attached to is on ground or not.
@@ -193,8 +193,8 @@ function NextBot:isOnGround() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Forces the nextbot to jump.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L312).
----@param jumpAct number? # The activity ID of the anim to play when jumping.
-function NextBot:jump(jumpAct) end
+---@param act number? # The activity ID of the anim to play when jumping.
+function NextBot:jump(act) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes the bot jump across a gap. The bot must be on ground (Entity:isOnGround). Its model must have the ACT_JUMP activity for proper animation.
@@ -206,14 +206,14 @@ function NextBot:jumpAcrossGap(landGoal, landForward) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes the nextbot play a sequence. This takes priority over movement. Will go to set pos after animation plays.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L227).
----@param seqtoplay string # The name of the sequence to play.
-function NextBot:playSequence(seqtoplay) end
+---@param seq string # The name of the sequence to play.
+function NextBot:playSequence(seq) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Enable or disable ragdolling on death for the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L520).
----@param ragdollondeath boolean # Whether the nextbot should ragdoll on death.
-function NextBot:ragdollOnDeath(ragdollondeath) end
+---@param bool boolean # Whether the nextbot should ragdoll on death.
+function NextBot:ragdollOnDeath(bool) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes the "approach" position from the NextBot.
@@ -223,14 +223,14 @@ function NextBot:removeApproachPos() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes the contact callback function from the NextBot if present.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L488).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeContactCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeContactCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a death callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L356).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeDeathCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeDeathCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes the "go to" position from the NextBot.
@@ -240,50 +240,50 @@ function NextBot:removeGotoPos() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a ignite callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L444).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeIgniteCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeIgniteCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a injury callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L378).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeInjuredCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeInjuredCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a landing callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L400).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeLandCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeLandCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a landing callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L422).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeLeaveGroundCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeLeaveGroundCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a nav area change callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L466).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeNavChangeCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeNavChangeCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes the ragdoll creation callback function from the NextBot if present.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L510).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeRagdollCreationCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeRagdollCreationCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Removes a reach callback function from the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L334).
----@param callbackid string # The unique ID of the callback to remove.
-function NextBot:removeReachCallback(callbackid) end
+---@param id string # The unique ID of the callback to remove.
+function NextBot:removeReachCallback(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the acceleration speed of the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L549).
----@param newaccel number # NB's new acceleration. Default is 400
-function NextBot:setAcceleration(newaccel) end
+---@param val number # NB's new acceleration. Default is 400
+function NextBot:setAcceleration(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes the nextbot try to go to a specified position without using navmesh pathfinding (in a straight line).
@@ -295,86 +295,86 @@ function NextBot:setApproachPos(pos) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the Nextbot is allowed try to to avoid obstacles or not. This is used during path generation. Works similarly to nb_allow_avoiding convar. By default bots are allowed to try to avoid obstacles.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L684).
----@param avoidallowed boolean # Whether this bot should be allowed to try to avoid obstacles.
-function NextBot:setAvoidAllowed(avoidallowed) end
+---@param val boolean # Whether this bot should be allowed to try to avoid obstacles.
+function NextBot:setAvoidAllowed(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the Nextbot is allowed to climb or not. This is used during path generation. Works similarly to nb_allow_climbing convar. By default bots are allowed to climb.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L702).
----@param climballowed boolean # Whether this bot should be allowed to climb.
-function NextBot:setClimbAllowed(climballowed) end
+---@param val boolean # Whether this bot should be allowed to climb.
+function NextBot:setClimbAllowed(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the height the nextbot is scared to fall from.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L621).
----@param newdeathdropheight number # New height nextbot is afraid of. Default is 200.
-function NextBot:setDeathDropHeight(newdeathdropheight) end
+---@param val number # New height nextbot is afraid of. Default is 200.
+function NextBot:setDeathDropHeight(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the deceleration speed of the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L567).
----@param newaccel number # NB's new deceleration. Default is 400
-function NextBot:setDeceleration(newaccel) end
+---@param val number # NB's new deceleration. Default is 400
+function NextBot:setDeceleration(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Makes the nextbot try to go to a specified position using navmesh pathfinding.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L197).
----@param gotopos Vector # The position the nextbot will continuosly try to go to.
-function NextBot:setGotoPos(gotopos) end
+---@param pos Vector # The position the nextbot will continuosly try to go to.
+function NextBot:setGotoPos(pos) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the gravity of the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L611).
----@param newgravity number # NB's new gravity. Default is 1000
-function NextBot:setGravity(newgravity) end
+---@param val number # NB's new gravity. Default is 1000
+function NextBot:setGravity(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the activity the nextbot uses for idling.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L275).
----@param runact number # The activity the nextbot will use.
-function NextBot:setIdleAct(runact) end
+---@param act number # The activity the nextbot will use.
+function NextBot:setIdleAct(act) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets whether the Nextbot is allowed to jump gaps or not. This is used during path generation. Works similarly to nb_allow_gap_jumping convar. By default bots are allowed to jump gaps.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L720).
----@param jumpgapsallowed boolean # Whether this bot should be allowed to jump gaps.
-function NextBot:setJumpGapsAllowed(jumpgapsallowed) end
+---@param val boolean # Whether this bot should be allowed to jump gaps.
+function NextBot:setJumpGapsAllowed(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the height of the bot's jump.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L738).
----@param jumpheight number # Height (default is 58)
-function NextBot:setJumpHeight(jumpheight) end
+---@param val number # Height (default is 58)
+function NextBot:setJumpHeight(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the max rate at which the NextBot can visually rotate. This will not affect moving or pathing.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L593).
----@param newmaxyawrate number # Desired new maximum yaw rate
-function NextBot:setMaxYawRate(newmaxyawrate) end
+---@param val number # Desired new maximum yaw rate
+function NextBot:setMaxYawRate(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the move speed of the NextBot.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L530).
----@param newmovespeed number # NB's new move speed. Default is 200.
-function NextBot:setMoveSpeed(newmovespeed) end
+---@param val number # NB's new move speed. Default is 200.
+function NextBot:setMoveSpeed(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the activity the nextbot uses for running.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L255).
----@param runact number # The activity the nextbot will use.
-function NextBot:setRunAct(runact) end
+---@param act number # The activity the nextbot will use.
+function NextBot:setRunAct(act) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the max height the bot can step up.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L639).
----@param stepheight number # Height (default is 18)
-function NextBot:setStepHeight(stepheight) end
+---@param val number # Height (default is 18)
+function NextBot:setStepHeight(val) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the nextbot's velocity. Seems to work only when used if nextbot is in air after using nextbot:jump().
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L295).
----@param newvel Vector # Velocity.
-function NextBot:setVelocity(newvel) end
+---@param vel Vector # Velocity.
+function NextBot:setVelocity(vel) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Start doing an activity (animation).
