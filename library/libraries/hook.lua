@@ -15,7 +15,7 @@ function hook.add(hookname, name, func) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Remove a hook.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hook.lua#L801).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hook.lua#L804).
 ---@param hookname HookName # The hook name
 ---@param name string # The unique name for this hook
 function hook.remove(hookname, name) end

@@ -7,7 +7,7 @@
 local PhysObj = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Applies a angular velocity to an object.
+--- Applies an angular velocity to an object.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L352).
 ---@param angvel Vector # The local angvel vector to apply
 function PhysObj:addAngleVelocity(angvel) end

@@ -13,7 +13,7 @@ local Entity = {}
 function Entity:__tostring() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Applies a angular velocity to an object.
+--- Applies an angular velocity to an object.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L396).
 ---@param angvel Vector # The local angvel vector to apply
 function Entity:addAngleVelocity(angvel) end
@@ -233,9 +233,9 @@ function Entity:getBodygroups() end
 function Entity:getBoneCount() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Returns the matrix of the entity's bone. Note: this method is slow/doesnt work well if the entity isn't animated.
+--- Returns the matrix of the entity's bone. Note: this method is slow, and doesn't work well if the entity isn't animated.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1259).
----@param bone number? # Bone index. (def 0)
+---@param bone number? # Bone index. Default is 0.
 ---@return VMatrix # The matrix
 function Entity:getBoneMatrix(bone) end
 
@@ -886,7 +886,7 @@ function Entity:getRenderMode() end
 function Entity:getRight() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Returns axis-aligned bounding box (AABB) of a orientated bounding box (OBB) based on entity's rotation.
+--- Returns axis-aligned bounding box (AABB) of an orientated bounding box (OBB) based on entity's rotation.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L1888).
 ---@param min Vector # Minimum extent of an OBB in local coordinates.
 ---@param max Vector # Maximum extent of an OBB in local coordinates.
@@ -1356,7 +1356,7 @@ function Entity:setCustomPropForces(ang, lin, mode) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets a custom prop's shadow forces, moving the entity to the desired position and angles.
---- This gets overriden by Entity.setCustomPropForces and cannot be used together.
+--- This gets overridden by Entity.setCustomPropForces and cannot be used together.
 --- See available parameters here: https://wiki.facepunch.com/gmod/PhysObj:ComputeShadowControl.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L332).
 ---@param data table|boolean # Shadow physics data, excluding 'deltatime'. 'teleportdistance' higher than 0 requires 'entities.setPos'. Pass a falsy value to disable custom physics entirely
@@ -1487,7 +1487,7 @@ function Entity:setMeshMaterial(material) end
 function Entity:setNoDraw(draw) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Set's the entity to collide with nothing but the world. Alias to entity:setCollisionGroup(COLLISION_GROUP_WORLD).
+--- Sets the entity to collide with nothing but the world. Alias to entity:setCollisionGroup(COLLISION_GROUP.WORLD).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/entities.lua#L746).
 ---@param nocollide boolean # Whether to collide with nothing except world or not.
 function Entity:setNocollideAll(nocollide) end

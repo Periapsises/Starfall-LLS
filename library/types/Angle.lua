@@ -137,21 +137,21 @@ function Angle:round(idp) end
 function Angle:set(b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the angle's pitch and returns self.
+--- Sets the angle's pitch and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L243).
 ---@param p number # The pitch
 ---@return Angle # Angle after modification
 function Angle:setP(p) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the angle's roll and returns self.
+--- Sets the angle's roll and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L259).
 ---@param r number # The roll
 ---@return Angle # Angle after modification
 function Angle:setR(r) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the angle's yaw and returns self.
+--- Sets the angle's yaw and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/angles.lua#L251).
 ---@param y number # The yaw
 ---@return Angle # Angle after modification

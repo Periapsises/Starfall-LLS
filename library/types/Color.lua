@@ -109,28 +109,28 @@ function Color:round(idp) end
 function Color:set(b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the color's alpha and returns it.
+--- Sets the color's alpha and returns it.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L280).
 ---@param a number # The alpha
 ---@return Color # Color after modification
 function Color:setA(a) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the color's blue and returns self.
+--- Sets the color's blue and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L272).
 ---@param b number # The blue
 ---@return Color # Color after modification
 function Color:setB(b) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the color's green and returns self.
+--- Sets the color's green and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L264).
 ---@param g number # The green
 ---@return Color # Color after modification
 function Color:setG(g) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the color's red channel and returns self.
+--- Sets the color's red channel and returns self.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/color.lua#L256).
 ---@param r number # The red
 ---@return Color # Color after modification

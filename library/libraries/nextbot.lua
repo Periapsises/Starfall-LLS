@@ -6,15 +6,15 @@
 nextbot = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks if a user can spawn anymore nextbots.
+--- Checks if you can spawn any more nextbots.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L134).
----@return boolean # True if user can spawn nextbots, False if not.
+---@return boolean # Returns true if you can spawn nextbots, false if not
 function nextbot.canSpawn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks if a user can spawn anymore nextbots ragdolls.
+--- Checks if you can spawn any more nextbot ragdolls.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L150).
----@return boolean # True if user can spawn nextbots ragdolls, False if not.
+---@return boolean # Returns true if you can spawn nextbot ragdolls, false if not
 function nextbot.canSpawnRagdoll() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -32,9 +32,9 @@ function nextbot.create(pos, mdl) end
 function nextbot.nextbotsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks how many ragdolls the nextbots can spawn.
+--- Returns how many nextbot ragdolls you can spawn.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L158).
----@return number # Number how many ragdoll can be spawned.
+---@return number # Amount of nextbot ragdolls that can be spawned
 function nextbot.ragdollsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)

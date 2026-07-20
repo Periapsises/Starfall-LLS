@@ -176,7 +176,7 @@ function render.createFont(font, size, weight, antialias, additive, shadow, outl
 --- Make sure to store the material to use it rather than calling this slow function repeatedly.
 --- NOTE: This no longer supports material names. Use texture names instead (Textures are .vtf, material are .vmt).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L978).
----@param tx string # Texture file path, a http url, or image data: https://en.wikipedia.org/wiki/Data_URI_scheme
+---@param tx string # Texture file path, or http URL, or image data: https://en.wikipedia.org/wiki/Data_URI_scheme
 ---@param cb function? # An optional callback called when loading is done. Passes nil if it fails or Passes the material, url, width, height, and layout function which can be called with x, y, w, h to reposition the image in the texture.
 ---@param done function? # An optional callback called when the image is done loading. Passes the material, url
 ---@return Material # The material. Use with render.setMaterial to draw with it.
@@ -199,7 +199,7 @@ function render.createRenderTarget(name) end
 function render.cursorPos(ply, screen) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Set's the depth range of the upcoming render.
+--- Sets the depth range of the upcoming render.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L2786).
 ---@param min number # The minimum depth of the upcoming render. 0.0 = render normally; 1.0 = render nothing.
 ---@param max number # The maximum depth of the upcoming render. 0.0 = render everything (through walls); 1.0 = render normally.
@@ -212,7 +212,7 @@ function render.depthRange(min, max) end
 function render.destroyRenderTarget(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Releases the texture. Required if you reach the maximum url textures.
+--- Releases the texture. Required if you reach the maximum URL textures.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/render.lua#L999).
 ---@param mat Material # The material object
 function render.destroyTexture(mat) end

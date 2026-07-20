@@ -272,28 +272,28 @@ function Vector:round(idp) end
 function Vector:set(v) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the vector's x coordinate and returns the vector after modifying.
+--- Sets the vector's x coordinate and returns the vector after modifying.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L367).
 ---@param x number # The x coordinate
 ---@return Vector # Modified vector after setting X.
 function Vector:setX(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the vector's y coordinate and returns the vector after modifying.
+--- Sets the vector's y coordinate and returns the vector after modifying.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L375).
 ---@param y number # The y coordinate
 ---@return Vector # Modified vector after setting Y.
 function Vector:setY(y) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's the vector's z coordinate and returns the vector after modifying.
+--- Sets the vector's z coordinate and returns the vector after modifying.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L383).
 ---@param z number # The z coordinate
 ---@return Vector # Modified vector after setting Z.
 function Vector:setZ(z) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Set's all vector fields to 0.
+--- Sets all vector fields to 0.
 --- Self-Modifies. Does not return anything.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/vectors.lua#L359).
 function Vector:setZero() end

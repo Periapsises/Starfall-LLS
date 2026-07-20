@@ -74,7 +74,7 @@ function table.count(tbl) end
 function table.empty(tbl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Inserts a value in to the given table even if the table is non-existent.
+--- Inserts a value into the given table even if the table is non-existent.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/table.lua#L68).
 ---@param tbl table # Table to insert value in to. If not supplied, will create a table
 ---@param val any # Value to insert

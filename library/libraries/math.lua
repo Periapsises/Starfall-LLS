@@ -215,7 +215,7 @@ function math.easeInElastic(fraction) end
 function math.easeInExpo(fraction) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Calculates the progress of a value fraction, taking in to account given easing fractions.
+--- Calculates the progress of a value fraction, taking into account given easing fractions.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/math.lua#L145).
 ---@param progress number # Fraction of the progress to ease
 ---@param easeIn number # Fraction of how much easing to begin with

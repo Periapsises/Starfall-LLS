@@ -3,7 +3,7 @@
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Midi Library.
 --- Polls midi event information from midi devices.
---- Requires a custom binary -> https://github.com/FPtje/gmcl_midi/releases/tag/v0.2.0.
+--- Requires a custom binary -> https://github.com/FPtje/gmcl_midi/releases/latest.
 --- GNU/Linux and MacOS users will have to compile their own binaries.
 --- Instructions here -> https://github.com/FPtje/gmcl_midi/blob/master/Compiling.md.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/midi.lua#L5).
@@ -70,7 +70,7 @@ function midi.getPorts() end
 function midi.isPortOpen(port) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Opens the midi port to make it available to grab events from.  This must be called before the hook.
+--- Opens the midi port to make it available to grab events from. This must be called before the hook.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/midi.lua#L48).
 ---@param port number # the midi port to open. Passing nothing defaults to 0.
 ---@return string # the name of the midi device opened at the given port.

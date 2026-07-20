@@ -1,14 +1,14 @@
 ---@meta
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Library for creating and manipulating physics-less models AKA "Holograms".
+--- Library for creating and manipulating physics-less models (holograms).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L46).
 hologram = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Checks if a user can spawn anymore holograms.
+--- Checks if you can spawn any more holograms.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/hologram.lua#L153).
----@return boolean # True if user can spawn holograms, False if not.
+---@return boolean # Returns true if you can spawn holograms, false if not
 function hologram.canSpawn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)

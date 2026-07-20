@@ -152,7 +152,7 @@ function Material:setTextureRenderTarget(key, name) end
 --- If the texture in key is not set to a rendertarget, a rendertarget will be created and used.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/material.lua#L574).
 ---@param key string # The key name to set. $basetexture is the key name for most purposes.
----@param url string # The url or base64 data
+---@param url string # The URL or base64 data
 ---@param cb function? # An optional callback called when image is loaded. Passes nil if it fails or Passes the material, url, width, height, and layout function which can be called with x, y, w, h, pixelated to reposition the image in the texture. Setting the optional 'pixelated' argument to True tells the image to use nearest-neighbor interpolation
 ---@param done function? # An optional callback called when the image is done loading. Passes the material, url
 function Material:setTextureURL(key, url, cb, done) end

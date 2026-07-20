@@ -91,7 +91,7 @@ function net.readData(n) end
 function net.readDouble() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Reads a entity from the net message.
+--- Reads an entity from the net message.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L593).
 ---@param callback function? # (Client only) optional callback to be ran whenever the entity becomes valid; returns nothing if this is used. The callback passes the entity if it succeeds or nil if it fails.
 ---@return Entity? # The entity that was read or nil if callback used
@@ -171,15 +171,15 @@ function net.receive(name, func) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Send a net message from client->server, or server->client.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L187).
----@param target Player|table|nil # Optional target location to send the net message. Player or table of targets. If nil, sends to server on client
----@param unreliable boolean? # Optional choose whether it's more important for the message to actually reach its destination (false) or reach it as fast as possible (true).
+---@param target Player|table|nil # On server-side: Optional target location to send the net message to, can be a player or table of players, or nil to broadcast to all players; On client-side: This argument is ignored, it will send to the server.
+---@param unreliable boolean? # Optional. Whether it's more important for the message to actually reach its destination (false), or reach it as fast as possible (true). Default is false.
 function net.send(target, unreliable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Send net message to all players within the visible area of a vector.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/net.lua#L225).
 ---@param pos Vector # A vector within the PVS area to send a message
----@param unreliable boolean? # Optional choose whether it's more important for the message to actually reach its destination (false) or reach it as fast as possible (true).
+---@param unreliable boolean? # Optional. Whether it's more important for the message to actually reach its destination (false), or reach it as fast as possible (true). Default is false.
 function net.sendPVS(pos, unreliable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)

@@ -28,7 +28,7 @@ function http.canRequest() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs a new http GET request.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L62).
----@param url string # Http target url
+---@param url string # HTTP resource URL
 ---@param callbackSuccess function # The function to be called on request success, taking the arguments body (string), length (number), headers (table) and code (number)
 ---@param callbackFail function? # The function to be called on request fail, taking the failing reason as an argument
 ---@param headers table? # GET headers to be sent
@@ -49,7 +49,7 @@ function http.getMaximumRequests() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs a new http POST request.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L91).
----@param url string # Http target url
+---@param url string # HTTP resource URL
 ---@param payload table? # Optional POST payload to be sent, can be both table and string. When table is used, the request body is encoded as application/x-www-form-urlencoded
 ---@param callbackSuccess function? # Optional function to be called on request success, taking the arguments body (string), length (number), headers (table) and code (number)
 ---@param callbackFail function? # Optional function to be called on request fail, taking the failing reason as an argument
@@ -59,7 +59,7 @@ function http.post(url, payload, callbackSuccess, callbackFail, headers) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Runs a new http request. Wraps HTTP() directly. Official documentation for each parameter can be found here: https://wiki.facepunch.com/gmod/Structures/HTTPRequest.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L171).
----@param url string # The target url
+---@param url string # HTTP resource URL
 ---@param method string # Request method, case insensitive. Possible values are: GET, POST, HEAD, PUT, DELETE, PATCH, OPTIONS
 ---@param success function? # Function to be called on success, taking arguments code (number), body (string), and headers (table)
 ---@param failed function? # Function to be called on failure, taking argument reason (string)
@@ -71,36 +71,36 @@ function http.post(url, payload, callbackSuccess, callbackFail, headers) end
 function http.request(url, method, success, failed, body, parameters, type, headers, timeout) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Decodes the % escaped chars in a url.
+--- Decodes the % escaped chars in a URL.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L291).
 ---@param data string # The data to convert
 ---@return string # The converted data
 function http.urlDecode(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Converts a regular dropbox url to a raw one.
+--- Converts a regular Dropbox URL to a raw one.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L315).
----@param url string # The url to convert
----@return string # The converted url
+---@param url string # The URL to convert
+---@return string # The converted URL
 function http.urlDropboxToRaw(url) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Encodes illegal url characters to be legal.
+--- Encodes illegal URL characters to be legal.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L279).
 ---@param data string # The data to convert
 ---@return string # The converted data
 function http.urlEncode(data) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Converts a github file url to a raw one.
+--- Converts a GitHub file URL to a raw one.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L325).
----@param url string # The url to convert
----@return string # The converted url
+---@param url string # The URL to convert
+---@return string # The converted URL
 function http.urlGithubToRaw(url) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Converts a simple google drive url to a raw one.
+--- Converts a simple Google Drive URL to a raw one.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/http.lua#L305).
----@param url string # The url to convert
----@return string # The converted url
+---@param url string # The URL to convert
+---@return string # The converted URL
 function http.urlGoogleDriveToRaw(url) end

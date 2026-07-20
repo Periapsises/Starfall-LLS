@@ -22,7 +22,7 @@ function StringStream:read(length) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Reads a 8 byte IEEE754 double from the byte stream and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L394).
----@return number # Double at this position
+---@return number # Double at this position (64-bit)
 function StringStream:readDouble() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -35,7 +35,7 @@ function StringStream:readEntity(callback) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Reads a 4 byte IEEE754 float from the byte stream and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L384).
----@return number # Float32 at this position
+---@return number # Float at this position (32-bit)
 function StringStream:readFloat() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -126,7 +126,7 @@ function StringStream:write(data) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Writes a 8 byte IEEE754 double to the byte stream and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L503).
----@param x number # The double to write
+---@param x number # The double to write (64-bit)
 function StringStream:writeDouble(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -138,47 +138,47 @@ function StringStream:writeEntity(e) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Writes a 4 byte IEEE754 float to the byte stream and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L493).
----@param x number # The float to write
+---@param x number # The float to write (32-bit)
 function StringStream:writeFloat(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a short to the buffer and advances the buffer pointer.
+--- Writes a signed short to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L455).
 ---@param x number # Int16 to write
 function StringStream:writeInt16(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes an int to the buffer and advances the buffer pointer.
+--- Writes a signed integer to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L474).
 ---@param x number # Int32 to write
 function StringStream:writeInt32(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a byte to the buffer and advances the buffer pointer.
+--- Writes a signed byte to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L441).
 ---@param x number # Int8 to write
 function StringStream:writeInt8(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a string to the buffer putting a null at the end and advances the buffer pointer.
+--- Writes a null-terminated string to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L513).
 ---@param str string # The string of bytes to write
 function StringStream:writeString(str) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a unsigned short to the buffer and advances the buffer pointer.
+--- Writes an unsigned short to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L468).
 ---@param x number # UInt16 to write
 function StringStream:writeUInt16(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a unsigned long to the buffer and advances the buffer pointer.
+--- Writes an unsigned integer to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L487).
 ---@param x number # UInt32 to write
 function StringStream:writeUInt32(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Writes a unsigned byte to the buffer and advances the buffer pointer.
+--- Writes an unsigned byte to the buffer and advances the buffer pointer.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/bit.lua#L449).
 ---@param x number # UInt8 to write
 function StringStream:writeUInt8(x) end

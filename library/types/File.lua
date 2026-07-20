@@ -14,7 +14,7 @@ function File:close() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether the File object has reached the end of file or not.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L639).
----@return boolean # Whether the file has reached end or not.
+---@return boolean # Whether the file position has reached the EOF or not.
 function File:endOfFile() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -32,11 +32,11 @@ function File:read(n) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Reads a boolean and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L507).
----@return boolean # Boolean
+---@return boolean # Boolean (8-bit)
 function File:readBool() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Reads a byte and advances the file position.
+--- Reads an unsigned byte and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L513).
 ---@return number # UInt8 number
 function File:readByte() end
@@ -44,13 +44,13 @@ function File:readByte() end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Reads a double and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L519).
----@return number # Float64 number
+---@return number # Double number (64-bit)
 function File:readDouble() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Reads a float and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L525).
----@return number # Float32 number
+---@return number # Float number (32-bit)
 function File:readFloat() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -60,13 +60,13 @@ function File:readFloat() end
 function File:readLine() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Reads a long and advances the file position.
+--- Reads a signed integer and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L537).
 ---@return number # Int32 number
 function File:readLong() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Reads a short and advances the file position.
+--- Reads a signed short and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L549).
 ---@return number # Int16 number
 function File:readShort() end
@@ -79,7 +79,7 @@ function File:readShort() end
 function File:readUInt64() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Reads an unsigned long and advances the file position.
+--- Reads an unsigned integer and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L543).
 ---@return number # UInt32 number
 function File:readULong() end
@@ -124,37 +124,37 @@ function File:write(str) end
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes a boolean and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L575).
----@param x boolean # The boolean to write
+---@param x boolean # The boolean to write (8-bit)
 function File:writeBool(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Writes a byte and advances the file position.
+--- Writes an unsigned byte and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L582).
----@param x number # The byte to write
+---@param x number # The byte to write (8-bit)
 function File:writeByte(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes a double and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L589).
----@param x number # The double to write
+---@param x number # The double to write (64-bit)
 function File:writeDouble(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes a float and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L596).
----@param x number # The float to write
+---@param x number # The float to write (32-bit)
 function File:writeFloat(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Writes a long and advances the file position.
+--- Writes a signed integer and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L603).
----@param x number # The long to write
+---@param x number # The signed integer to write (32-bit)
 function File:writeLong(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Writes a short and advances the file position.
+--- Writes a signed short and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L617).
----@param x number # The short to write
+---@param x number # The signed short to write (16-bit)
 function File:writeShort(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
@@ -165,13 +165,13 @@ function File:writeShort(x) end
 function File:writeUInt64(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Writes an unsigned long and advances the file position.
+--- Writes an unsigned integer and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L610).
----@param x number # The unsigned long to write
+---@param x number # The unsigned integer to write (32-bit)
 function File:writeULong(x) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Writes an unsigned short and advances the file position.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/file.lua#L624).
----@param x number # The unsigned short to write
+---@param x number # The unsigned short to write (16-bit)
 function File:writeUShort(x) end

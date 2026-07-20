@@ -14,7 +14,7 @@ socket = {}
 --- Optionally, the user can also specify the local address and port to bind (locaddr and locport), or restrict the socket family to "inet" or "inet6".
 --- Without specifying family to connect, whether a tcp or tcp6 connection is created depends on your system configuration.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/socket.lua#L227).
----@param addr number # Address to connect to
+---@param addr number|string # Address to connect to
 ---@param port number # Port to connect to
 ---@param laddr number? # Local address to bind to
 ---@param lport number? # Local port to bind to
@@ -27,7 +27,7 @@ function socket.connect(addr, port, laddr, lport, family) end
 --- This function is a shortcut that creates and returns a TCP client object connected to a remote address at a given port.
 --- Optionally, the user can also specify the local address and port to bind (locaddr and locport).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/socket.lua#L241).
----@param addr number # Address to connect to
+---@param addr number|string # Address to connect to
 ---@param port number # Port to connect to
 ---@param laddr number? # Local address to bind to
 ---@param lport number? # Local port to bind to
@@ -39,7 +39,7 @@ function socket.connect4(addr, port, laddr, lport) end
 --- This function is a shortcut that creates and returns a TCP client object connected to a remote address at a given port.
 --- Optionally, the user can also specify the local address and port to bind (locaddr and locport).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/socket.lua#L253).
----@param addr number # Address to connect to
+---@param addr number|string # Address to connect to
 ---@param port number # Port to connect to
 ---@param laddr number? # Local address to bind to
 ---@param lport number? # Local port to bind to

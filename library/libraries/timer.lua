@@ -74,7 +74,7 @@ function timer.remove(name) end
 --- Returns amount of repetitions/executions left before the timer destroys itself.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/timer.lua#L217).
 ---@param name string # The timer name
----@return number # The amount of executions left. Nil if timer doesnt exist
+---@return number # The amount of executions left. Nil if timer doesn't exist
 function timer.repsleft(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
@@ -108,7 +108,7 @@ function timer.systime() end
 --- Returns amount of time left (in seconds) before the timer executes its function.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/timer.lua#L208).
 ---@param name string # The timer name
----@return number # The amount of time left (in seconds). If the timer is paused, the amount will be negative. Nil if timer doesnt exist
+---@return number # The amount of time left (in seconds). If the timer is paused, the amount will be negative. Nil if timer doesn't exist
 function timer.timeleft(name) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)

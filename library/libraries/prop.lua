@@ -1,20 +1,20 @@
 ---@meta
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Library for creating and manipulating physics-less models AKA "Props".
+--- Library for creating and manipulating physical models (props).
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L17).
 prop = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks if a user can manipulate anymore bones.
+--- Checks if you can manipulate any more bones.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L428).
----@return boolean # True if user can manipulate bones, False if not.
+---@return boolean # Returns true if you can manipulate bones, false if not
 function prop.canManipulateBones() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Checks if a user can spawn anymore props.
+--- Checks if you can spawn any more props.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L663).
----@return boolean # True if user can spawn props, False if not.
+---@return boolean # Returns true if you can spawn props, false if not
 function prop.canSpawn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -23,7 +23,7 @@ function prop.canSpawn() end
 ---@param pos Vector # Initial entity position
 ---@param ang Angle # Initial entity angles
 ---@param model string # Model path
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@return Entity # The prop object
 function prop.create(pos, ang, model, frozen) end
 
@@ -37,7 +37,7 @@ function prop.create(pos, ang, model, frozen) end
 ---@param ang Angle # Angle of created component
 ---@param class string # Class of created component
 ---@param model string # Model of created component
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@return Entity # Component entity
 function prop.createComponent(pos, ang, class, model, frozen) end
 
@@ -47,7 +47,7 @@ function prop.createComponent(pos, ang, class, model, frozen) end
 ---@param pos Vector # The position to spawn the prop
 ---@param ang Angle # The angles to spawn the prop
 ---@param meshConvexes table # The table of tables of vertices that make up the physics mesh {{v1,v2,...},{v1,v2,...},...}
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@return Entity # The prop object
 function prop.createCustom(pos, ang, meshConvexes, frozen) end
 
@@ -55,7 +55,7 @@ function prop.createCustom(pos, ang, meshConvexes, frozen) end
 --- Creates a ragdoll.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L111).
 ---@param model string # Model path
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@return Entity # The ragdoll entity
 function prop.createRagdoll(model, frozen) end
 
@@ -65,7 +65,7 @@ function prop.createRagdoll(model, frozen) end
 ---@param pos Vector # Position of created seat
 ---@param ang Angle # Angle of created seat
 ---@param model string # Model of created seat
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@return Entity # The seat object
 function prop.createSeat(pos, ang, model, frozen) end
 
@@ -75,7 +75,7 @@ function prop.createSeat(pos, ang, model, frozen) end
 ---@param pos Vector # Position of created sent
 ---@param ang Angle # Angle of created sent
 ---@param class string # Class of created sent
----@param frozen boolean? # True to spawn the entity in a frozen state. Default = False
+---@param frozen boolean? # True to spawn the entity in a frozen state. Default is false.
 ---@param data table? # Optional table, additional entity data to be supplied to certain SENTs. See prop.SENT_Data_Structures table in Docs for list of SENTs
 ---@return Entity # The sent object
 function prop.createSent(pos, ang, class, frozen, data) end
@@ -106,9 +106,9 @@ function prop.getSpawnableSents(categorized) end
 function prop.manipulateBonesLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Returns how many bone manipulations per second the user can do.
+--- Returns how many bone manipulations you can do per second.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/entities.lua#L442).
----@return number # Number of props per second the user can spawn
+---@return number # Number of bone manipulations per second the user can perform
 function prop.manipulateBonesRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
@@ -130,7 +130,7 @@ function prop.setPropClean(on) end
 function prop.setPropUndo(on) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Returns how many props per second the user can spawn.
+--- Returns how many props you can spawn per second.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/prop.lua#L679).
 ---@return number # Number of props per second the user can spawn
 function prop.spawnRate() end

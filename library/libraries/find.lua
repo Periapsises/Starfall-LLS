@@ -92,7 +92,7 @@ function find.inPVS(pos, filter) end
 ---@param startpos Vector # The ray start
 ---@param endpos Vector # The ray end
 ---@param mins Vector? # If not nil, will define a lower bound of the ray's hull
----@param maxs Vector? # If not nil, will define a upper bound of the ray's hull
+---@param maxs Vector? # If not nil, will define an upper bound of the ray's hull
 ---@param filter function? # Optional function to filter results
 ---@return table # An array of found entities
 function find.inRay(startpos, endpos, mins, maxs, filter) end

@@ -425,7 +425,7 @@ function Player:isMuted() end
 function Player:isNoclipped() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Gets whether a animation is playing.
+--- Gets whether an animation is playing.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L808).
 ---@return boolean # If an animation is playing
 function Player:isPlayingAnimation() end
@@ -495,14 +495,14 @@ function Player:keyDown(key) end
 function Player:keyDownLast(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Gets wether a key was just pressed this tick.
+--- Gets whether a key was just pressed this tick.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L497).
 ---@param key number # Key to check. See IN_KEY table values.
 ---@return boolean # Was their key pressed.
 function Player:keyPressed(key) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
---- Gets wether a key was just released this tick.
+--- Gets whether a key was just released this tick.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/players.lua#L505).
 ---@param key number # Key to check. See IN_KEY table values.
 ---@return boolean # Was their key released.
