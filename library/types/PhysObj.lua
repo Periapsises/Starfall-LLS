@@ -135,16 +135,8 @@ function PhysObj:getEntity() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns table of tables of friction data of a contact against the physobj.
---- PhysObj Other - The other physics object we came in contact with.
---- number EnergyAbsorbed -.
---- number FrictionCoefficient -.
---- number NormalForce -.
---- Vector Normal - Direction of the friction event.
---- Vector ContactPoint - Contact point of the friction event.
---- number Material - Surface Property ID of our physics obj.
---- number MaterialOther - Surface Property ID of the physics obj we came in contact with.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/physobj.lua#L551).
----@return table # Table of tables of data. Each table will contain:
+---@return table # Table of tables of data. Each table will contain: PhysObj Other - The other physics object we came in contact with number EnergyAbsorbed - number FrictionCoefficient - number NormalForce - Vector Normal - Direction of the friction event Vector ContactPoint - Contact point of the friction event number Material - Surface Property ID of our physics obj number MaterialOther - Surface Property ID of the physics obj we came in contact with
 function PhysObj:getFrictionSnapshot() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)

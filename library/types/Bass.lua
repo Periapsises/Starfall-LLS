@@ -8,34 +8,34 @@ local Bass = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns 3D cone of the sound channel.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L596).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L589).
 ---@return number # The angle of the inside projection cone in degrees.
 ---@return number # The angle of the outside projection cone in degrees.
 ---@return number # The delta-volume outside the outer projection cone.
 function Bass:get3DCone() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Returns if the sound channel is currently in 3D mode or not. This value will be affected by Bass:set3DEnabled().
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L544).
----@return boolean # True or False depending on if the sound is currently 3D or not.
+--- Determines whether the sound channel is currently in 3D mode.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L538).
+---@return boolean # Whether the sound channel is currently in 3D mode.
 function Bass:get3DEnabled() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the average bit rate of the sound.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L443).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L442).
 ---@return number # The average bit rate of the sound.
 function Bass:getAverageBitRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves the number of bits per sample of the sound.
 --- Doesn't work for mp3 and ogg files.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L436).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L435).
 ---@return number # Floating point number of bits per sample, or 0 if unknown.
 function Bass:getBitsPerSample() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the buffered time of the sound channel in seconds, for online streaming sound channels (Bass:loadURL()). For offline channels this will be equivalent to Bass:getLength().
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L449).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L448).
 ---@return number # The current buffered time of the stream, in seconds.
 function Bass:getBufferedTime() end
 
@@ -72,7 +72,7 @@ function Bass:getFileName() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the flags used to create the sound.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L515).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L514).
 ---@return string # The flags of the sound (`3d`, `mono`, `noplay`, `noblock`).
 function Bass:getFlags() end
 
@@ -109,13 +109,13 @@ function Bass:getPos() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the sample rate for currently playing sound.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L458).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L457).
 ---@return number # The sample rate in Hz. This should always be 44100.
 function Bass:getSamplingRate() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the state of the sound.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L550).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L544).
 ---@return number # The state enum of the sound. https://wiki.facepunch.com/gmod/Enums/GMOD_CHANNEL
 function Bass:getState() end
 
@@ -123,50 +123,49 @@ function Bass:getState() end
 --- Retrieves HTTP headers from a bass stream channel created by Bass:loadURL(), if available.
 --- Of special interest here are headers such as icy-name, icy-br, ice-audio-info, icy-genre.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L464).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L463).
 ---@return table # A list of HTTP headers or nil if no information is available.
 function Bass:getTagsHTTP() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves the ID3 version 1 info from a bass channel created by Bass:loadFile or Bass:loadURL, if available. ID3v2 is not supported.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- (The table will always have the following keys, filled out based on what is available: "album", "artist", "comment", "genre", "id", "title", "year").
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L472).
----@return table # A table containing the information, or nil if no information is available.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L471).
+---@return table # A table containing the information, or nil if no information is available. (The table will always have the following keys, filled out based on what is available: "album", "artist", "comment", "genre", "id", "title", "year")
 function Bass:getTagsID3() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves .m4a media info, from a bass channel created by Bass:loadFile or Bass:loadURL, if available.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L487).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L486).
 ---@return table # A list of available information in no particular order, or nil if no information is available.
 function Bass:getTagsMP4() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves ICY metadata from a bass stream channel created by Bass:loadURL, if available.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L480).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L479).
 ---@return string # The meta information, or nil if no information is available.
 function Bass:getTagsMeta() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves OGG media info tag, from a bass channel created by Bass:loadFile or Bass:loadURL, if available.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L494).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L493).
 ---@return table # A list of available information in no particular order, or nil if no information is available.
 function Bass:getTagsOGG() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves OGG Vendor tag, usually containing the application that created the file, from a bass channel created by Bass:loadFile or Bass:loadURL, if available.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L501).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L500).
 ---@return string # The OGG vendor tag, or nil if no information is available.
 function Bass:getTagsVendor() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Retrieves .WMA media info, from a bass channel created by Bass:loadFile or Bass:loadURL, if available.
 --- CRITICAL NOTE: Tags aren't available immediately! Must use a timer to wait 100-500ms for BASS to parse metadata during stream init!!.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L508).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L507).
 ---@return table # A list of available information in no particular order, or nil if no information is available.
 function Bass:getTagsWMA() end
 
@@ -185,13 +184,13 @@ function Bass:getVolume() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is 2D.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L521).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L520).
 ---@return boolean # True if the sound is 2D.
 function Bass:is2D() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is 3D.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L527).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L526).
 ---@return boolean # True if the sound is 3D.
 function Bass:is3D() end
 
@@ -215,26 +214,26 @@ function Bass:isOnline() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is paused.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L569).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L563).
 ---@return boolean # True if the sound is paused.
 function Bass:isPaused() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is playing.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L563).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L557).
 ---@return boolean # True if the sound is playing.
 function Bass:isPlaying() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is stalled.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L575).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L569).
 ---@return boolean # True if the sound is stalled.
 function Bass:isStalled() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns whether or not the sound is stopped.
 --- Only true if the `noplay` flag is used and Bass:play() hasn't been called yet, since Bass:stop() will destroy the sound channel.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L556).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L550).
 ---@return boolean # True if the sound is stopped.
 function Bass:isStopped() end
 
@@ -256,18 +255,11 @@ function Bass:play() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets 3D cone of the sound channel.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L581).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L575).
 ---@param innerAngle number # The angle of the inside projection cone in degrees. Range is from 0 (no cone) to 360 (sphere), -1 = leave current.
 ---@param outerAngle number # The angle of the outside projection cone in degrees. Range is from 0 (no cone) to 360 (sphere), -1 = leave current.
 ---@param outerVolume number # The delta-volume outside the outer projection cone. Range is from 0 (silent) to 1 (same as inside the cone), less than 0 = leave current.
 function Bass:set3DCone(innerAngle, outerAngle, outerVolume) end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
---- Sets the 3D mode of the channel. This will affect Bass:get3DEnabled() but not Bass:is3D().
---- This feature requires the channel to be initially created in 3D mode, i.e. Bass:is3D() should return true or this function will do nothing. .
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/bass.lua#L533).
----@param enable boolean # True or False to toggle 3D.
-function Bass:set3DEnabled(enable) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Sets the fade distance of the sound in 3D space. Must have `3d` flag for this to have any effect.

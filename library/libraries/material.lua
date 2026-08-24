@@ -7,15 +7,8 @@ material = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Creates a new blank material.
---- UnlitGeneric.
---- VertexLitGeneric.
---- Refract_DX90.
---- Water_DX90.
---- Sky_DX9.
---- gmodscreenspace.
---- Modulate_DX9.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/material.lua#L348).
----@param shader string # The shader of the material. Must be one of
+---@param shader string # The shader of the material. Must be one of UnlitGeneric VertexLitGeneric Refract_DX90 Water_DX90 Sky_DX9 gmodscreenspace Modulate_DX9
 ---@return Material # The Material created.
 function material.create(shader) end
 

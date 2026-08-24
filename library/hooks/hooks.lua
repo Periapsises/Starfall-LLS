@@ -4,8 +4,9 @@
 ---| string # A custom hook name called when triggered by hook.run
 ---| '"AddLaw"' #  Called when a law is added. DarkRP only.
 ---| '"AdjustMouseSensitivity"' #  Allows modifying the player's mouse sensitivity
----| '"CalcView"' #  Called when the engine wants to calculate the player's view. Only works if connected to Starfall HUD
----| '"ChatTextChanged"' #  Called when the player's chat box text changes.  Requires the 'input' permission.
+---| '"CalcView"' #  Called when the engine wants to calculate the player's view (only works if connected to Starfall HUD)
+---| '"CalcViewModelView"' #  Called when the engine wants to calculate the viewmodel position and angle (only works if connected to Starfall HUD)
+---| '"ChatTextChanged"' #  Called when the player's chat box text changes. Requires the 'input' permission.
 ---| '"ClientInitialized"' #  Called after a client's starfall has initialized. Use this to know when it's safe to send net messages to the client.
 ---| '"ComponentLinked"' #  Called when a component is linked to the starfall
 ---| '"ComponentUnlinked"' #  Called when a component is unlinked to the starfall
@@ -35,24 +36,24 @@
 ---| '"KeyRelease"' #  Called when a player releases a key
 ---| '"LockdownEnded"' #  Called when a lockdown has ended. DarkRP only.
 ---| '"LockdownStarted"' #  Called when a lockdown has started. DarkRP only.
----| '"LockpickStarted"' #  Called when a player is about to pick a lock. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
----| '"MIDI"' #  Event hook for midi devices.  Everytime a midi device outputs a signal, the callback function on the hook is called.  Read up on the MIDI protocol to make better sense of everything -> https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html  Commands and their parameters:  0x80 NOTE_OFF              : param1 = key;                         param2 = velocity  0x90 NOTE_ON               : param1 = key;                         param2 = velocity  0xA0 AFTERTOUCH            : param1 = key;                         param2 = touch  0xB0 CONTINUOUS_CONTROLLER : param1 = button_number;               param2 = button_value  0xC0 PATCH_CHANGE          : param1 = patch number;  0xD0 CHANNEL_PRESSURE      : param1 = pressure;  0xE0 PITCH_BEND            : param1 = lsb(least signifigant bit);  param2 = msb(most signifigant bit)
----| '"MoneyPrinterCatchFire"' #  Called when a money printer is about to catch fire. DarkRP only. Called between moneyPrinterPrintMoney and moneyPrinterPrinted.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
----| '"MoneyPrinterPrintMoney"' #  Called when a money printer is about to print money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  You should use moneyPrinterPrinted instead, as the printer is not guaranteed to print money even if this hook is called.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
----| '"MoneyPrinterPrinted"' #  Called after a money printer is has printed money. DarkRP only.  Not guaranteed to work for non-vanilla money printers.  Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"LockpickStarted"' #  Called when a player is about to pick a lock. DarkRP only. Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
+---| '"MIDI"' #  Event hook for midi devices. Everytime a midi device outputs a signal, the callback function on the hook is called. Read up on the MIDI protocol to make better sense of everything -> https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html
+---| '"MoneyPrinterCatchFire"' #  Called when a money printer is about to catch fire. DarkRP only. Called between moneyPrinterPrintMoney and moneyPrinterPrinted. Not guaranteed to work for non-vanilla money printers. Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"MoneyPrinterPrintMoney"' #  Called when a money printer is about to print money. DarkRP only. Not guaranteed to work for non-vanilla money printers. You should use moneyPrinterPrinted instead, as the printer is not guaranteed to print money even if this hook is called. Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
+---| '"MoneyPrinterPrinted"' #  Called after a money printer is has printed money. DarkRP only. Not guaranteed to work for non-vanilla money printers. Only works if the owner of the chip also owns the money printer, or if the chip is running in superuser mode.
 ---| '"MouseMoved"' #  Called when the mouse is moved
 ---| '"MouseWheeled"' #  Called when the mouse wheel is rotated
 ---| '"Net"' #  Called when a net message arrives
 ---| '"NetworkEntityCreated"' #  Called when a clientside entity gets created or re-created via lag/PVS
----| '"NotifyShouldTransmit"' #  Called when a clientside entity transmit state is changed. Usually when changing PVS  If you want clientside render changes to persist on an entity you have to re-apply them  each time it begins transmitting again
+---| '"NotifyShouldTransmit"' #  Called when a clientside entity transmit state is changed. Usually when changing PVS If you want clientside render changes to persist on an entity you have to re-apply them each time it begins transmitting again
 ---| '"OnContextMenuClose"' #  Called when the player closes the context menu
 ---| '"OnContextMenuOpen"' #  Called when the player opens the context menu
 ---| '"OnEntityCreated"' #  Called the next frame after an entity is created
 ---| '"OnEntityWaterLevelChanged"' #  Called when the Entity:getWaterLevel of an entity is changed.
----| '"OnLockpickCompleted"' #  Called when a player has finished picking a lock, successfully or otherwise. DarkRP only.  Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
+---| '"OnLockpickCompleted"' #  Called when a player has finished picking a lock, successfully or otherwise. DarkRP only. Will only be called if the lockpicker is the owner of the chip, or if the chip is running in superuser mode.
 ---| '"OnNPCKilled"' #  Called whenever an NPC is killed.
----| '"OnPhysgunFreeze"' #  Called when an entity is being frozen  Note this is not called for players or NPCs held with the physgun (bug)
----| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun.  Not to be confused with PhysgunPickup which is a predicted hook
+---| '"OnPhysgunFreeze"' #  Called when an entity is being frozen Note this is not called for players or NPCs held with the physgun (bug)
+---| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun. Not to be confused with PhysgunPickup which is a predicted hook
 ---| '"OnPhysgunReload"' #  Called when a player reloads their physgun
 ---| '"OnPlayerHitGround"' #  Called when a player makes contact with the ground after a jump or a fall.
 ---| '"OnPlayerJump"' #  Called when a player jumps.
@@ -60,7 +61,7 @@
 ---| '"OnPlayerPhysicsPickup"' #  Called when an entity is being picked up by +use
 ---| '"PermissionRequest"' #  Called when local client changed instance permissions
 ---| '"PhysgunDrop"' #  Called when an entity being held by a physgun gets dropped
----| '"PhysgunPickup"' #  Called when an entity gets picked up by a physgun  This hook is predicted.
+---| '"PhysgunPickup"' #  Called when an entity gets picked up by a physgun This hook is predicted.
 ---| '"PlayerAmmoChanged"' #  Called when a player's reserve ammo count changes.
 ---| '"PlayerCanPickupWeapon"' #  Called when a wants to pick up a weapon
 ---| '"PlayerChangedTeam"' #  Called when a player has changed team using Player:SetTeam
@@ -84,8 +85,8 @@
 ---| '"PlayerSwitchFlashlight"' #  Called when a players turns their flashlight on or off
 ---| '"PlayerSwitchWeapon"' #  Called when a player switches their weapon
 ---| '"PlayerUnfrozeObject"' #  Called when a player unfreezes an object
----| '"PlayerUse"' #  Called when a player holds their use key and looks at an entity.  Will continuously run.
----| '"PlayerWalletChanged"' #  Called when a player receives money. DarkRP only.  Will only be called if the recipient is the owner of the chip, or if the chip is running in superuser mode.
+---| '"PlayerUse"' #  Called when a player holds their use key and looks at an entity. Will continuously run.
+---| '"PlayerWalletChanged"' #  Called when a player receives money. DarkRP only. Will only be called if the recipient is the owner of the chip, or if the chip is running in superuser mode.
 ---| '"PostDraw2DSkyBox"' #  Called right after the 2D skybox has been drawn - allowing you to draw over it.
 ---| '"PostDrawHUD"' #  Called after drawing HUD (2D Context)
 ---| '"PostDrawOpaqueRenderables"' #  Called after opaque entities are drawn. (Only works with HUD) (3D context)
@@ -102,7 +103,7 @@
 ---| '"PreDrawViewModels"' #  Called before drawing the viewmodel rendergroup (3D Context)
 ---| '"PropBreak"' #  Called when an entity is broken
 ---| '"ReadCell"' #  Called when a high speed device reads from a wired SF chip
----| '"Remote"' #  Remote hook.  This hook can be called from other instances
+---| '"Remote"' #  Remote hook. This hook can be called from other instances
 ---| '"RemoveLaw"' #  Called when a law is removed. DarkRP only. Not usually called when /resetlaws is used.
 ---| '"Removed"' #  Called when the starfall chip is removed
 ---| '"Render"' #  Called when a frame is requested to be drawn on screen. (2D/3D Context)
@@ -135,6 +136,7 @@
 ---@alias AddLaw fun(index: number, law: string, player: Player?)
 ---@alias AdjustMouseSensitivity fun(defaultSensitivity: number, localFOV: number, defaultFOV: number) : number?
 ---@alias CalcView fun(pos: Vector, ang: Angle, fov: number, znear: number, zfar: number) : table
+---@alias CalcViewModelView fun(wep: Weapon, vm: Entity, oldPos: Vector, oldAng: Angle, pos: Vector, ang: Angle) : Vector, Angle
 ---@alias ChatTextChanged fun(txt: string)
 ---@alias ClientInitialized fun(ply: Player)
 ---@alias ComponentLinked fun(ent: Entity)

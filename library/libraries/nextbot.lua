@@ -7,13 +7,13 @@ nextbot = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if you can spawn any more nextbots.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L134).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L127).
 ---@return boolean # Returns true if you can spawn nextbots, false if not
 function nextbot.canSpawn() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks if you can spawn any more nextbot ragdolls.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L150).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L143).
 ---@return boolean # Returns true if you can spawn nextbot ragdolls, false if not
 function nextbot.canSpawnRagdoll() end
 
@@ -27,17 +27,12 @@ function nextbot.create(pos, mdl) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Checks how many nextbots can be spawned.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L142).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L135).
 ---@return number # Number of nextbots able to be spawned
 function nextbot.nextbotsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns how many nextbot ragdolls you can spawn.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L158).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L151).
 ---@return number # Amount of nextbot ragdolls that can be spawned
 function nextbot.ragdollsLeft() end
-
---- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
---- Removes the given nextbot.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/nextbot.lua#L127).
-function nextbot.remove() end

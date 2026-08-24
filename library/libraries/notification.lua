@@ -7,14 +7,9 @@ notification = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Displays a standard notification.
----NOTIFY.GENERIC.
----NOTIFY.ERROR.
----NOTIFY.UNDO.
----NOTIFY.HINT.
----NOTIFY.CLEANUP.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_cl/notification.lua#L27).
 ---@param text string # The text to display
----@param type number # Determines the notification method.
+---@param type number # Determines the notification method.NOTIFY.GENERICNOTIFY.ERRORNOTIFY.UNDONOTIFY.HINTNOTIFY.CLEANUP
 ---@param length number # Time in seconds to display the notification (Max length of 30)
 function notification.addLegacy(text, type, length) end
 

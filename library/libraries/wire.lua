@@ -51,12 +51,29 @@ function wire.create(entI, entO, inputname, outputname, width, color, materialNa
 function wire.delete(entI, inputname) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Gets the source entity and output name that a given input is wired to.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L628).
+---@param ent Entity # Entity with input
+---@param inputName string # Input name to check
+---@return Entity? # Source entity, or nil if not wired
+---@return string? # Output name on the source entity, or nil if not wired
+function wire.getInputSource(ent, inputName) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a table of entity's inputs.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L598).
 ---@param entI Entity # Entity with input(s)
 ---@return table # Table of entity's input names
 ---@return table # Table of entity's input types
 function wire.getInputs(entI) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
+--- Gets all destination inputs that a given output is wired to.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L645).
+---@param ent Entity # Entity with the output
+---@param outputName string # Name of the output to check
+---@return table # A table of destination connections. Each entry is a table with fields `Entity` (the destination entity) and `Name` (the input name on that entity). Returns an empty table if not wired.
+function wire.getOutputTargets(ent, outputName) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a table of entity's outputs.
@@ -68,7 +85,7 @@ function wire.getOutputs(entO) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Returns a wirelink to a wire entity.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L628).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L671).
 ---@param ent Entity # Wire entity
 ---@return Wirelink # Wirelink of the entity
 function wire.getWirelink(ent) end
@@ -83,7 +100,7 @@ function wire.isConnected(ent, inputName) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets a value from an entity's wire memory.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L742).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L785).
 ---@param ent Entity # Entity with wire memory
 ---@param index number # The cell address
 ---@return number # The value at the address
@@ -91,7 +108,7 @@ function wire.readCell(ent, index) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the value of an entity's input.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L720).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L763).
 ---@param ent Entity # Entity with input
 ---@param inputname string # Input name
 ---@return any # value The value to set the input to (must match the input type)
@@ -99,7 +116,7 @@ function wire.readInput(ent, inputname) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Gets the value of an entity's output.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L731).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L774).
 ---@param ent Entity # Entity with output
 ---@param outputname string # Output name
 ---@return any # value The value to set the output to (must match the output type)
@@ -119,7 +136,7 @@ function wire.serverUUID() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's wire memory, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L708).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L751).
 ---@param ent Entity # Entity with wire memory
 ---@param index number # The cell address
 ---@param value number # The value to set the cell
@@ -127,7 +144,7 @@ function wire.triggerCell(ent, index, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's input, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L686).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L729).
 ---@param ent Entity # Entity with input
 ---@param inputname string # Input name
 ---@param value any # The value to set the input to (must match the input type)
@@ -135,7 +152,7 @@ function wire.triggerInput(ent, inputname, value) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Sets the value of an entity's output, triggering it as well.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L697).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sv/wire.lua#L740).
 ---@param ent Entity # Entity with output
 ---@param outputname string # Output name
 ---@param value any # The value to set the output to (must match the output type)

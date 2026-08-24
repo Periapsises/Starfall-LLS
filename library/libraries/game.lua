@@ -7,7 +7,7 @@ game = {}
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Applies explosion damage to all entities in the specified radius.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L178).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L191).
 ---@param damageOrigin Vector # The center of the explosion
 ---@param damageRadius number # The radius in which entities will be damaged (0 - 1500)
 ---@param damage number # The amount of damage to be applied
@@ -15,7 +15,7 @@ function game.blastDamage(damageOrigin, damageRadius, damage) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Fires a bullet. Bullet made with this function will not have any tracer, you will have to make them yourself.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L189).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L202).
 ---@param src Vector # The position to fire the bullets from.
 ---@param dir Vector # The fire direction.
 ---@param damage number? # The damage dealt by the bullet. Default: (1-100)
@@ -30,23 +30,29 @@ function game.bulletDamage(src, dir, damage, num, force, distance, spread, hullS
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Return the amount of damage left bullets can deal.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L262).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L275).
 ---@return number # Damage left bullets can deal
 function game.bulletsDPSLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Return the amount of bullets left to fire.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L255).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L268).
 ---@return number # Number of bullets left to fire
 function game.bulletsLeft() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/server.png?raw=true)
 --- Return if the given bullets can be fired.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L244).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L257).
 ---@param damage number # The damage dealt by the bullet. (1-100)
 ---@param num number # The amount of bullets to fire. (1-5)
 ---@return boolean # true if the given bullets can be fired or else false
 function game.canFireBullets(damage, num) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the name of the currently running gamemode.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L183).
+---@return string # The name of the active gamemode
+function game.getActiveGamemode() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns AmmoData for given id.
@@ -114,7 +120,7 @@ function game.getRealTickInterval() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the direction and how obstructed the map's sun is or nil if it doesn't exist.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L278).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L291).
 ---@return Vector # The direction of the sun
 ---@return number # How obstructed the sun is 0 to 1.
 function game.getSunInfo() end
@@ -138,6 +144,13 @@ function game.getTickInterval() end
 function game.getTimeScale() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
+--- Returns the wind's velocity at a given position, as influenced by current map's env_wind entities.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L161).
+---@param pos Vector? # Optional position to get wind speed at. If specified, wind controllers with windradius other than -1 will be taken into account, if the point is within their radius. If omitted, only the global wind controller will be used (if one exists). This argument will be ignored on client-side and will be treated as nil because the position of env_wind is not currently networked to clients
+---@return Vector # The current wind velocity at a given position
+function game.getWindSpeed(pos) end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the worldspawn entity.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L145).
 ---@return Entity # Worldspawn
@@ -145,7 +158,7 @@ function game.getWorld() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns if the game has focus or not, i.e. will return false if the game is minimized.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L271).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L284).
 ---@return boolean # True if the game is focused
 function game.hasFocus() end
 
@@ -168,6 +181,18 @@ function game.isLan() end
 ---@return boolean # True if the game is mounted
 function game.isMounted(str) end
 
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns whether the game menu overlay (escape/main menu) is open or not.
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L338).
+---@return boolean # True if the game UI is visible
+function game.isPauseMenuVisible() end
+
+--- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
+--- Returns true if the game is currently recording a demo file (.dem).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L331).
+---@return boolean # True if recording a demo
+function game.isRecordingDemo() end
+
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns whether or not the current game is single player.
 --- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L52).
@@ -176,14 +201,14 @@ function game.isSinglePlayer() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Check whether the skybox is visible from the point specified.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L287).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L300).
 ---@param position Vector # The position to check the skybox visibility from
 ---@return boolean # Whether the skybox is visible from the position
 function game.isSkyboxVisibleFromPoint(position) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns if the client is currently timing out from the server.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L310).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L323).
 ---@return boolean # If currently timing out
 ---@return number # Time since the connection started to timeout
 function game.isTimingOut() end
@@ -197,33 +222,33 @@ function game.modelExists(path) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Returns the frame time of the physics engine.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L320).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L347).
 ---@return number # The physics frame time length
 function game.physicsFrameTime() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the real frame-time which is unaffected by host_timescale.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L303).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L316).
 ---@return number # Frametime
 function game.realFrameTime() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/client.png?raw=true)
 --- Returns the server's frame time and standard deviation.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L295).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L308).
 ---@return number # Server frametime
 ---@return number # Server frametime standard deviation
 function game.serverFrameTime() end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Given a 64bit SteamID will return a STEAM_0: style Steam ID.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L162).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L169).
 ---@param id string # The 64 bit Steam ID
 ---@return string # STEAM_0 style Steam ID
 function game.steamIDFrom64(id) end
 
 --- ![](https://github.com/Periapsises/Starfall-LLS/blob/generator/resources/shared.png?raw=true)
 --- Given a STEAM_0 style Steam ID will return a 64bit Steam ID.
---- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L169).
+--- View [source](https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/libs_sh/game.lua#L176).
 ---@param id string # The STEAM_0 style id
 ---@return string # 64bit Steam ID
 function game.steamIDTo64(id) end
