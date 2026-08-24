@@ -135,10 +135,10 @@ local function compileLibrary(name, contents)
 					varargType = "any"
 				end
 
-				file:write("---@param ... " .. varargType .. " # " .. param.description .. "\n")
+				file:write("---@param ... " .. varargType .. " # " .. param.description:gsub("[\r\n]", "") .. "\n")
 				args = args .. "..."
 			else
-				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description .. "\n")
+				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description:gsub("[\r\n]", "") .. "\n")
 				args = args .. paramName
 			end
 
