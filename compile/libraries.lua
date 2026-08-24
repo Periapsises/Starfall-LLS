@@ -150,7 +150,7 @@ local function compileLibrary(name, contents)
 		if methodInfo.returns then
 			for i, ret in ipairs(methodInfo.returns) do
 				file:write(
-					"---@return " .. ret.type .. " # " .. ret.description .. "\n"
+					"---@return " .. ret.type .. " # " .. ret.description:gsub("[\r\n]", "") .. "\n"
 				)
 			end
 		end

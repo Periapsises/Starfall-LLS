@@ -74,7 +74,7 @@ local function compileType(name, contents)
 		for i = 1, #contents.fields do
 			local field = contents.fields[i]
 
-			file:write("---@field " .. field.name .. " " .. (field.type or "any") .. " # " .. field.description .. "\n")
+			file:write("---@field " .. field.name .. " " .. (field.type or "any") .. " # " .. field.description:gsub("[\r\n]", "") .. "\n")
 		end
 	end
 
@@ -115,10 +115,10 @@ local function compileType(name, contents)
 					varargType = "any"
 				end
 
-				file:write("---@param ... " .. varargType .. " # " .. param.description .. "\n")
+				file:write("---@param ... " .. varargType .. " # " .. param.description:gsub("[\r\n]", "") .. "\n")
 				args = args .. "..."
 			else
-				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description .. "\n")
+				file:write("---@param " .. paramName .. " " .. paramType .. " # " .. param.description:gsub("[\r\n]", "") .. "\n")
 				args = args .. paramName
 			end
 
@@ -134,7 +134,7 @@ local function compileType(name, contents)
 					"---@return "
 						.. ret.type
 						.. " # "
-						.. ret.description
+						.. ret.description:gsub("[\r\n]", "")
 						.. "\n"
 				)
 			end

@@ -40,7 +40,7 @@ local function compileHooks(hooks)
 
 	for i = 1, #hooks do
 		local hook = hooks[i]
-		file:write("---| '\"" .. hook.name .. "\"' # " .. hook.value.description:gsub("\n", " ") .. "\n")
+		file:write("---| '\"" .. hook.name .. "\"' # " .. hook.value.description:gsub("[\r\n]", "") .. "\n")
 	end
 
 	file:write("\n")
